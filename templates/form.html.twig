@@ -1,0 +1,27 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+	<div class="container mt-5">
+		<div class="row pb-2 text-center">
+			<h1>Enter data</h1>
+		</div>
+		<div class="row">
+			<div class="card">
+					<form method="post" action="{{ path('form_submit') }}">
+						<div class="mb-3">
+							<label for="title" class="form-label">Title</label>
+							<input type="text" class="form-control" name="title" id="title" placeholder="enter a title" required>
+						</div>
+						<div class="mb-3">
+							<label for="decription" class="form-label">Message</label>
+							<textarea class="form-control" name="decription" id="decription" rows="3" required></textarea>
+						</div>
+						<div>
+							<input type="submit" class="btn btn-success text-white mb-2" href="form.html.twig" name="submit" value="Save"></input>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+{% endblock %}
