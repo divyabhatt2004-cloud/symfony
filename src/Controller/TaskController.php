@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\zayEntity\Product;
 use App\Form\ProductCreateForm;
 use App\Repository\ProductCreateRepository;
+
 use App\Entity\zayEntity\UserContact;
 use App\Form\UserContactForm;
 use App\Repository\UserContactRepository;
@@ -92,7 +93,6 @@ class TaskController extends AbstractController
     {
         return $this->render('admin/admin.html.twig');
     }
-
     #[Route(path: '/product-admin', name: 'product_admin')]
     public function product_admin(ProductCreateRepository $productRepository): Response
     {
@@ -100,12 +100,6 @@ class TaskController extends AbstractController
         return $this->render('admin/product_admin.html.twig', [
             'productLists' => $productList,
         ]);
-    }
-
-    #[Route(path: '/category-admin', name: 'category_admin')]
-    public function categories_admin(): Response
-    {
-        return $this->render('admin/category_admin.html.twig');
     }
     #[Route(path: '/product-create', name: 'product_create')]
     public function product_create(Request $request, EntityManagerInterface $em): Response
@@ -122,7 +116,6 @@ class TaskController extends AbstractController
         return $this->render('admin/product_create.html.twig', [
             'form' => $form->createView(),
         ]);
-
     }
     #[Route(path: '/update-product/{id}', name: 'update-product')]
     public function editTodoList(Request $request,ProductCreateRepository $productRepository, EntityManagerInterface $em, string $id): Response
@@ -150,10 +143,26 @@ class TaskController extends AbstractController
         $em->flush();
         return $this->redirectToRoute('product_admin');
     }
+    #[Route(path: '/category-admin', name: 'category_admin')]
+    public function categories_admin(): Response
+    {
+        return $this->render('admin/category_admin.html.twig');
+    }
     #[Route(path: '/category-create', name: 'category_create')]
     public function category_create(): Response
     {
-        return $this->render('admin/category_create.html.twig');
+        $Category = new Category();
+        $form = $this->createForm(ProductCreateForm::class, $product);
+
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em->persist($product);
+            $em->flush();
+            return $this->redirectToRoute('product_admin');
+        }
+        return $this->render('admin/product_create.html.twig', [
+            'form' => $form->createView(),
+        ]);
     }
 
 
