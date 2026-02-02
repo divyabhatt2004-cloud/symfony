@@ -1,0 +1,40 @@
+{% extends 'admin/inner_nav.html.twig' %}
+{% block innerCardBody %}
+    <div class="row text-end border-bottom pb-2">
+        <div class=" offset-10 col-lg-2">
+            <button class="btn btn-success"><a href="{{ path('contact') }}" class="text-white text-decoration-none">Create <i
+                        class="fa-solid fa-circle-plus"></i></a></button>
+        </div>
+    </div>
+    <div>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Sno</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Subject</th>
+                <th>Message</th>
+                <th>Reply</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for userSupportlist in userSupportLists %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ userSupportlist.name }}</td>
+                <td>{{ userSupportlist.email }}</td>
+                <td>{{ userSupportlist.subject }}</td>
+                <td>{{ userSupportlist.message }}</td>
+                <td><?php echo   $userrows['reply']; ?></td>
+                <td><a class="text-success ms-2" href="{{ path('edit-user-request',{'id':userSupportlist.id}) }}"><i
+                            class="fa-solid fa-pen"></i></a> <a class="text-danger ms-2"
+                                                                href="{{ path('delete-user-request',{'id':userSupportlist.id}) }}"><i
+                            class="fa-solid fa-trash-can"></i></a></td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

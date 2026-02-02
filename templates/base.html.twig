@@ -1,21 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>
-			{% block title %}Welcome!
-			{% endblock %}
-		</title>
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> {% block stylesheets %}{% endblock %}
-		{% block javascripts %}
-			{% block importmap %}
-				{{ importmap('app') }}
-			{% endblock %}
-		{% endblock %}
-	</head>
-	<body>
-		{% block body %}{% endblock %}
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-	</body>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        {% block title %}webshop(symfony)
+        {% endblock %}
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+          integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    {% block stylesheets %}{% endblock %}
+            {{ encore_entry_link_tags('app') }}
+    {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% block importmap %}
+            {{ importmap('app') }}
+        {% endblock %}
+    {% endblock %}
+</head>
+<body>
+{% block nav %}
+    <nav class="navbar navbar-expand-lg p-0 bg-dark navbar-light d-none d-lg-block" id="top">
+        <div class="container">
+            <div class="row">
+             <span class="text-light fs-6 fw-lighter d-flex align-items-center">
+                 <div class="d-flex align-items-center me-2">
+                     <span> <i class="fa-solid fa-envelope me-1"></i></span>
+                     <p class="h6 m-0 fw-lighter"> info@company.com</p>
+                 </div>
+                 <div class="d-flex align-items-center ms-2">
+                     <i class="fa-solid fa-phone me-1 "></i>
+                     <p class="h6 m-0 fw-lighter"> 010-020-0340</p>
+                 </div>
+             </span>
+            </div>
+            <div class="row">
+             <span class="text-end text-light fs-6 fw-lighter">
+                 <div class="col-12 d-flex ">
+                     <span class=" bg-dark text-light ps-1 pe-1 text-center me-2">
+                         <i class="fa-brands fa-facebook-f me-1"></i>
+                         <i class="fa-brands fa-instagram me-1"></i>
+                         <i class="fa-brands fa-twitter me-1"></i>
+                         <i class="fa-brands fa-linkedin-in me-1"></i>
+                     </span>
+                 </div>
+             </span>
+            </div>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg shadow">
+        <div class="container">
+            <a class="navbar-brand fs-1 text-success fw-medium" href="#">Zay</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <div class="mx-auto">
+                    <ul class="navbar-nav" id="headerNav">
+                        <li class="nav-item px-5">
+                            <a class="nav-link text-black" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item px-5">
+                            <a class="nav-link text-black" href="/about">About</a>
+                        </li>
+                        <li class="nav-item px-5">
+                            <a class="nav-link text-black" href="/shop">Shop</a>
+                        </li>
+                        <li class="nav-item px-5">
+                            <a class="nav-link text-black" href="/contact">Contact</a>
+                        </li>
+                        <li class="nav-item px-5">
+                            <a class="nav-link text-black" name="admin" href="/admin">Admin</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="d-flex my-2 mb-2 align-items-center">
+                 <span class="me-2 p-1">
+                     <i class="fa-solid fa-magnifying-glass"></i>
+                 </span>
+                    <span class="me-2 p-1">
+                     <a href="product_cart.php" class="text-black"><i class="fa-sharp fa-solid fa-cart-arrow-down"></i></a>
+                 </span>
+
+                    <span class="me-2 p-1">
+                     <div class="dropdown">
+                         <a class="btn btn-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                             <i class="fa-solid fa-user"></i>
+                         </a>
+                         <ul class="dropdown-menu">
+                                 <li><a class="dropdown-item text-success" href="login.php">Login</a></li>
+                                 <li><a class="dropdown-item text-success" href="register.php">Register</a></li>
+                             </ul>
+                     </div>
+                 </span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <?php
+}
+?>
+{% endblock %}
+
+{% block body %}{% endblock %}
+
+{% block footer %}
+    <footer class="bg-dark" id="footer">
+        <div class="container">
+            <div class="row border-bottom mb-3">
+                <div class="col-lg-4 mt-5">
+                    <h1 class="text-success border-bottom mb-5 pb-3">Zay shop</h1>
+                    <ul class="text-light list-unstyled">
+                        <li class="mb-2">
+                            <span class="d-inline-block">
+                                <i class="fa-solid fa-location-dot"></i>
+                                123 Consectetur at ligula 10660
+                            </span>
+                        </li>
+                        <li class="mb-2">
+                            <span class="d-inline-block">
+                                <i class="fa-solid fa-phone"></i>
+                                010-020-0340
+                            </span>
+                        </li>
+                        <li class="mb-2">
+                            <span class="d-inline-block">
+                                <i class="fa-solid fa-envelope"></i>
+                                info@company.com
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mt-5">
+                    <h1 class="text-success border-bottom mb-5 pb-3">Products</h1>
+                    <ul class="text-light list-unstyled">
+                        <li class="mb-2">
+                            <a class="text-decoration-none text-light" href="#">Luxury</a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="text-decoration-none text-light" href="#">Sport Wear</a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="text-decoration-none text-light" href="#">Men's Shoes</a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="text-decoration-none text-light" href="#">Women's Shoes</a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="text-decoration-none text-light" href="#">Popular Dress</a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="text-decoration-none text-light" href="#">Gym Accessories</a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="text-decoration-none text-light" href="#">Sport Shoes</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mt-5">
+                    <h1 class="text-success border-bottom mb-5 pb-3">Further Info</h1>
+                    <ul class="text-light list-unstyled">
+                        <li class="mb-2">
+                            <a class="text-decoration-none text-light" href="index.php">Home</a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="text-decoration-none text-light" href="about.php">About Us</a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="text-decoration-none text-light" href="shop.php">Shop Locations</a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="text-decoration-none text-light" href="#">FAQs</a>
+                        </li>
+                        <li class="mb-2">
+                            <a class="text-decoration-none text-light" href="contact.php">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-lg-8 col-md-6 col-sm-8">
+                    <div class="col-12 d-flex my-2 mb-2">
+                        <span class="rounded-circle fs-4 bg-dark text-light p-1 text-center me-2 border">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </span>
+
+                        <span class="rounded-circle fs-4 bg-dark text-light text-center p-1  me-2 border">
+                            <i class="fa-brands fa-instagram"></i>
+                        </span>
+
+                        <span class="rounded-circle fs-4 bg-dark text-light me-2 text-center p-1 border">
+                            <i class="fa-brands fa-twitter"></i>
+                        </span>
+
+                        <span class="rounded-circle fs-4 bg-dark text-light me-2 text-center p-1 border">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </span>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-8 pt-3">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control bg-dark border-light" placeholder="Email Address"
+                               aria-label="Email">
+                        <button class=" btn input-group-btn btn-success" id="btn1" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-100 bg-black">
+            <div class="container">
+                <div class="row pt-3 pb-3 text-light fw-lighter">
+                    <p class="h6 fw-light">Copyright © 2021 Company Name | Designed by<a class="text-success" href="#">
+                            TemplateMo</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+{% endblock %}
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
 </html>

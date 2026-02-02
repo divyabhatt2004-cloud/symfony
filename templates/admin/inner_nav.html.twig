@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="container pt-5 pb-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <a class="list-group-item border-0 text-success mb-1" href="/product-admin">Product</a>
+                        <a class="list-group-item text-success border-0 mb-1" href="/category-admin">Categories</a>
+                        <a class="list-group-item text-success border-0 mb-1" href="/support-admin">Support</a>
+                        <a class="list-group-item text-success border-0 mb-1" href="#">Orders</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="card shadow">
+                    <div class="card-body">
+                        {% block innerCardBody %}
+                        {% endblock %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
