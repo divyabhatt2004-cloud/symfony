@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-        {% block title %}webshop(symfony)
-        {% endblock %}
+        {% block title %}webshop(symfony){% endblock %}
     </title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -20,12 +19,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     {% block stylesheets %}
-        {{ encore_entry_link_tags('app/css') }}
+        {{ encore_entry_link_tags('css/app') }}
     {% endblock %}
 
-    {% block javascripts %}
-            {{ encore_entry_script_tags('app/js') }}
-    {% endblock %}
+
 </head>
 <body>
 {% block nav %}
@@ -232,5 +229,8 @@
     </footer>
 {% endblock %}
 
+{% block javascripts %}
+    {{ encore_entry_script_tags('js/app') }}
+{% endblock %}
 </body>
 </html>

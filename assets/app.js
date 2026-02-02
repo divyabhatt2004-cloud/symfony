@@ -1,7 +1,11 @@
 import './stimulus_bootstrap.js';
 import './styles/js/script'
-import $ from 'jquery';
-import * as bootstrap from 'bootstrap';
-window.$ = window.jQuery = global.$ = global.jQuery = $;
-window.bootstrap = window.bootstrap = global.bootstrap = global.bootstrap = bootstrap;
 
+/*==========  jquery start ===========*/
+const bootstrap = require("bootstrap");
+const jQuery = $ = require("jquery");
+
+window.$ = window.jQuery = window.jquery = jQuery;
+global.$ = global.jQuery = global.jquery = jQuery;
+window.bootstrap = global.bootstrap = bootstrap;
+/*==========  jquery end ===========*/
