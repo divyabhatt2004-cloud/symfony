@@ -2,13 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c2925937-9bb4-488b-824d-3e2dd29b3f33" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Form/TodoListType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/todo_list/form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/todo_list/page.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/todo_list/table.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20260122104451.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/TaskController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/TaskController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/zayEntity/ProductCreate.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/zayEntity/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/ProductCreateForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ProductCreateForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ProductCreateRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ProductCreateRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/product_admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/product_admin.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/reference.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/reference.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/zayEntity/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/zayEntity/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/zayEntity/UserContact.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/zayEntity/UserContact.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +33,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="$PROJECT_DIR$/../../../bin/php/php8.4.16/php.exe">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="$PROJECT_DIR$/../../../bin/php/php8.4.10/php.exe">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
       <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
@@ -165,18 +169,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Symfony2.SettingsForm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/wamp64/www/raghav/symfony",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "Symfony2.SettingsForm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\divya\symfony\assets\styles\scss" />
@@ -185,7 +190,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-php-predefined-a98d8de5180a-0e0d91225499-com.jetbrains.php.sharedIndexes-PS-253.29346.151" />
+        <option value="bundled-php-predefined-a98d8de5180a-0e0d91225499-com.jetbrains.php.sharedIndexes-PS-253.30387.85" />
       </set>
     </attachedChunks>
   </component>
@@ -204,6 +209,7 @@
       <workItem from="1768976033268" duration="13313000" />
       <workItem from="1769061450276" duration="14755000" />
       <workItem from="1770014615303" duration="7087000" />
+      <workItem from="1770031403832" duration="3353000" />
     </task>
     <servers />
   </component>

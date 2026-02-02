@@ -6,10 +6,10 @@ use App\Entity\AbstractEntity;
 use App\Repository\ProductCreateRepository;
 use Doctrine\ORM\Mapping as ORM;
 
+#[ORM\Table(name: 'product')]
 #[ORM\Entity(repositoryClass:ProductCreateRepository::class)]
 class Product extends AbstractEntity
 {
-
     #[ORM\Column(nullable: true)]
     private ?string $productName = null;
     #[ORM\Column(nullable: true)]

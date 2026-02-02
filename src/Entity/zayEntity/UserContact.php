@@ -8,10 +8,10 @@ use Doctrine\DBAL\Types\Type;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
+#[ORM\Table(name: 'user_contact')]
 #[ORM\Entity(repositoryClass:UserContactRepository::class)]
 class UserContact extends AbstractEntity
 {
-
     #[ORM\Column(nullable: true)]
     private ?string $name = null;
 

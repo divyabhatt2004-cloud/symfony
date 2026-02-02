@@ -1,1 +1,4 @@
-@import "bootstrap";
+@use "sass:color";
+@use "sass:string";
+
+@import "~bootstrap/scss/bootstrap";
