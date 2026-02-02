@@ -2,43 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c2925937-9bb4-488b-824d-3e2dd29b3f33" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Entity/zayEntity/ProductCreate.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/ProductCreateForm.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/UserContactForm.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/ProductCreateRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/UserContactRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/about.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/category_create.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/product_create.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/contact.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/shop.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/my_project_directory.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/my_project_directory.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/controllers.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/controllers/csrf_protection_controller.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/controllers/hello_controller.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/stimulus_bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/app.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/asset_mapper.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/importmap.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20260109101320.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20260109101621.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/DefaultController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/TaskController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/TaskController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/TodoList.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/TodoType.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/TodoListRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,6 +153,8 @@
       <path value="$PROJECT_DIR$/vendor/sebastian/complexity" />
       <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
       <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/vendor/symfony/webpack-encore-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/stimulus-bundle" />
     </include_path>
   </component>
   <component name="ProjectColorInfo">{
@@ -226,7 +198,7 @@
       <workItem from="1768821025356" duration="2771000" />
       <workItem from="1768976033268" duration="13313000" />
       <workItem from="1769061450276" duration="14755000" />
-      <workItem from="1770014615303" duration="2329000" />
+      <workItem from="1770014615303" duration="3338000" />
     </task>
     <servers />
   </component>
