@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c2925937-9bb4-488b-824d-3e2dd29b3f33" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Entity/zayEntity/Category.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/CategoryForm.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/CategoryRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20260122104451.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/TaskController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/TaskController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/zayEntity/ProductCreate.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/zayEntity/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/ProductCreateForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ProductCreateForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ProductCreateRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ProductCreateRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/product_admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/product_admin.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +202,7 @@
       <workItem from="1768821025356" duration="2771000" />
       <workItem from="1768976033268" duration="13313000" />
       <workItem from="1769061450276" duration="14755000" />
-      <workItem from="1770014615303" duration="7087000" />
+      <workItem from="1770014615303" duration="8620000" />
     </task>
     <servers />
   </component>
