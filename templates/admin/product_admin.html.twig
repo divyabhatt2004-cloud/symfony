@@ -23,28 +23,24 @@
             </tr>
             </thead>
             <tbody>
-            <?php
-                                $sno = 0;
-                                while ($productrows = mysqli_fetch_assoc($productresult)) {
-                                    $sno++;
-                                ?>
-            <tr>
-                <td><?php echo   $sno; ?></td>
-                <td><?php echo $productrows['product name'] ?></td>
-                <td><?php echo $productrows['image'] ?></td>
-                <td><?php echo $productrows['description'] ?></td>
-                <td><?php echo $productrows['quantity'] ?></td>
-                <td><?php echo $productrows['category'] ?></td>
-                <td><?php echo $productrows['price'] ?></td>
-                <td><?php echo $productrows['gst'] ?></td>
-                <td><a class="text-success ms-2" href="product_update.php?id=<?php echo $productrows['id']; ?>"><i
-                            class="fa-solid fa-pen"></i></a><a class="text-danger ms-2"
-                                                               href="product_delete.php?id=<?php echo $productrows['id']; ?>"><i
-                            class="fa-solid fa-trash-can"></i></a></td>
-            </tr>
-            <?php
-                                }
-                                ?>
+            {% for productList in productLists %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ productList.productName }}</td>
+                    <td>{{ productList.productImage }}</td>
+                    <td>{{ productList.productDescription }}</td>
+                    <td>{{ productList.quantity }}</td>
+                    <td>{{ productList.category }}</td>
+                    <td>{{ productList.price }}</td>
+                    <td>{{ productList.gst }}</td>
+                    <td><?php echo   $userrows['reply']; ?></td>
+                    <td><a class="text-success ms-2" href="{{ path('update-product',{'id':productList.id}) }}"><i
+                                class="fa-solid fa-pen"></i></a>
+                        <a class="text-danger" href="{{ path('delete-product',{'id':productList.id}) }}"><i
+                                class="fa-solid fa-trash-can"></i></a>
+                    </td>
+                </tr>
+            {% endfor %}
             </tbody>
         </table>
     </div>

@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\zayEntity\ProductCreate;
+use App\Entity\zayEntity\Product;
 use App\Form\ProductCreateForm;
 use App\Repository\ProductCreateRepository;
 use App\Entity\zayEntity\UserContact;
@@ -52,7 +52,7 @@ class TaskController extends AbstractController
         ]);
     }
     #[Route(path: '/support-admin', name: 'support_admin')]
-    public function support_admin(Request $request, UserContactRepository $UserSupportRepository): Response
+    public function support_admin(UserContactRepository $UserSupportRepository): Response
     {
         $userSupportList = $UserSupportRepository->findBy(['recordState' => '0']);
         return $this->render('admin/support_admin.html.twig', [
@@ -60,7 +60,7 @@ class TaskController extends AbstractController
         ]);
     }
     #[Route(path: '/edit-user-request/{id}', name: 'edit-user-request')]
-    public function editTodoList(Request $request,UserContactRepository $editUserRepository, EntityManagerInterface $em, string $id): Response
+    public function edit_user_request(Request $request,UserContactRepository $editUserRepository, EntityManagerInterface $em, string $id): Response
     {
         $user = $editUserRepository->find(['id' => $id]);
         $form = $this->createForm(UserContactForm::class, $user);
@@ -78,7 +78,7 @@ class TaskController extends AbstractController
     }
 
     #[Route(path:'/delete-user-request/{id}', name: 'delete-user-request')]
-    public function deleteTodoList(UserContactRepository $deleteUserRepository,EntityManagerInterface $em,string $id): Response
+    public function delete_user_request(UserContactRepository $deleteUserRepository,EntityManagerInterface $em,string $id): Response
     {
         $user = $deleteUserRepository->find(['id' => $id]);
         $user->setRecordState(1);
@@ -94,9 +94,12 @@ class TaskController extends AbstractController
     }
 
     #[Route(path: '/product-admin', name: 'product_admin')]
-    public function product_admin(): Response
+    public function product_admin(ProductCreateRepository $productRepository): Response
     {
-        return $this->render('admin/product_admin.html.twig');
+        $productList = $productRepository->findBy(['recordState' => '0']);
+        return $this->render('admin/product_admin.html.twig', [
+            'productLists' => $productList,
+        ]);
     }
 
     #[Route(path: '/category-admin', name: 'category_admin')]
@@ -107,7 +110,7 @@ class TaskController extends AbstractController
     #[Route(path: '/product-create', name: 'product_create')]
     public function product_create(Request $request, EntityManagerInterface $em): Response
     {
-        $product = new ProductCreate();
+        $product = new Product();
         $form = $this->createForm(ProductCreateForm::class, $product);
 
         $form->handleRequest($request);
@@ -120,6 +123,32 @@ class TaskController extends AbstractController
             'form' => $form->createView(),
         ]);
 
+    }
+    #[Route(path: '/update-product/{id}', name: 'update-product')]
+    public function editTodoList(Request $request,ProductCreateRepository $productRepository, EntityManagerInterface $em, string $id): Response
+    {
+        $product = $productRepository->find(['id' => $id]);
+        $form = $this->createForm(ProductCreateForm::class, $product);
+
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+
+            $em->persist($product);
+            $em->flush();
+            return $this->redirectToRoute('product_admin');
+        }
+        return $this->render('/admin/product_create.html.twig', [
+            'form' => $form->createView(),
+        ]);
+    }
+    #[Route(path:'/delete-product/{id}', name: 'delete-product')]
+    public function delete_product(ProductCreateRepository $productRepository,EntityManagerInterface $em,string $id): Response
+    {
+        $product = $productRepository->find(['id' => $id]);
+        $product->setRecordState(1);
+        $em->persist($product);
+        $em->flush();
+        return $this->redirectToRoute('product_admin');
     }
     #[Route(path: '/category-create', name: 'category_create')]
     public function category_create(): Response

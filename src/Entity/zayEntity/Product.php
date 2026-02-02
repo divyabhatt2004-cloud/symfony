@@ -7,15 +7,15 @@ use App\Repository\ProductCreateRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass:ProductCreateRepository::class)]
-class ProductCreate extends AbstractEntity
+class Product extends AbstractEntity
 {
 
     #[ORM\Column(nullable: true)]
-    private ?string $product_name = null;
+    private ?string $productName = null;
     #[ORM\Column(nullable: true)]
-    private ?string $product_image = null;
+    private ?string $productImage = null;
     #[ORM\Column(nullable: true)]
-    private ?string $product_description = null;
+    private ?string $productDescription = null;
     #[ORM\Column(nullable: true)]
     private ?int $quantity = null;
     #[ORM\Column(nullable: true)]
@@ -27,32 +27,32 @@ class ProductCreate extends AbstractEntity
 
     public function getProductName(): ?string
     {
-        return $this->product_name;
+        return $this->productName;
     }
 
-    public function setProductName(?string $product_name): self
+    public function setProductName(?string $productName): self
     {
-        $this->product_name = $product_name;
+        $this->productName = $productName;
         return $this;
     }
     public function getProductImage(): ?string
     {
-        return $this->product_image;
+        return $this->productImage;
     }
 
-    public function setProductImage(?string $product_image): self
+    public function setProductImage(?string $productImage): self
     {
-        $this->product_image = $product_image;
+        $this->productImage = $productImage;
         return $this;
     }
     public function getProductDescription(): ?string
     {
-        return $this->product_description;
+        return $this->productDescription;
     }
 
-    public function setProductDescription(?string $product_description): self
+    public function setProductDescription(?string $productDescription): self
     {
-        $this->product_description = $product_description;
+        $this->productDescription = $productDescription;
         return $this;
     }
     public function getQuantity(): ?int

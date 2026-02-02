@@ -3,12 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="c2925937-9bb4-488b-824d-3e2dd29b3f33" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/Version20260122104451.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/TaskController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/TaskController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/zayEntity/ProductCreate.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/zayEntity/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/ProductCreateForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ProductCreateForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/ProductCreateRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ProductCreateRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/product_admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/product_admin.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,6 +177,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\divya\symfony\assets\styles\scss" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -198,7 +203,7 @@
       <workItem from="1768821025356" duration="2771000" />
       <workItem from="1768976033268" duration="13313000" />
       <workItem from="1769061450276" duration="14755000" />
-      <workItem from="1770014615303" duration="3338000" />
+      <workItem from="1770014615303" duration="7087000" />
     </task>
     <servers />
   </component>

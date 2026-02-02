@@ -2,7 +2,7 @@
 
 namespace App\Form;
 
-use App\Entity\zayEntity\ProductCreate;
+use App\Entity\zayEntity\Product;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
@@ -38,7 +38,7 @@ class ProductCreateForm extends AbstractType
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-            'product_data_class' => ProductCreate::class,
+            'data_class' => Product::class,
         ]);
     }
 
