@@ -1,4 +1,7 @@
 {% extends 'base.html.twig' %}
+{%block nav %}
+{% endblock %}
+
 {% block body %}
     <div class="container">
         <div class="row justify-content-center">
@@ -33,7 +36,7 @@
                         </div>
                         <div class="row justify-content-center ">
                             <div class="col-6 text-center">
-                                <div class="alert alert-danger border
+                                <div class="alert alert-danger border d-none
 {#                                <?php echo empty($error) ? 'd-none' : ''; ?> #}
                                         " id="alertmsg">
                                     <p class="text-danger">
@@ -92,7 +95,7 @@
                                             <label for="check1" class="form-check-label">remember me</label>
                                         </div>
                                         <div class="col-6 mb-3 text-end">
-                                            <a href="/forgot_password">Forget password?</a>
+                                            <a href="/forget-password">Forget password?</a>
                                         </div>
                                     </div>
                                     <div class="row text-center">
@@ -115,6 +118,9 @@
             </div>
         </div>
     </div>
+{% endblock %}
+
+{%block footer %}
 {% endblock %}
 
 

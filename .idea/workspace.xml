@@ -5,27 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2925937-9bb4-488b-824d-3e2dd29b3f33" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Entity/zayEntity/CartProduct.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/login.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/product_cart.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/register.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/forget_password.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/profile/account.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/profile/inner_nav.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/scss/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/scss/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20260202112818.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20260202113357.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20260202120953.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20260203061003.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CategoryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DefaultController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/zayEntity/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/zayEntity/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/zayEntity/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/zayEntity/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/ProductCreateForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ProductCreateForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/category_admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/category_admin.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/product_admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/product_admin.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/support_admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/support_admin.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/shop.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shop.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,6 +200,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\divya\symfony\templates\profile" />
+      <recent name="C:\wamp64\www\divya\symfony\templates" />
       <recent name="C:\wamp64\www\divya\symfony\assets\styles\scss" />
     </key>
   </component>

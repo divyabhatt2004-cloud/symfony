@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="container pt-5 pb-5">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card shadow">
+                    <div class="card-body rounded-circle bg-light border border-black w-50 p-5 m-auto mt-3 mb-3">
+                        <img src="" class="card-img rounded-circle img-fluid w-50 p-5">
+                    </div>
+                    <div class="card-body">
+                        <a class="list-group-item border-0 text-success mb-1" href="account.php">Personal data</a>
+                        <a class="list-group-item text-success border-0 mb-1" href="wishlist.php">Wishlist</a>
+                        <a class="list-group-item text-success border-0 mb-1" href="#">Orders</a>
+                        <a class="list-group-item text-success border-0 mb-1" href="verify.php">Change password</a>
+                        <a class="list-group-item text-success border-0 mb-1" href="logout.php">Log out</a>
+                    </div>
+                </div>
+            </div>
+            {% block innerBody %}
+            {% endblock %}
+        </div>
+    </div>
+{% endblock %}

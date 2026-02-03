@@ -46,6 +46,21 @@ class DefaultController extends AbstractController
     {
         return $this->render('register.html.twig');
     }
+    #[Route(path: '/forget-password', name: 'forget_password')]
+    public function forget_password(): Response
+    {
+        return $this->render('forget_password.html.twig');
+    }
+    #[Route(path: '/account', name: 'account')]
+    public function account(): Response
+    {
+        return $this->render('profile/account.html.twig');
+    }
+    #[Route(path: '/wishlist', name: 'wishlist')]
+    public function wishlist(): Response
+    {
+        return $this->render('profile/wishlist.html.twig');
+    }
     #[Route(path: '/admin', name: 'admin')]
     public function admin(): Response
     {
