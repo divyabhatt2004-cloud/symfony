@@ -20,6 +20,7 @@
             </tr>
             </thead>
             <tbody>
+            {% if userSupportLists|length > 0 %}
             {% for userSupportlist in userSupportLists %}
             <tr>
                 <td>{{ loop.index }}</td>
@@ -34,6 +35,11 @@
                             class="fa-solid fa-trash-can"></i></a></td>
             </tr>
             {% endfor %}
+            {% else %}
+                <tr>
+                    <td colspan="7" class="text-center"> No result found</td>
+                </tr>
+            {% endif %}
             </tbody>
         </table>
     </div>

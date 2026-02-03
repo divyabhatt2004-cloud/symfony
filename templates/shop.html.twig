@@ -15,29 +15,30 @@
                                     <a class="d-flex justify-content-between text-decoration-none text-success border-0 pb-2">Categories
                                         <i class="fa-solid fa-circle-chevron-up text-black"></i>
                                     </a>
+
                                 </li>
-                                <div id="catelist" class="row mb-1">
+                                <li id="categoryList" class="row mb-1">
                                     <ul class="list-unstyled">
-                                        <?php while ($category_rows = mysqli_fetch_assoc($category_result)) {
-                                            ?>
-                                        <li>
-                                            <?php echo $category_rows['category name'] ?>
-                                        </li>
-                                        <?php
-                                        } ?>
+                                        {% if categoryLists|length > 0 %}
+                                            {% for categoryList in categoryLists %}
+                                                <li>{{ categoryList.categoryName }}</li>
+                                            {% endfor %}
+                                        {% else %}
+                                            <p class="text-center">No result found</p>
+                                        {% endif %}
                                     </ul>
-                                </div>
+                                </li>
                                 <li id="dropdown2">
                                     <a class="d-flex justify-content-between text-decoration-none text-success border-0">Gender
                                         <i class="fa-solid fa-circle-chevron-down text-black"></i>
                                     </a>
                                 </li>
-                                <div id="genderlist" class="row d-none">
+                                <li id="genderList" class="row d-none">
                                     <ul class="list-unstyled">
                                         <li class="row ms-1">Men</li>
                                         <li class="row ms-1">Women</li>
                                     </ul>
-                                </div>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -56,71 +57,71 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="row text-center d-none">
-                            <?php
-                            // while($fav_rows = mysqli_fetch_assoc($fav_Result) ){
-                            while ($product_row = mysqli_fetch_assoc($product_result)) {
-
-                                ?>
-                            <div class="col-md-4 mb-5" id="product">
-                                <div class="card product-wap mb-4 rounded-0" id="productcard">
-                                    <div class="position-relative">
-                                        <img src="./productimage/<?php echo $product_row['image']; ?>"
-                                             class="card-img rounded-0 img-fluid">
-                                        <ul class="list-unstyled start-0 end-0" id="actionBtns">
-                                            <li>
-                                                <?php if (!empty($favProductIds) && in_array($product_row['id'], $favProductIds)) { ?>
-                                                <a href="delete_from_wishlist.php?id=<?php echo $product_row['id']; ?>"
-                                                   class="text-white btn btn-success opacity-75 p-2 border-0 mb-1 rounded">
-                                                    <i class="fa-solid fa-heart"></i>
-                                                </a>
-                                                <?php } else { ?>
-                                                <a href="add_to_wishlist.php?id=<?php echo $product_row['id']; ?>"
-                                                   class="text-white btn btn-success opacity-75 p-2 border-0 mb-1 rounded">
-                                                    <i class="fa-regular fa-heart"></i>
-                                                </a>
-                                                <?php } ?>
-                                            </li>
-                                            <li>
-                                                <a href="./product_detail.php?id=<?php echo $product_row['id']; ?>"
-                                                   class="text-white btn btn-success opacity-75 p-2 border-0 mb-1 rounded">
-                                                    <i class="fa-solid fa-eye"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a class="text-white btn btn-success opacity-75 p-2 border-0 mb-1 rounded"
-                                                   href="add_to_cart.php?id=<?php echo $product_row['id']; ?>">
-                                                    <i class="fa-solid fa-cart-plus"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="card-body p-2 bg-white w-100 h-100">
-                                        <div class="row">
-                                            <div class="col-lg-8">
-                                                <p class=" h3 text-start card-title fw-light"><?php echo $product_row['product name']; ?></p>
-                                                <p class="card-text text-start"><?php echo $product_row['description']; ?></p>
+                        {% if productLists|length > 0 %}
+                            <div class="row text-center">
+                                {% for productList in productLists %}
+                                    <div class="col-md-4 mb-5" id="product">
+                                        <div class="card product-wap mb-4 rounded-0" id="productcard">
+                                            <div class="position-relative">
+                                                <img src="{{ productList.productImage }}"
+                                                     class="card-img rounded-0 img-fluid">
+                                                <ul class="list-unstyled start-0 end-0" id="actionBtns">
+                                                    <li>
+                                                        {#                                                <?php if (!empty($favProductIds) && in_array($product_row['id'], $favProductIds)) { ?> #}
+                                                        {#                                                <a href="delete_from_wishlist.php?id=<?php echo $product_row['id']; ?>" #}
+                                                        {#                                                   class="text-white btn btn-success opacity-75 p-2 border-0 mb-1 rounded"> #}
+                                                        {#                                                    <i class="fa-solid fa-heart"></i> #}
+                                                        {#                                                </a> #}
+                                                        {#                                                <?php } else { ?> #}
+                                                        <a href="add_to_wishlist.php?id=<?php echo $product_row['id']; ?>"
+                                                           class="text-white btn btn-success opacity-75 p-2 border-0 mb-1 rounded">
+                                                            <i class="fa-regular fa-heart"></i>
+                                                        </a>
+                                                        {#                                                <?php } ?> #}
+                                                    </li>
+                                                    <li>
+                                                        <a href="./product_detail.php?id=<?php echo $product_row['id']; ?>"
+                                                           class="text-white btn btn-success opacity-75 p-2 border-0 mb-1 rounded">
+                                                            <i class="fa-solid fa-eye"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="text-white btn btn-success opacity-75 p-2 border-0 mb-1 rounded"
+                                                           href="add_to_cart.php?id=<?php echo $product_row['id']; ?>">
+                                                            <i class="fa-solid fa-cart-plus"></i>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="card-body p-2 bg-white w-100 h-100">
+                                                <div class="row">
+                                                    <div class="col-lg-8">
+                                                        <p class=" h3 text-start card-title fw-light">{{ productList.productName }}</p>
+                                                        <p class="card-text text-start">{{ productList.productDescription }}</p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-8 offset-2">
+                                                        <i class="fa-solid fa-star text-warning"></i>
+                                                        <i class="fa-solid fa-star text-warning"></i>
+                                                        <i class="fa-solid fa-star text-warning"></i>
+                                                        <i class="fa-duotone fa-solid fa-star text-secandary opacity-50"></i>
+                                                        <i class="fa-duotone fa-solid fa-star text-secandary opacity-50"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="row text-center fw-lighter pt-1">
+                                                    <p class="h6 fw-light">${{ productList.price }}.00</p>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-8 offset-2">
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-solid fa-star text-warning"></i>
-                                                <i class="fa-duotone fa-solid fa-star text-secandary opacity-50"></i>
-                                                <i class="fa-duotone fa-solid fa-star text-secandary opacity-50"></i>
-                                            </div>
-                                        </div>
-                                        <div class="row text-center fw-lighter pt-1">
-                                            <p class="h6 fw-light"><?php echo '$' . $product_row['price'] . '.00'; ?></p>
-                                        </div>
                                     </div>
-                                </div>
+                                {% endfor %}
                             </div>
-                            <?php
-                            }
-                            ?>
-                        </div>
+                        {% else %}
+                            <tr>
+                                <td colspan="9" class="text-center"> No result found</td>
+                            </tr>
+                        {% endif %}
                     </div>
                 </div>
             </div>

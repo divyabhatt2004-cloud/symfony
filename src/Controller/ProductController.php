@@ -36,7 +36,7 @@ class ProductController extends AbstractController
         ]);
     }
     #[Route(path: '/update-product/{id}', name: 'update-product')]
-    public function editTodoList(Request $request,ProductCreateRepository $productRepository, EntityManagerInterface $em, string $id): Response
+    public function update_product(Request $request,ProductCreateRepository $productRepository, EntityManagerInterface $em, string $id): Response
     {
         $product = $productRepository->find(['id' => $id]);
         $form = $this->createForm(ProductCreateForm::class, $product);

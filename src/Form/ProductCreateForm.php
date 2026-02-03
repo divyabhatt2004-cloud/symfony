@@ -2,10 +2,11 @@
 
 namespace App\Form;
 
+use App\Entity\zayEntity\Category;
 use App\Entity\zayEntity\Product;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
-use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -17,20 +18,15 @@ class ProductCreateForm extends AbstractType
     {
         $builder
             ->add('product_name', TextType::class, ['required' => true])
-            ->add('product_image', FileType::class, ['required' => true])
+            ->add('product_image', FileType::class, ['required' => true,])
             ->add('product_description', TextareaType::class, ['required' => true])
             ->add('quantity', TextType::class, ['required' => true])
-            ->add('category', ChoiceType::class
-                , [
-                    'choices' => [
-                        'MenFashion' => 'menFashion',
-                        'WomenFashion' => 'womenFashion',
-                        'Other' => 'other',
-                    ],
-                    'placeholder' => 'Select the product category',
+            ->add('category', EntityType::class, [
+                    'class' => Category::class,
+                'choice_label' => 'categoryName',
+                'placeholder' => 'Select',
                     'required' => true,
-                ]
-            )
+                ])
             ->add('price', TextType::class, ['required' => true])
             ->add('gst', TextType::class, ['required' => true]);
     }

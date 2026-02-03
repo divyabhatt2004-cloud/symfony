@@ -18,8 +18,8 @@ class Product extends AbstractEntity
     private ?string $productDescription = null;
     #[ORM\Column(nullable: true)]
     private ?int $quantity = null;
-    #[ORM\Column(nullable: true)]
-    private ?string $category = null;
+    #[ORM\ManyToOne(targetEntity: Category::class)]
+    private ?Category $category = null;
     #[ORM\Column(nullable: true)]
     private ?int $price = null;
     #[ORM\Column(nullable: true)]
@@ -66,12 +66,12 @@ class Product extends AbstractEntity
         return $this;
     }
 
-    public function getCategory(): ?string
+    public function getCategory(): ?Category
     {
         return $this->category;
     }
 
-    public function setCategory(?string $category): self
+    public function setCategory(?Category $category): self
     {
         $this->category = $category;
         return $this;

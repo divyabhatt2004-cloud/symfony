@@ -5,7 +5,7 @@ namespace App\Entity\zayEntity;
 use App\Entity\AbstractEntity;
 use App\Repository\CategoryRepository;
 use Doctrine\ORM\Mapping as ORM;
-
+#[ORM\Table(name: 'category')]
 #[ORM\Entity(repositoryClass:CategoryRepository::class)]
 class Category extends AbstractEntity
 {
@@ -36,6 +36,10 @@ class Category extends AbstractEntity
     {
         $this->categoryType = $categoryType;
         return $this;
+    }
+    public function __toString(): string
+    {
+        return (string) $this->getCategoryName();
     }
     public function getCategoryDescription(): ?string
     {

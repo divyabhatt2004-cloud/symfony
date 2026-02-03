@@ -18,24 +18,24 @@
             </tr>
             </thead>
             <tbody>
-            <?php
-                                $sno = 0;
-                                while ($categoryrows = mysqli_fetch_assoc($categoryresult)) {
-                                    $sno++;
-                                ?>
-            <tr>
-                <td><?php echo   $sno; ?></td>
-                <td><?php echo $categoryrows['category name'] ?></td>
-                <td><?php echo $categoryrows['category type'] ?></td>
-                <td><?php echo $categoryrows['description'] ?></td>
-                <td><a class="text-success ms-2" href="category_update.php?id=<?php echo $categoryrows['id']; ?>"><i
-                            class="fa-solid fa-pen"></i></a><a class="text-danger ms-2"
-                                                               href="categaory_delete.php?id=<?php echo $categoryrows['id']; ?>"><i
-                            class="fa-solid fa-trash-can"></i></a></td>
-            </tr>
-            <?php
-                                }
-                                ?>
+            {% if categoryLists|length > 0 %}
+            {% for categoryList in categoryLists %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ categoryList.categoryName }}</td>
+                    <td>{{ categoryList.categoryType }}</td>
+                    <td>{{ categoryList.categoryDescription }}</td>
+                    <td><a class="text-success ms-2" href="{{ path('update-category',{'id':categoryList.id}) }}"><i
+                                class="fa-solid fa-pen"></i></a> <a class="text-danger ms-2"
+                                                                    href="{{ path('delete-category',{'id':categoryList.id}) }}"><i
+                                class="fa-solid fa-trash-can"></i></a></td>
+                </tr>
+            {% endfor %}
+            {% else %}
+                <tr>
+                    <td colspan="5" class="text-center"> No result found</td>
+                </tr>
+            {% endif %}
             </tbody>
         </table>
     </div>

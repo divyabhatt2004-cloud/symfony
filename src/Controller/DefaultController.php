@@ -3,6 +3,8 @@
 namespace App\Controller;
 
 
+use App\Repository\CategoryRepository;
+use App\Repository\ProductCreateRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
@@ -21,9 +23,28 @@ class DefaultController extends AbstractController
         return $this->render('about.html.twig');
     }
     #[Route(path: '/shop', name: 'shop')]
-    public function shop(): Response
+    public function shop(CategoryRepository $categoryRepository,ProductCreateRepository $productRepository): Response
     {
-        return $this->render('shop.html.twig');
+        $productList = $productRepository->findBy(['recordState' => '0']);
+        $categoryList = $categoryRepository->findBy(['recordState' => '0']);
+        return $this->render('shop.html.twig',
+            ['categoryLists' => $categoryList,'productLists' => $productList
+        ]);
+    }
+    #[Route(path: '/product-cart', name: 'product_cart')]
+    public function product_cart(): Response
+    {
+        return $this->render('product_cart.html.twig');
+    }
+    #[Route(path: '/login', name: 'login')]
+    public function login(): Response
+    {
+        return $this->render('login.html.twig');
+    }
+    #[Route(path: '/register', name: 'register')]
+    public function register(): Response
+    {
+        return $this->render('register.html.twig');
     }
     #[Route(path: '/admin', name: 'admin')]
     public function admin(): Response

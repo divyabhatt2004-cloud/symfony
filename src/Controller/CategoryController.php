@@ -14,9 +14,13 @@ use Symfony\Component\Routing\Attribute\Route;
 class CategoryController extends AbstractController
 {
     #[Route(path: '/category-admin', name: 'category_admin')]
-    public function categories_admin(): Response
+    public function category_admin(CategoryRepository $categoryRepository): Response
     {
-        return $this->render('admin/category_admin.html.twig');
+        $categoryList = $categoryRepository->findBy(['recordState' => '0']);
+        dump($categoryList);
+        return $this->render('admin/category_admin.html.twig', [
+            'categoryLists' => $categoryList,
+        ]);
     }
     #[Route(path: '/category-create', name: 'category_create')]
     public function category_create(Request $request, EntityManagerInterface $em): Response
@@ -35,7 +39,7 @@ class CategoryController extends AbstractController
         ]);
     }
     #[Route(path: '/update-category/{id}', name: 'update-category')]
-    public function editTodoList(Request $request,CategoryRepository $categoryRepository, EntityManagerInterface $em, string $id): Response
+    public function update_category(Request $request,CategoryRepository $categoryRepository, EntityManagerInterface $em, string $id): Response
     {
         $category = $categoryRepository->find(['id' => $id]);
         $form = $this->createForm(CategoryForm::class, $category);
@@ -51,8 +55,8 @@ class CategoryController extends AbstractController
             'form' => $form->createView(),
         ]);
     }
-    #[Route(path:'/delete-product/{id}', name: 'delete-product')]
-    public function delete_product(CategoryRepository $categoryRepository,EntityManagerInterface $em,string $id): Response
+    #[Route(path:'/delete-category/{id}', name: 'delete-category')]
+    public function delete_category(CategoryRepository $categoryRepository,EntityManagerInterface $em,string $id): Response
     {
         $category = $categoryRepository->find(['id' => $id]);
         $category->setRecordState(1);
@@ -60,4 +64,5 @@ class CategoryController extends AbstractController
         $em->flush();
         return $this->redirectToRoute('category_admin');
     }
+
 }
