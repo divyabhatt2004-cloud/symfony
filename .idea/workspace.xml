@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2925937-9bb4-488b-824d-3e2dd29b3f33" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/admin.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/category_admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/category_admin.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/inner_nav.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/inner_nav.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/product_admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/product_admin.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/zay-pages/base.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/CategoryForm.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/ProductCreateForm.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/UserContactForm.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/CategoryRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/ProductCreateRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/UserContactRepository.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,7 +228,7 @@
       <workItem from="1770014615303" duration="7087000" />
       <workItem from="1770031403832" duration="3353000" />
       <workItem from="1770048104041" duration="1479000" />
-      <workItem from="1770183807421" duration="2125000" />
+      <workItem from="1770183807421" duration="2460000" />
     </task>
     <servers />
   </component>
