@@ -67,19 +67,19 @@
                 <div class="mx-auto">
                     <ul class="navbar-nav" id="headerNav">
                         <li class="nav-item px-5">
-                            <a class="nav-link text-black" aria-current="page" href="/">Home</a>
+                            <a class="nav-link text-black" aria-current="page" href="{{ path('index') }}">Home</a>
                         </li>
                         <li class="nav-item px-5">
-                            <a class="nav-link text-black" href="/about">About</a>
+                            <a class="nav-link text-black" href="{{ path('about') }}">About</a>
                         </li>
                         <li class="nav-item px-5">
-                            <a class="nav-link text-black" href="/shop">Shop</a>
+                            <a class="nav-link text-black" href="{{ path('shop') }}">Shop</a>
                         </li>
                         <li class="nav-item px-5">
-                            <a class="nav-link text-black" href="/contact">Contact</a>
+                            <a class="nav-link text-black" href="{{ path('contact') }}">Contact</a>
                         </li>
                         <li class="nav-item px-5">
-                            <a class="nav-link text-black" href="/admin">Admin</a>
+                            <a class="nav-link text-black" href="{{ path('admin') }}">Admin</a>
                         </li>
                     </ul>
                 </div>
@@ -88,7 +88,7 @@
                      <i class="fa-solid fa-magnifying-glass"></i>
                  </span>
                     <span class="me-2 p-1">
-                     <a href="/product-cart" class="text-black"><i class="fa-sharp fa-solid fa-cart-arrow-down"></i></a>
+                     <a href="{{ path('product_cart') }}" class="text-black"><i class="fa-sharp fa-solid fa-cart-arrow-down"></i></a>
                  </span>
 
                     <span class="me-2 p-1">
@@ -98,8 +98,8 @@
                              <i class="fa-solid fa-user"></i>
                          </a>
                          <ul class="dropdown-menu">
-                                 <li><a class="dropdown-item text-success" href="/login">Login</a></li>
-                                 <li><a class="dropdown-item text-success" href="/register">Register</a></li>
+                                 <li><a class="dropdown-item text-success" href="{{ path('login') }}">Login</a></li>
+                                 <li><a class="dropdown-item text-success" href="{{ path('register') }}">Register</a></li>
                              </ul>
                      </div>
                  </span>
@@ -171,19 +171,19 @@
                     <h1 class="text-success border-bottom mb-5 pb-3">Further Info</h1>
                     <ul class="text-light list-unstyled">
                         <li class="mb-2">
-                            <a class="text-decoration-none text-light" href="index.php">Home</a>
+                            <a class="text-decoration-none text-light" href="{{ path('index') }}">Home</a>
                         </li>
                         <li class="mb-2">
-                            <a class="text-decoration-none text-light" href="about.php">About Us</a>
+                            <a class="text-decoration-none text-light" href="{{ path('about') }}">About Us</a>
                         </li>
                         <li class="mb-2">
-                            <a class="text-decoration-none text-light" href="shop.php">Shop Locations</a>
+                            <a class="text-decoration-none text-light" href="{{ path('shop') }}">Shop Locations</a>
                         </li>
                         <li class="mb-2">
                             <a class="text-decoration-none text-light" href="#">FAQs</a>
                         </li>
                         <li class="mb-2">
-                            <a class="text-decoration-none text-light" href="contact.php">Contact</a>
+                            <a class="text-decoration-none text-light" href="{{ path('contact') }}">Contact</a>
                         </li>
                     </ul>
                 </div>
