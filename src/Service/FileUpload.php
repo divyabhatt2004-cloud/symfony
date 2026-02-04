@@ -7,13 +7,14 @@ use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\String\Slugger\SluggerInterface;
 
+// https://symfony.com/doc/current/controller/upload_file.html
 class FileUpload
 {
     public function __construct(private readonly SluggerInterface $slugger, private readonly ParameterBagInterface $parameterBag)
     {
     }
 
-    public function uploadFile($folderName, UploadedFile $fileName)
+    public function uploadFile($folderName, UploadedFile $fileName): string
     {
         $originalFilename = pathinfo($fileName->getClientOriginalName(), PATHINFO_FILENAME);
         $safeFilename = $this->slugger->slug($originalFilename);

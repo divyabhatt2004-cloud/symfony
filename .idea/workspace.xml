@@ -4,27 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2925937-9bb4-488b-824d-3e2dd29b3f33" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/reference.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/reference.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/zayController/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/zayController/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/zayController/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/zayController/ContactController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/zayController/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/zayController/DefaultController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/zayController/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/zayController/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/zayEntity/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/ZayEntity/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/zayEntity/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/ZayEntity/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/zayEntity/UserContact.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/ZayEntity/UserContact.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/zayForm/CategoryForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/zayForm/CategoryForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/zayForm/ProductCreateForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/zayForm/ProductType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/zayForm/UserContactForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/zayForm/UserContactForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/zayRepository/CategoryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ZayRepository/CategoryRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/zayRepository/ProductCreateRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ZayRepository/ProductCreateRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/zayRepository/UserContactRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ZayRepository/UserContactRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/inner_nav.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/inner_nav.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/product_admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/product_admin.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/product_create.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/product_create.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/todo_list/form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/todo_list/form.html.twig" afterDir="false" />
-    </list>
+    <list default="true" id="c2925937-9bb4-488b-824d-3e2dd29b3f33" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
