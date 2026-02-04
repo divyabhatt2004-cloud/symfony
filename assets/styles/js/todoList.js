@@ -11,7 +11,6 @@ $(document).ready(function () {
         })
     }
 
-
     $('body').on('click','[data-type="popup"][data-edit="form"]',function(){
         window.bootbox.dialog({
             title: 'A custom dialog with buttons and callbacks',
@@ -45,6 +44,12 @@ $(document).ready(function () {
     })
 
 })
+// $(document).ready(function () {
+//   $('#categoryDropdown').on('click', function(){
+//       // $(this).toggleClass('fa-circle-chevron-up fa-circle-chevron-down');
+//       $('#categoryList').toggleClass('d-none ');
+//   })
+// })
 
 
 

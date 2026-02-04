@@ -9,15 +9,15 @@
                             <ul class="list-unstyled">
                                 <li>
                                     <a class="d-flex justify-content-between text-decoration-none border-0 text-success pb-2"
-                                       href="/shop">Product</a>
+                                       href="{{ path('shop') }}">Product</a>
                                 </li>
                                 <li id="dropdown">
                                     <a class="d-flex justify-content-between text-decoration-none text-success border-0 pb-2">Categories
-                                        <i class="fa-solid fa-circle-chevron-up text-black"></i>
+                                        <i class="fa-solid fa-circle-chevron-up text-black" id="categoryDropdown"></i>
                                     </a>
 
                                 </li>
-                                <li id="categoryList" class="row mb-1">
+                                <li id="categoryList" class="row mb-1 d-none">
                                     <ul class="list-unstyled">
                                         {% if categoryLists|length > 0 %}
                                             {% for categoryList in categoryLists %}
