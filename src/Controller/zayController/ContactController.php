@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\zayController;
 use App\Entity\zayEntity\UserContact;
-use App\Form\UserContactForm;
-use App\Repository\UserContactRepository;
+use App\Form\zayForm\UserContactForm;
+use App\Repository\zayRepository\UserContactRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;

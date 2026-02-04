@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\zayController;
 
 
-use App\Repository\CategoryRepository;
-use App\Repository\ProductCreateRepository;
+use App\Repository\zayRepository\CategoryRepository;
+use App\Repository\zayRepository\ProductCreateRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;

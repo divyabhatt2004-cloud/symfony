@@ -1,6 +1,7 @@
 <?php
 
-namespace App\Form;
+namespace App\Form\zayForm;
+
 use App\Entity\zayEntity\UserContact;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;

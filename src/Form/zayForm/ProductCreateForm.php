@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Form;
+namespace App\Form\zayForm;
 
 use App\Entity\zayEntity\Category;
 use App\Entity\zayEntity\Product;

@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\zayController;
 use App\Entity\zayEntity\Product;
-use App\Form\ProductCreateForm;
-use App\Repository\ProductCreateRepository;
+use App\Form\zayForm\ProductCreateForm;
+use App\Repository\zayRepository\ProductCreateRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
