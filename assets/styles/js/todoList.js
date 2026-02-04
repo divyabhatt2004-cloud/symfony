@@ -44,12 +44,6 @@ $(document).ready(function () {
     })
 
 })
-// $(document).ready(function () {
-//   $('#categoryDropdown').on('click', function(){
-//       // $(this).toggleClass('fa-circle-chevron-up fa-circle-chevron-down');
-//       $('#categoryList').toggleClass('d-none ');
-//   })
-// })
 
 
 

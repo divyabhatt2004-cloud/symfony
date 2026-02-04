@@ -11,9 +11,9 @@
                                     <a class="d-flex justify-content-between text-decoration-none border-0 text-success pb-2"
                                        href="{{ path('shop') }}">Product</a>
                                 </li>
-                                <li id="dropdown">
+                                <li>
                                     <a class="d-flex justify-content-between text-decoration-none text-success border-0 pb-2">Categories
-                                        <i class="fa-solid fa-circle-chevron-up text-black" id="categoryDropdown"></i>
+                                        <i class="fa-solid fa-circle-chevron-down text-black" id="categoryDropdown"></i>
                                     </a>
 
                                 </li>
@@ -28,9 +28,9 @@
                                         {% endif %}
                                     </ul>
                                 </li>
-                                <li id="dropdown2">
+                                <li>
                                     <a class="d-flex justify-content-between text-decoration-none text-success border-0">Gender
-                                        <i class="fa-solid fa-circle-chevron-down text-black"></i>
+                                        <i class="fa-solid fa-circle-chevron-down text-black" id="genderDropdown"></i>
                                     </a>
                                 </li>
                                 <li id="genderList" class="row d-none">
@@ -61,11 +61,11 @@
                             <div class="row text-center">
                                 {% for productList in productLists %}
                                     <div class="col-md-4 mb-5" id="product">
-                                        <div class="card product-wap mb-4 rounded-0" id="productcard">
+                                        <div class="card product-wap mb-4 rounded-0" id="productCard">
                                             <div class="position-relative">
                                                 <img src="{{ productList.productImage }}"
                                                      class="card-img rounded-0 img-fluid">
-                                                <ul class="list-unstyled start-0 end-0" id="actionBtns">
+                                                <ul class="list-unstyled start-0 end-0" id="actionButtons">
                                                     <li>
                                                         {#                                                <?php if (!empty($favProductIds) && in_array($product_row['id'], $favProductIds)) { ?> #}
                                                         {#                                                <a href="delete_from_wishlist.php?id=<?php echo $product_row['id']; ?>" #}
@@ -73,21 +73,21 @@
                                                         {#                                                    <i class="fa-solid fa-heart"></i> #}
                                                         {#                                                </a> #}
                                                         {#                                                <?php } else { ?> #}
-                                                        <a href="add_to_wishlist.php?id=<?php echo $product_row['id']; ?>"
+                                                        <a href=""
                                                            class="text-white btn btn-success opacity-75 p-2 border-0 mb-1 rounded">
                                                             <i class="fa-regular fa-heart"></i>
                                                         </a>
                                                         {#                                                <?php } ?> #}
                                                     </li>
                                                     <li>
-                                                        <a href="./product_detail.php?id=<?php echo $product_row['id']; ?>"
+                                                        <a href=""
                                                            class="text-white btn btn-success opacity-75 p-2 border-0 mb-1 rounded">
                                                             <i class="fa-solid fa-eye"></i>
                                                         </a>
                                                     </li>
                                                     <li>
                                                         <a class="text-white btn btn-success opacity-75 p-2 border-0 mb-1 rounded"
-                                                           href="add_to_cart.php?id=<?php echo $product_row['id']; ?>">
+                                                           href="">
                                                             <i class="fa-solid fa-cart-plus"></i>
                                                         </a>
                                                     </li>
@@ -130,13 +130,13 @@
     <script>
         $(document).ready(function () {
 
-            $('#dropdown i').on('click', function () {
+            $('#categoryDropdown').on('click', function () {
                 $(this).toggleClass('fa-circle-chevron-up fa-circle-chevron-down')
-                $('#catelist').toggleClass('d-none')
+                $('#categoryList').toggleClass('d-none')
             })
-            $('#dropdown2 i').on('click', function () {
+            $('#genderDropdown').on('click', function () {
                 $(this).toggleClass('fa-circle-chevron-down fa-circle-chevron-up')
-                $('#genderlist').toggleClass('d-none')
+                $('#genderList').toggleClass('d-none')
             })
             //  $('#heart').on('click', function() {
             //     $(this).toggleClass('fa-regular fa-solid')

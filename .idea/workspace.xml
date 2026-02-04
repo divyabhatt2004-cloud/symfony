@@ -7,8 +7,7 @@
     <list default="true" id="c2925937-9bb4-488b-824d-3e2dd29b3f33" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styles/js/todoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/js/todoList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/zay-pages/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/zay-pages/login.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/zay-pages/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/zay-pages/register.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/scss/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/scss/app.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/zay-pages/shop.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/zay-pages/shop.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -227,7 +226,7 @@
       <workItem from="1770014615303" duration="7087000" />
       <workItem from="1770031403832" duration="3353000" />
       <workItem from="1770048104041" duration="1479000" />
-      <workItem from="1770183807421" duration="4706000" />
+      <workItem from="1770183807421" duration="7275000" />
     </task>
     <servers />
   </component>
