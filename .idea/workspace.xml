@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2925937-9bb4-488b-824d-3e2dd29b3f33" name="Changes" comment="" />
+    <list default="true" id="c2925937-9bb4-488b-824d-3e2dd29b3f33" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/zayEntity/CartProduct.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/about.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contact.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/forget_password.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/list_page.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/product_cart.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/register.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/shop.html.twig" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,7 +50,7 @@
     <commands />
     <urls />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="$PROJECT_DIR$/../../../bin/php/php8.4.10/php.exe">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="$PROJECT_DIR$/../../../bin/php/php8.4.16/php.exe">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
       <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
@@ -200,7 +214,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-php-predefined-a98d8de5180a-0e0d91225499-com.jetbrains.php.sharedIndexes-PS-253.30387.85" />
+        <option value="bundled-php-predefined-a98d8de5180a-0e0d91225499-com.jetbrains.php.sharedIndexes-PS-253.29346.151" />
       </set>
     </attachedChunks>
   </component>
@@ -221,6 +235,7 @@
       <workItem from="1770014615303" duration="7087000" />
       <workItem from="1770031403832" duration="3353000" />
       <workItem from="1770048104041" duration="1479000" />
+      <workItem from="1770183807421" duration="687000" />
     </task>
     <servers />
   </component>

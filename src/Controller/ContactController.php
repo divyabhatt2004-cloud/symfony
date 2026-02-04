@@ -31,7 +31,7 @@ class ContactController extends AbstractController
             $em->flush();
             return $this->redirectToRoute('contact');
         }
-        return $this->render('contact.html.twig', [
+        return $this->render('zay-pages/contact.html.twig', [
             'form' => $form->createView(),
         ]);
     }
@@ -48,7 +48,7 @@ class ContactController extends AbstractController
             $em->flush();
             return $this->redirectToRoute('support_admin');
         }
-        return $this->render('contact.html.twig', [
+        return $this->render('zay-pages/contact.html.twig', [
             'form' => $form->createView(),
         ]);
     }
