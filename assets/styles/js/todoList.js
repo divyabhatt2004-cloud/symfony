@@ -1,4 +1,3 @@
-const $ = require('jquery');
 $(document).ready(function () {
     if ($('#table').length > 0) {
 
