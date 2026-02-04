@@ -3,7 +3,7 @@
 namespace App\Entity\zayEntity;
 
 use App\Entity\AbstractEntity;
-use App\Repository\CategoryRepository;
+use App\Repository\zayRepository\CategoryRepository;
 use Doctrine\ORM\Mapping as ORM;
 #[ORM\Table(name: 'category')]
 #[ORM\Entity(repositoryClass:CategoryRepository::class)]
