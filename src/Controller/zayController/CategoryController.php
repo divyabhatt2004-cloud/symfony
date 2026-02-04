@@ -2,9 +2,9 @@
 
 namespace App\Controller\zayController;
 
-use App\Entity\zayEntity\Category;
+use App\Entity\ZayEntity\Category;
 use App\Form\zayForm\CategoryForm;
-use App\Repository\zayRepository\CategoryRepository;
+use App\Repository\ZayRepository\CategoryRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;

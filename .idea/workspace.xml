@@ -1,8 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="c2925937-9bb4-488b-824d-3e2dd29b3f33" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/reference.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/reference.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/zayController/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/zayController/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/zayController/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/zayController/ContactController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/zayController/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/zayController/DefaultController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/zayController/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/zayController/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/zayEntity/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/ZayEntity/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/zayEntity/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/ZayEntity/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/zayEntity/UserContact.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/ZayEntity/UserContact.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/zayForm/CategoryForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/zayForm/CategoryForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/zayForm/ProductCreateForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/zayForm/ProductType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/zayForm/UserContactForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/zayForm/UserContactForm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/zayRepository/CategoryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ZayRepository/CategoryRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/zayRepository/ProductCreateRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ZayRepository/ProductCreateRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/zayRepository/UserContactRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ZayRepository/UserContactRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/inner_nav.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/inner_nav.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/product_admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/product_admin.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/product_create.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/product_create.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/todo_list/form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/todo_list/form.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,23 +187,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/wamp64/www/raghav/symfony",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "Symfony2.SettingsForm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/wamp64/www/raghav/symfony&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Symfony2.SettingsForm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\divya\symfony\assets\styles\scss" />

@@ -11,13 +11,16 @@
                 <div class="col-lg-6 col-md-4">
                     <label for="product_name" class="form-label">Product Name</label>
                     <div class="mb-3">
-                        {{ form_widget(form.product_name,{'attr':{'class':'form-control'}}) }}
+                        {{ form_widget(form.productName,{'attr':{'class':'form-control'}}) }}
+                        {{ form_errors(form.productName) }}
                     </div>
                 </div>
+
                 <div class="col-lg-6 col-md-4">
                     <label for="product_image" class="form-label">Upload image</label>
                     <div class="mb-3">
-                        {{ form_widget(form.product_image,{'attr':{'class':'form-control'}}) }}
+                        {{ form_widget(form.productImage,{'attr':{'class':'form-control'}}) }}
+                        {{ form_errors(form.productImage) }}
                     </div>
                 </div>
             </div>
@@ -25,17 +28,20 @@
                 <div class="col-lg-6 col-md-4">
                     <label for="product_description" class="form-label">Description</label>
                     <div class="mb-3">
-                        {{ form_widget(form.product_description,{'attr':{'class':'form-control'}}) }}
+                        {{ form_widget(form.productDescription,{'attr':{'class':'form-control'}}) }}
+                        {{ form_errors(form.productDescription) }}
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-4">
                     <label for="quantity" class="form-label">Quantity</label>
                     <div class="mb-3">
                         {{ form_widget(form.quantity,{'attr':{'class':'form-control'}}) }}
+                        {{ form_errors(form.quantity) }}
                     </div>
                     <label for="category" class="form-label">Categories</label>
                     <div>
                         {{ form_widget(form.category,{'attr':{'class':'form-select'}}) }}
+                        {{ form_errors(form.category) }}
 
 {#                                                    <select class="form-select" name="cate" id="cate"> #}
 {#                                                        <?php while ($categoryrow = mysqli_fetch_assoc($categorydata)) { #}
@@ -52,12 +58,14 @@
                     <label for="price" class="form-label">Price</label>
                     <div class="mb-3">
                         {{ form_widget(form.price,{'attr':{'class':'form-control'}}) }}
+                        {{ form_errors(form.price) }}
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-4">
                     <label for="gst" class="form-label">GST</label>
                     <div class="mb-3">
                         {{ form_widget(form.gst,{'attr':{'class':'form-control'}}) }}
+                        {{ form_errors(form.gst) }}
                     </div>
                 </div>
             </div>

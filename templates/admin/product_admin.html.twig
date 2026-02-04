@@ -11,9 +11,9 @@
         <table class="table">
             <thead>
             <tr>
-                <th>Srno</th>
+                <th>Sno</th>
                 <th>Product_name</th>
-                <th>Image</th>
+                <th width="150">Image</th>
                 <th>Description</th>
                 <th>Quantity</th>
                 <th>Category</th>
@@ -28,7 +28,7 @@
                 <tr>
                     <td>{{ loop.index }}</td>
                     <td>{{ productList.productName }}</td>
-                    <td>{{ productList.productImage }}</td>
+                    <td><img src="{{ asset('product/' ~ productList.productImage) }}" class="img-fluid w-25"> </td>
                     <td>{{ productList.productDescription }}</td>
                     <td>{{ productList.quantity }}</td>
                     <td>{{ productList.category }}</td>

@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Entity\zayEntity;
+namespace App\Entity\ZayEntity;
 
 use App\Entity\AbstractEntity;
-use App\Repository\ProductCreateRepository;
+use App\Repository\ZayRepository\ProductCreateRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Table(name: 'product')]

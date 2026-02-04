@@ -1,11 +1,9 @@
 <?php
 
-namespace App\Entity\zayEntity;
+namespace App\Entity\ZayEntity;
 
 use App\Entity\AbstractEntity;
-use App\Repository\UserContactRepository;
-use Doctrine\DBAL\Types\Type;
-use Doctrine\DBAL\Types\Types;
+use App\Repository\ZayRepository\UserContactRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Table(name: 'user_contact')]

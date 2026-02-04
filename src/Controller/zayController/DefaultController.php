@@ -3,8 +3,8 @@
 namespace App\Controller\zayController;
 
 
-use App\Repository\zayRepository\CategoryRepository;
-use App\Repository\zayRepository\ProductCreateRepository;
+use App\Repository\ZayRepository\CategoryRepository;
+use App\Repository\ZayRepository\ProductCreateRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;

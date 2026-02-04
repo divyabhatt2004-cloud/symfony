@@ -1,17 +1,17 @@
 <?php
 
-namespace App\Repository\zayRepository;
+namespace App\Repository\ZayRepository;
 
 
-use App\Entity\zayEntity\Category;
+use App\Entity\ZayEntity\Product;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 
-class CategoryRepository extends ServiceEntityRepository
+class ProductCreateRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Category::class);
+        parent::__construct($registry, Product::class);
     }
 }

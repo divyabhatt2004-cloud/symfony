@@ -1,14 +1,18 @@
 <?php
 
 namespace App\Controller\zayController;
-use App\Entity\zayEntity\Product;
-use App\Form\zayForm\ProductCreateForm;
-use App\Repository\zayRepository\ProductCreateRepository;
+
+use App\Entity\ZayEntity\Product;
+use App\Form\zayForm\ProductType;
+use App\Repository\ZayRepository\ProductCreateRepository;
+use App\Service\FileUpload;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Attribute\Route;
+
 class ProductController extends AbstractController
 {
     #[Route(path: '/product-admin', name: 'product_admin')]
@@ -19,14 +23,24 @@ class ProductController extends AbstractController
             'productLists' => $productList,
         ]);
     }
+
     #[Route(path: '/product-create', name: 'product_create')]
-    public function product_create(Request $request, EntityManagerInterface $em): Response
+    public function product_create(Request $request, FileUpload $fileUpload, EntityManagerInterface $em): Response
     {
         $product = new Product();
-        $form = $this->createForm(ProductCreateForm::class, $product);
+        $form = $this->createForm(ProductType::class, $product);
 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
+
+            /** @var UploadedFile $imageFile */
+            $imageFile = $form->get('productImage')->getData();
+
+            if ($imageFile) {
+                $fileName = $fileUpload->uploadFile('product', $imageFile);
+                $product->setProductImage($fileName);
+            }
+
             $em->persist($product);
             $em->flush();
             return $this->redirectToRoute('product_admin');
@@ -35,11 +49,12 @@ class ProductController extends AbstractController
             'form' => $form->createView(),
         ]);
     }
+
     #[Route(path: '/update-product/{id}', name: 'update-product')]
-    public function update_product(Request $request,ProductCreateRepository $productRepository, EntityManagerInterface $em, string $id): Response
+    public function update_product(Request $request, ProductCreateRepository $productRepository, EntityManagerInterface $em, string $id): Response
     {
         $product = $productRepository->find(['id' => $id]);
-        $form = $this->createForm(ProductCreateForm::class, $product);
+        $form = $this->createForm(ProductType::class, $product);
 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
@@ -52,8 +67,9 @@ class ProductController extends AbstractController
             'form' => $form->createView(),
         ]);
     }
-    #[Route(path:'/delete-product/{id}', name: 'delete-product')]
-    public function delete_product(ProductCreateRepository $productRepository,EntityManagerInterface $em,string $id): Response
+
+    #[Route(path: '/delete-product/{id}', name: 'delete-product')]
+    public function delete_product(ProductCreateRepository $productRepository, EntityManagerInterface $em, string $id): Response
     {
         $product = $productRepository->find(['id' => $id]);
         $product->setRecordState(1);
