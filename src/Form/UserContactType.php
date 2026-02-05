@@ -19,9 +19,9 @@ class UserContactType extends AbstractType
             ->add('email', EmailType::class,['required' => true])
             ->add('subject', TextType::class,['required' => true])
             ->add('message', TextareaType::class,['required' => true])
+            ->add('reply', TextType::class,['required' => true])
         ;
     }
-
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([

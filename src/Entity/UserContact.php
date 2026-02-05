@@ -20,7 +20,19 @@ class UserContact extends AbstractEntity
     private ?string $subject = null;
     #[ORM\Column(nullable: true)]
     private ?string $message = null;
+    #[ORM\Column(nullable: true)]
+    private ?string $reply = null;
 
+    public function getReply(): ?string
+    {
+        return $this->reply;
+    }
+
+    public function setReply(?string $reply): self
+    {
+        $this->reply = $reply;
+        return $this;
+    }
 
     public function getName(): ?string
     {
