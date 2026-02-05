@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Controller;
-use App\Entity\ZayEntity\UserContact;
-use App\Form\zayForm\UserContactForm;
-use App\Repository\ZayRepository\UserContactRepository;
+use App\Entity\UserContact;
+use App\Form\UserContactForm;
+use App\Repository\UserContactRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -31,7 +31,7 @@ class ContactController extends AbstractController
             $em->flush();
             return $this->redirectToRoute('contact');
         }
-        return $this->render('zay-pages/contact.html.twig', [
+        return $this->render('contact.html.twig', [
             'form' => $form->createView(),
         ]);
     }
@@ -48,7 +48,7 @@ class ContactController extends AbstractController
             $em->flush();
             return $this->redirectToRoute('support_admin');
         }
-        return $this->render('zay-pages/contact.html.twig', [
+        return $this->render('contact.html.twig', [
             'form' => $form->createView(),
         ]);
     }

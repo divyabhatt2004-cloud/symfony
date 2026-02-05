@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Repository\ZayRepository;
+namespace App\Repository;
 
 
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
-use App\Entity\ZayEntity\UserContact;
+use App\Entity\UserContact;
 use Doctrine\Persistence\ManagerRegistry;
 
 

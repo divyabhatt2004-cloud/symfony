@@ -1,13 +1,14 @@
 <?php
 
-namespace App\Entity\ZayEntity;
+namespace App\Entity;
 
 use App\Entity\AbstractEntity;
-use App\Repository\ZayRepository\ProductCreateRepository;
+use App\Repository\ProductCreateRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Table(name: 'product')]
 #[ORM\Entity(repositoryClass:ProductCreateRepository::class)]
+
 class Product extends AbstractEntity
 {
     #[ORM\Column(nullable: true)]

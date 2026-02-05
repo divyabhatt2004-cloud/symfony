@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Repository\ZayRepository;
+namespace App\Repository;
 
 
-use App\Entity\ZayEntity\Category;
+use App\Entity\Category;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 

@@ -2,9 +2,9 @@
 
 namespace App\Controller;
 
-use App\Entity\ZayEntity\Product;
-use App\Form\zayForm\ProductType;
-use App\Repository\ZayRepository\ProductCreateRepository;
+use App\Entity\Product;
+use App\Form\ProductType;
+use App\Repository\ProductCreateRepository;
 use App\Service\FileUpload;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -16,12 +16,12 @@ use Symfony\Component\Routing\Attribute\Route;
 class ProductController extends AbstractController
 {
     #[Route(path: '/product-admin', name: 'product_admin')]
-    public function product_admin(ProductCreateRepository $productRepository): Response
+    public function product_admin(): Response
     {
         return $this->render('admin/product_admin.html.twig');
     }
     #[Route(path: '/product-table', name: 'product_table')]
-    public function todoListTable(Request $request, ProductCreateRepository $productRepository): Response
+    public function todoListTable(ProductCreateRepository $productRepository): Response
     {
         $productList = $productRepository->getProducts();
 

@@ -1,12 +1,14 @@
 <?php
 
-namespace App\Entity\ZayEntity;
+namespace App\Entity;
 
 use App\Entity\AbstractEntity;
-use App\Repository\ZayRepository\CategoryRepository;
+use App\Repository\CategoryRepository;
 use Doctrine\ORM\Mapping as ORM;
+
 #[ORM\Table(name: 'category')]
 #[ORM\Entity(repositoryClass:CategoryRepository::class)]
+
 class Category extends AbstractEntity
 {
     #[ORM\Column(nullable: true)]
