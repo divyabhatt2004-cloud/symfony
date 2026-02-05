@@ -44,10 +44,9 @@ class ContactController extends AbstractController
     #[Route(path: '/edit-user-request/{id}', name: 'edit_user_request')]
     public function edit_user_request(Request $request,UserContactRepository $editUserRepository, EntityManagerInterface $em, string $id): Response
     {
-        $isEditMode = (null !== $id);
         $user = $editUserRepository->find(['id' => $id]);
         $form = $this->createForm(UserContactType::class, $user, [
-            'is_edit_mode' => $isEditMode, // Pass the condition as a form option
+            'id' => $id, // Pass the condition as a form option
         ]);
 
 

@@ -19,9 +19,9 @@ class UserContactType extends AbstractType
             ->add('email', EmailType::class, ['required' => true])
             ->add('subject', TextType::class, ['required' => true])
             ->add('message', TextareaType::class, ['required' => true]);
-            if ($options['is_edit_mode'] === true) {
-               $builder ->add('reply', TextType::class, ['required' => true]);
-                }
+        if ($options['id']) {
+            $builder->add('reply', TextType::class, ['required' => true]);
+        }
 
     }
 
@@ -29,7 +29,7 @@ class UserContactType extends AbstractType
     {
         $resolver->setDefaults([
             'user_data_class' => UserContact::class,
-            'is_edit_mode' => false,
+            'id' => false,
         ]);
     }
 

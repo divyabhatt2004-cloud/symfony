@@ -8,9 +8,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ContactController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form/UserContactType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/UserContactType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/request_update.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/request_update.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/contact.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/formLayout/cantact_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/formLayout/cantact_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/tables/request_table.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tables/request_table.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,7 +225,7 @@
       <workItem from="1770031403832" duration="3353000" />
       <workItem from="1770196774485" duration="708000" />
       <workItem from="1770270692855" duration="3833000" />
-      <workItem from="1770274592179" duration="10228000" />
+      <workItem from="1770274592179" duration="11070000" />
     </task>
     <servers />
   </component>

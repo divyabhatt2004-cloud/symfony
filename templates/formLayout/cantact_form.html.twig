@@ -25,7 +25,7 @@
         {{ form_widget(form.message,{'attr':{'class':'form-control'}}) }}
     </div>
 </div>
-{% if app.request.query.get('id') is not null %}
+{% if form.reply is defined and form.reply%}
     {# Only display targetField if 'id' is in the URL query parameters #}
     <div class="row">
         <label for="reply" class="form-label">Reply</label>
