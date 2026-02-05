@@ -18,8 +18,14 @@ class ProductController extends AbstractController
     #[Route(path: '/product-admin', name: 'product_admin')]
     public function product_admin(ProductCreateRepository $productRepository): Response
     {
-        $productList = $productRepository->findBy(['recordState' => '0']);
-        return $this->render('admin/product_admin.html.twig', [
+        return $this->render('admin/product_admin.html.twig');
+    }
+    #[Route(path: '/product-table', name: 'product_table')]
+    public function todoListTable(Request $request, ProductCreateRepository $productRepository): Response
+    {
+        $productList = $productRepository->getProducts();
+
+        return $this->render('product_table.html.twig', [
             'productLists' => $productList,
         ]);
     }

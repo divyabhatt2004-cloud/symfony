@@ -4,7 +4,7 @@
        <div class="card p-3 my-5">
            <div class="card-body">
                <div class="row text-center mt-3">
-                   <p class="h1">Add product</p>
+                   <p class="h1">{{ titleType|default('Add product') }}</p>
                </div>
                <div class="row">
                    {{ form_start(form) }}

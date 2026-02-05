@@ -14,4 +14,13 @@ class ProductCreateRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Product::class);
     }
+    public function getProducts(): ?array
+    {
+        return $this->findBy(['recordState' => 0]);
+    }
+
+    public function getProductById(string $productId)
+    {
+        return $this->findOneBy(['id' => $productId, 'recordState' => 0]);
+    }
 }

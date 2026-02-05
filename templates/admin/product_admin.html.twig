@@ -8,47 +8,12 @@
         </div>
     </div>
     <div>
-        <table class="table">
-            <thead>
-            <tr>
-                <th>Sno</th>
-                <th>Product_name</th>
-                <th width="150">Image</th>
-                <th>Description</th>
-                <th>Quantity</th>
-                <th>Category</th>
-                <th>Price</th>
-                <th>GST</th>
-                <th>Action</th>
-            </tr>
-            </thead>
-            <tbody>
-            {% if productLists|length > 0 %}
-            {% for productList in productLists %}
-                <tr>
-                    <td>{{ loop.index }}</td>
-                    <td>{{ productList.productName }}</td>
-                    <td><img src="{{ asset('product/' ~ productList.productImage) }}" class="img-fluid w-25"> </td>
-                    <td>{{ productList.productDescription }}</td>
-                    <td>{{ productList.quantity }}</td>
-                    <td>{{ productList.category }}</td>
-                    <td>{{ productList.price }}</td>
-                    <td>{{ productList.gst }}</td>
-                    <td>
-                        <a class="text-success ms-2" href="{{ path('update-product',{'id':productList.id}) }}"><i
-                                class="fa-solid fa-pen"></i></a>
-                        <a class="text-danger" href="{{ path('delete-product',{'id':productList.id}) }}"><i
-                                class="fa-solid fa-trash-can"></i></a>
-                    </td>
-                </tr>
-            {% endfor %}
-            {% else %}
-                <tr>
-                    <td colspan="9" class="text-center"> No result found</td>
-                </tr>
-            {% endif %}
-
-            </tbody>
-        </table>
+        <div class="col-12" id="product_table">
+            <div class="text-center">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock %}

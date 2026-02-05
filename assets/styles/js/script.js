@@ -1,2 +1,2 @@
-import './todoList';
+import './admin';
 import './shop';
