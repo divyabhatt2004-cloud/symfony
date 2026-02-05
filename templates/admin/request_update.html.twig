@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container p-5">
+        <div class="card rounded-0">
+            <div class="card-body p-5">
+                <div class="row text-center mt-3 pb-2">
+                    <p class="h1 fw-light">Update Request</p>
+                </div>
+                <div class="row" id="productForm">
+                    {% include 'formLayout/cantact_form.html.twig' with {'form': form} %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{#{{ titleType|default('Create product') }}#}

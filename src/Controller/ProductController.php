@@ -69,7 +69,7 @@ class ProductController extends AbstractController
             $em->flush();
             return $this->redirectToRoute('product_admin');
         }
-        return $this->render('/admin/product_create.html.twig', [
+        return $this->render('/admin/product_update.html.twig', [
             'form' => $form->createView(),
         ]);
     }

@@ -1,0 +1,32 @@
+{{ form_start(form) }}
+<div class="row">
+    <div class="col-lg-6 col-md-4">
+        <label for="name1" class="form-label">Name</label>
+        <div class="mb-3">
+            {{ form_widget(form.name,{'attr':{'class':'form-control'}}) }}
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-4">
+        <label for="email1" class="form-label">Email</label>
+        <div class="mb-3">
+            {{ form_widget(form.email,{'attr':{'class':'form-control'}}) }}
+        </div>
+    </div>
+</div>
+<div class="row">
+    <label for="subject1" class="form-label">Subject</label>
+    <div class="mb-3">
+        {{ form_widget(form.subject,{'attr':{'class':'form-control'}}) }}
+    </div>
+</div>
+<div class="row">
+    <label for="message1" class="form-label">Message</label>
+    <div class="mb-3">
+        {{ form_widget(form.message,{'attr':{'class':'form-control rows-10'}}) }}
+    </div>
+</div>
+<div class="col-6 text-end offset-6 pt-2">
+    <input type="submit" class="btn btn-success text-white fs-5" name="submit_contact"
+           value="Let's Talk"></input>
+</div>
+{{ form_end(form) }}
