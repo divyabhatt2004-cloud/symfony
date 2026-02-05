@@ -1,12 +1,12 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-    <div class="container">
-       <div class="card p-3 my-5">
-           <div class="card-body">
-               <div class="row text-center mt-3">
+    <div class="container p-5">
+       <div class="card rounded-0">
+           <div class="card-body p-5">
+               <div class="row text-center mt-3 pb-2">
                    <p class="h1">{{ titleType|default('Add product') }}</p>
                </div>
-               <div class="row">
+               <div class="row" id="productForm">
                    {{ form_start(form) }}
                    {#            <form method="post" class="mt-5 mb-5" enctype="multipart/form-data"> #}
                    <div class="row">
