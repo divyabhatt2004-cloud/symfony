@@ -14,8 +14,6 @@ class Category extends AbstractEntity
     #[ORM\Column(nullable: true)]
     private ?string $categoryName = null;
     #[ORM\Column(nullable: true)]
-    private ?string $categoryType = null;
-    #[ORM\Column(nullable: true)]
     private ?string $categoryDescription = null;
 
     public function getCategoryName(): ?string
@@ -26,16 +24,6 @@ class Category extends AbstractEntity
     public function setCategoryName(?string $categoryName): self
     {
         $this->categoryName = $categoryName;
-        return $this;
-    }
-    public function getCategoryType(): ?string
-    {
-        return $this->categoryType;
-    }
-
-    public function setCategoryType(?string $categoryType): self
-    {
-        $this->categoryType = $categoryType;
         return $this;
     }
     public function __toString(): string

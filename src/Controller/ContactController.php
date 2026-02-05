@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 use App\Entity\UserContact;
-use App\Form\UserContactForm;
+use App\Form\UserContactType;
 use App\Repository\UserContactRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -29,7 +29,7 @@ class ContactController extends AbstractController
     public function contact(Request $request, EntityManagerInterface $em): Response
     {
         $user = new UserContact();
-        $form = $this->createForm(UserContactForm::class, $user);
+        $form = $this->createForm(UserContactType::class, $user);
 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
@@ -45,7 +45,7 @@ class ContactController extends AbstractController
     public function edit_user_request(Request $request,UserContactRepository $editUserRepository, EntityManagerInterface $em, string $id): Response
     {
         $user = $editUserRepository->find(['id' => $id]);
-        $form = $this->createForm(UserContactForm::class, $user);
+        $form = $this->createForm(UserContactType::class, $user);
 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {

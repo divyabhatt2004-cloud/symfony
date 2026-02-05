@@ -5,19 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2925937-9bb4-488b-824d-3e2dd29b3f33" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/tables/category_table.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/tables/request_table.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/js/admin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CategoryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ContactController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/CategoryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/CategoryRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/UserContactRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserContactRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/category_admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/category_admin.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/product_admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/product_admin.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/support_admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/support_admin.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/product_table.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tables/product_table.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/CategoryForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/CategoryType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/UserContactForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/UserContactType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/category_create.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/category_create.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/inner_nav.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/inner_nav.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,7 +226,7 @@
       <workItem from="1770031403832" duration="3353000" />
       <workItem from="1770196774485" duration="708000" />
       <workItem from="1770270692855" duration="3833000" />
-      <workItem from="1770274592179" duration="2715000" />
+      <workItem from="1770274592179" duration="3874000" />
     </task>
     <servers />
   </component>

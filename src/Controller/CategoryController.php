@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Category;
-use App\Form\CategoryForm;
+use App\Form\CategoryType;
 use App\Repository\CategoryRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -31,7 +31,7 @@ class CategoryController extends AbstractController
     public function category_create(Request $request, EntityManagerInterface $em): Response
     {
         $category = new Category();
-        $form = $this->createForm(CategoryForm::class, $category);
+        $form = $this->createForm(CategoryType::class, $category);
 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
@@ -47,7 +47,7 @@ class CategoryController extends AbstractController
     public function update_category(Request $request,CategoryRepository $categoryRepository, EntityManagerInterface $em, string $id): Response
     {
         $category = $categoryRepository->find(['id' => $id]);
-        $form = $this->createForm(CategoryForm::class, $category);
+        $form = $this->createForm(CategoryType::class, $category);
 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
