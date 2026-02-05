@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller\zayController;
+namespace App\Controller;
 
 use App\Entity\ZayEntity\Category;
 use App\Form\zayForm\CategoryForm;

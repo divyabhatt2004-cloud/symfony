@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller\zayController;
+namespace App\Controller;
 
 
 use App\Repository\ZayRepository\CategoryRepository;

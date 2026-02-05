@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller\zayController;
+namespace App\Controller;
 use App\Entity\ZayEntity\UserContact;
 use App\Form\zayForm\UserContactForm;
 use App\Repository\ZayRepository\UserContactRepository;
