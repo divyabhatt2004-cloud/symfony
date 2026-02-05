@@ -73,21 +73,21 @@
                                                         {#                                                    <i class="fa-solid fa-heart"></i> #}
                                                         {#                                                </a> #}
                                                         {#                                                <?php } else { ?> #}
-                                                        <a href=""
+                                                        <a href="{{ path('add_to_wishlist',{'id':productList.id}) }}"
                                                            class="text-white btn btn-success opacity-75 p-2 border-0 mb-1 rounded">
                                                             <i class="fa-regular fa-heart"></i>
                                                         </a>
                                                         {#                                                <?php } ?> #}
                                                     </li>
                                                     <li>
-                                                        <a href=""
+                                                        <a href="{{ path('product_detials',{'id':productList.id}) }}"
                                                            class="text-white btn btn-success opacity-75 p-2 border-0 mb-1 rounded">
                                                             <i class="fa-solid fa-eye"></i>
                                                         </a>
                                                     </li>
                                                     <li>
                                                         <a class="text-white btn btn-success opacity-75 p-2 border-0 mb-1 rounded"
-                                                           href="">
+                                                           href="{{ path('add_to_cart',{'id':productList.id}) }}">
                                                             <i class="fa-solid fa-cart-plus"></i>
                                                         </a>
                                                     </li>

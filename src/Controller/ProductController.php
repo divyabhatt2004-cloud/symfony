@@ -4,7 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Product;
 use App\Form\ProductType;
-use App\Repository\ProductCreateRepository;
+use App\Repository\ProductRepository;
 use App\Service\FileUpload;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -21,7 +21,7 @@ class ProductController extends AbstractController
         return $this->render('admin/product_admin.html.twig');
     }
     #[Route(path: '/product-table', name: 'product_table')]
-    public function productTable(ProductCreateRepository $productRepository): Response
+    public function productTable(ProductRepository $productRepository): Response
     {
         $productList = $productRepository->getProducts();
 
@@ -57,7 +57,7 @@ class ProductController extends AbstractController
     }
 
     #[Route(path: '/update-product/{id}', name: 'update_product')]
-    public function update_product(Request $request, ProductCreateRepository $productRepository, EntityManagerInterface $em, string $id): Response
+    public function update_product(Request $request, ProductRepository $productRepository, EntityManagerInterface $em, string $id): Response
     {
         $product = $productRepository->find(['id' => $id]);
         $form = $this->createForm(ProductType::class, $product);
@@ -75,7 +75,7 @@ class ProductController extends AbstractController
     }
 
     #[Route(path: '/delete-product/{id}', name: 'delete_product')]
-    public function delete_product(ProductCreateRepository $productRepository, EntityManagerInterface $em, string $id): Response
+    public function delete_product(ProductRepository $productRepository, EntityManagerInterface $em, string $id): Response
     {
         $product = $productRepository->find(['id' => $id]);
         $product->setRecordState(1);

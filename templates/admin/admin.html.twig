@@ -18,41 +18,7 @@
             </tr>
             </thead>
             <tbody>
-            <?php
-                                $sno = 0;
-                                while ($user_rows = mysqli_fetch_assoc($user_result)) {
-                                    $sno++;
-                                ?>
-            <tr>
-                <td><?php echo   $sno; ?></td>
-                <td><?php echo   $user_rows['name']; ?></td>
-                <td><?php echo   $user_rows['email']; ?></td>
-                <td><?php echo   $user_rows['password']; ?></td>
-                <td>
-                    <!-- <button class="border-0 bg-white" onclick="active()"> -->
-                    <a class="text-success me-1" id="active" href="user_update.php?id=<?php echo $user_rows['id']; ?>">
-                        <?php if($user_rows['active'] == 1 )
-                                                { ?>
-                        <i class="fa-solid fa-check" id="user_active"></i>
-                        <?php
-                                                }else
-                                                {
-                                                ?>
-                        <i class="fa-solid fa-xmark text-danger" id="user_nonactive"></i>
-                        <?php
-                                                }
-                                                ?>
-                    </a>
-                    <!-- </button> -->
-                    <a class="text-danger" href="user_delete.php?id=<?php echo $user_rows['id']; ?>">
-                        <i class="fa-solid fa-trash-can"></i>
-                    </a>
-                </td>
-            </tr>
-            <!-- <i class="fa-solid fa-xmark>"</i> -->
-            <?php
-                                }
-                                ?>
+
             </tbody>
         </table>
     </div>
