@@ -15,17 +15,21 @@ class UserContactType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('name', TextType::class,['required' => true])
-            ->add('email', EmailType::class,['required' => true])
-            ->add('subject', TextType::class,['required' => true])
-            ->add('message', TextareaType::class,['required' => true])
-            ->add('reply', TextType::class,['required' => true])
-        ;
+            ->add('name', TextType::class, ['required' => true])
+            ->add('email', EmailType::class, ['required' => true])
+            ->add('subject', TextType::class, ['required' => true])
+            ->add('message', TextareaType::class, ['required' => true]);
+            if ($options['is_edit_mode'] === true) {
+               $builder ->add('reply', TextType::class, ['required' => true]);
+                }
+
     }
+
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
             'user_data_class' => UserContact::class,
+            'is_edit_mode' => false,
         ]);
     }
 
