@@ -14,4 +14,13 @@ class UserContactRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, UserContact::class);
     }
+    public function getUserRequests(): ?array
+    {
+        return $this->findBy(['recordState' => 0]);
+    }
+
+    public function getUserRequestById(string $productId)
+    {
+        return $this->findOneBy(['id' => $productId, 'recordState' => 0]);
+    }
 }

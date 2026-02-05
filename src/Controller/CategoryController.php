@@ -14,11 +14,16 @@ use Symfony\Component\Routing\Attribute\Route;
 class CategoryController extends AbstractController
 {
     #[Route(path: '/category-admin', name: 'category_admin')]
-    public function category_admin(CategoryRepository $categoryRepository): Response
+    public function category_admin(): Response
     {
-        $categoryList = $categoryRepository->findBy(['recordState' => '0']);
-        dump($categoryList);
-        return $this->render('admin/category_admin.html.twig', [
+        return $this->render('admin/category_admin.html.twig');
+    }
+    #[Route(path: '/category-table', name: 'category_table')]
+    public function categoryTable(CategoryRepository $categoryRepository): Response
+    {
+        $categoryList = $categoryRepository->getCategories();
+
+        return $this->render('tables/category_table.html.twig', [
             'categoryLists' => $categoryList,
         ]);
     }
@@ -38,7 +43,7 @@ class CategoryController extends AbstractController
             'form' => $form->createView(),
         ]);
     }
-    #[Route(path: '/update-category/{id}', name: 'update-category')]
+    #[Route(path: '/update-category/{id}', name: 'update_category')]
     public function update_category(Request $request,CategoryRepository $categoryRepository, EntityManagerInterface $em, string $id): Response
     {
         $category = $categoryRepository->find(['id' => $id]);
@@ -55,7 +60,7 @@ class CategoryController extends AbstractController
             'form' => $form->createView(),
         ]);
     }
-    #[Route(path:'/delete-category/{id}', name: 'delete-category')]
+    #[Route(path:'/delete-category/{id}', name: 'delete_category')]
     public function delete_category(CategoryRepository $categoryRepository,EntityManagerInterface $em,string $id): Response
     {
         $category = $categoryRepository->find(['id' => $id]);

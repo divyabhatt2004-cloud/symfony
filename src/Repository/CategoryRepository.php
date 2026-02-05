@@ -14,4 +14,13 @@ class CategoryRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Category::class);
     }
+    public function getCategories(): ?array
+    {
+        return $this->findBy(['recordState' => 0]);
+    }
+
+    public function getCategoryById(string $productId)
+    {
+        return $this->findOneBy(['id' => $productId, 'recordState' => 0]);
+    }
 }

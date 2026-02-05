@@ -1,11 +1,31 @@
 $(document).ready(function () {
-    if ($('#product_table').length > 0) {
+    if ($('#productTable').length > 0) {
 
         $.ajax({
             type: 'get',
             url: '/product-table',
             success: function (res) {
-                $('#product_table').html(res);
+                $('#productTable').html(res);
+            },
+        })
+    }
+    if ($('#categoryTable').length > 0) {
+
+        $.ajax({
+            type: 'get',
+            url: '/category-table',
+            success: function (res) {
+                $('#categoryTable').html(res);
+            },
+        })
+    }
+    if ($('#requestTable').length > 0) {
+
+        $.ajax({
+            type: 'get',
+            url: '/request-table',
+            success: function (res) {
+                $('#requestTable').html(res);
             },
         })
     }

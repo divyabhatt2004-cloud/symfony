@@ -12,10 +12,16 @@ use Symfony\Component\Routing\Attribute\Route;
 class ContactController extends AbstractController
 {
     #[Route(path: '/support-admin', name: 'support_admin')]
-    public function support_admin(UserContactRepository $UserSupportRepository): Response
+    public function support_admin(): Response
     {
-        $userSupportList = $UserSupportRepository->findBy(['recordState' => '0']);
-        return $this->render('admin/support_admin.html.twig', [
+        return $this->render('admin/support_admin.html.twig');
+    }
+    #[Route(path: '/request-table', name: 'request_table')]
+    public function productTable(UserContactRepository $UserSupportRepository): Response
+    {
+        $userSupportList = $UserSupportRepository->getUserRequests();
+
+        return $this->render('tables/request_table.html.twig', [
             'userSupportLists' => $userSupportList,
         ]);
     }
@@ -35,7 +41,7 @@ class ContactController extends AbstractController
             'form' => $form->createView(),
         ]);
     }
-    #[Route(path: '/edit-user-request/{id}', name: 'edit-user-request')]
+    #[Route(path: '/edit-user-request/{id}', name: 'edit_user_request')]
     public function edit_user_request(Request $request,UserContactRepository $editUserRepository, EntityManagerInterface $em, string $id): Response
     {
         $user = $editUserRepository->find(['id' => $id]);
@@ -52,7 +58,7 @@ class ContactController extends AbstractController
             'form' => $form->createView(),
         ]);
     }
-    #[Route(path:'/delete-user-request/{id}', name: 'delete-user-request')]
+    #[Route(path:'/delete-user-request/{id}', name: 'delete_user_request')]
     public function delete_user_request(UserContactRepository $deleteUserRepository,EntityManagerInterface $em,string $id): Response
     {
         $user = $deleteUserRepository->find(['id' => $id]);

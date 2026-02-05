@@ -5,29 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2925937-9bb4-488b-824d-3e2dd29b3f33" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/tables/category_table.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/tables/request_table.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/js/admin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CategoryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ContactController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DefaultController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/ZayEntity/Category.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/ZayEntity/Product.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/ZayEntity/UserContact.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/zayForm/CategoryForm.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/zayForm/ProductType.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/zayForm/UserContactForm.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ZayRepository/CategoryRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ZayRepository/ProductCreateRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ZayRepository/UserContactRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/zay-pages/about.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/zay-pages/contact.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/zay-pages/forget_password.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/zay-pages/form.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/zay-pages/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/zay-pages/login.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/zay-pages/product_cart.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/zay-pages/register.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/zay-pages/shop.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/CategoryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/CategoryRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/UserContactRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserContactRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/category_admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/category_admin.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/product_admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/product_admin.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/support_admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/support_admin.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/product_table.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tables/product_table.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,6 +200,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\divya\symfony\templates\tables" />
       <recent name="C:\wamp64\www\divya\symfony\src\Entity" />
       <recent name="C:\wamp64\www\divya\symfony\src\Controller" />
       <recent name="C:\wamp64\www\divya\symfony\assets\styles\scss" />
@@ -240,7 +231,7 @@
       <workItem from="1770031403832" duration="3353000" />
       <workItem from="1770196774485" duration="708000" />
       <workItem from="1770270692855" duration="3833000" />
-      <workItem from="1770274592179" duration="819000" />
+      <workItem from="1770274592179" duration="2715000" />
     </task>
     <servers />
   </component>

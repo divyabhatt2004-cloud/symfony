@@ -21,11 +21,11 @@ class ProductController extends AbstractController
         return $this->render('admin/product_admin.html.twig');
     }
     #[Route(path: '/product-table', name: 'product_table')]
-    public function todoListTable(ProductCreateRepository $productRepository): Response
+    public function productTable(ProductCreateRepository $productRepository): Response
     {
         $productList = $productRepository->getProducts();
 
-        return $this->render('product_table.html.twig', [
+        return $this->render('tables/product_table.html.twig', [
             'productLists' => $productList,
         ]);
     }
@@ -56,7 +56,7 @@ class ProductController extends AbstractController
         ]);
     }
 
-    #[Route(path: '/update-product/{id}', name: 'update-product')]
+    #[Route(path: '/update-product/{id}', name: 'update_product')]
     public function update_product(Request $request, ProductCreateRepository $productRepository, EntityManagerInterface $em, string $id): Response
     {
         $product = $productRepository->find(['id' => $id]);
@@ -74,7 +74,7 @@ class ProductController extends AbstractController
         ]);
     }
 
-    #[Route(path: '/delete-product/{id}', name: 'delete-product')]
+    #[Route(path: '/delete-product/{id}', name: 'delete_product')]
     public function delete_product(ProductCreateRepository $productRepository, EntityManagerInterface $em, string $id): Response
     {
         $product = $productRepository->find(['id' => $id]);
