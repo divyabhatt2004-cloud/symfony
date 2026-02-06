@@ -23,6 +23,7 @@
     },
     "dependencies": {
         "@popperjs/core": "^2.11.8",
+        "alertifyjs": "^1.14.0",
         "bootbox": "^6.0.4",
         "bootstrap": "5.3.8",
         "i": "^0.3.7",

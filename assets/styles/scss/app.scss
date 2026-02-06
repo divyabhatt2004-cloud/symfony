@@ -1,6 +1,7 @@
 @use "sass:color";
 @use "sass:string";
 @use "bootstrap" ;
+@use 'alertifyjs/build/css/alertify.min.css'  as *;
 
 body {
     font-family: 'Roboto', sans-serif;

@@ -9,6 +9,7 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
+
 class CartProductController extends AbstractController
 {
     #[Route(path: '/product-cart', name: 'product_cart')]
@@ -16,20 +17,28 @@ class CartProductController extends AbstractController
     {
         return $this->render('product_cart.html.twig');
     }
+
     #[Route(path: '/add-to-cart/{id}', name: 'add_to_cart')]
-    public function add_to_cart(ProductRepository $productRepository,CartProductRepository $cartProductRepository, EntityManagerInterface $em, string $id): Response
+    public function add_to_cart(ProductRepository $productRepository, CartProductRepository $cartProductRepository, EntityManagerInterface $em, string $id): Response
     {
-//        $product = $productRepository->find(['id' => $id]);
+        //        $product = $productRepository->find(['id' => $id]);
         $product = $productRepository->getProductById($id);
-//        dd($product);
+        if (!$product) {
+            return $this->json(['status' => false, 'msg' => 'Product not found']);
+        }
         $cartProduct = new CartProduct();
 
-        $cartProduct->setProduct($product);
+        $cartProduct->setProductId($product->getId());
+        $cartProduct->setProductName($product->getProductName());
+        $cartProduct->setProductImage($product->getProductImage());
+        $cartProduct->setProductDescription($product->getProductDescription());
+        $cartProduct->setCategory($product->getCategory());
+        $cartProduct->setPrice($product->getPrice());
+        $cartProduct->setGst($product->getGst());
         $cartProduct->setQuantity(1);
-        $cartProduct->setRecordState(0);
         $em->persist($cartProduct);
         $em->flush();
-        return $this->redirectToRoute('shop');
+        return $this->json(['status' => true, 'msg' => 'add to cart success']);
 
     }
 
