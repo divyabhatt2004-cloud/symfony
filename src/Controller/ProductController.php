@@ -83,4 +83,9 @@ class ProductController extends AbstractController
         $em->flush();
         return $this->redirectToRoute('product_admin');
     }
+    #[Route(path: '/product-details/{id}', name: 'product_details')]
+    public function product_details(): Response
+    {
+        return $this->render('shop.html.twig');
+    }
 }

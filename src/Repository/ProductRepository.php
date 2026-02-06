@@ -19,8 +19,8 @@ class ProductRepository extends ServiceEntityRepository
         return $this->findBy(['recordState' => 0]);
     }
 
-    public function getProductById(string $productId)
+    public function getProductById(string $productId): ?Product
     {
-        return $this->findOneBy(['id' => $productId, 'recordState' => 0]);
+        return $this->findOneBy(['id' => $productId]);
     }
 }
