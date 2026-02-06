@@ -48,11 +48,6 @@ class ContactController extends AbstractController
         $form = $this->createForm(UserContactType::class, $user, [
             'id' => $id, // Pass the condition as a form option
         ]);
-
-
-//        $form = $this->createForm(YourFormType::class, $entity, [
-//            'is_edit_mode' => $isEditMode, // Pass the condition as a form option
-//        ]);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
 

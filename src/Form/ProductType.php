@@ -28,30 +28,28 @@ class ProductType extends AbstractType
                 'required' => false,
             ])
             ->add('price', TextType::class, ['required' => true])
-            ->add('gst', TextType::class, ['required' => true])
+            ->add('gst', TextType::class, ['required' => true]);
 
-
-            ->add('productImage', FileType::class, [
-                'label' => 'Product Image',
+        if (!$options['id']) {
+            $builder->add('productImage', FileType::class, ['label' => 'Product Image',
                 'mapped' => false,
                 'required' => false,
-                'constraints' => [
-                    new Assert\Image(
-                        maxSize: '10M',
-                        mimeTypesMessage: 'Please upload a valid image (JPG, PNG, WEBP, GIF)',
-                    ),
-                ],
-            ])
-        ;
-
-        ;
+                'constraints' => [new Assert\Image(
+                    maxSize: '10M',
+                    mimeTypesMessage: 'Please upload a valid image (JPG, PNG, WEBP, GIF)',
+                ),],]);
+        }
     }
 
-    public function configureOptions(OptionsResolver $resolver): void
-    {
-        $resolver->setDefaults([
-            'data_class' => Product::class,
-        ]);
-    }
+
+public
+function configureOptions(OptionsResolver $resolver): void
+{
+    $resolver->setDefaults([
+        'data_class' => Product::class,
+        'id' => false,
+        'editProduct' => false
+    ]);
+}
 
 }

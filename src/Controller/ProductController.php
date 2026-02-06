@@ -7,6 +7,7 @@ use App\Form\ProductType;
 use App\Repository\ProductRepository;
 use App\Service\FileUpload;
 use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Bridge\Doctrine\Attribute\MapEntity;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Response;
@@ -31,7 +32,7 @@ class ProductController extends AbstractController
     }
 
     #[Route(path: '/product-create', name: 'product_create')]
-    public function product_create(Request $request, FileUpload $fileUpload, EntityManagerInterface $em): Response
+    public function product_create(Request $request,FileUpload $fileUpload,EntityManagerInterface $em): Response
     {
         $product = new Product();
         $form = $this->createForm(ProductType::class, $product);
@@ -52,25 +53,30 @@ class ProductController extends AbstractController
             return $this->redirectToRoute('product_admin');
         }
         return $this->render('admin/product_create.html.twig', [
-            'form' => $form->createView(),
+            'form' => $form->createView(),'editProduct' => $product,
         ]);
     }
 
     #[Route(path: '/update-product/{id}', name: 'update_product')]
-    public function update_product(Request $request, ProductRepository $productRepository, EntityManagerInterface $em, string $id): Response
+    public function update_product(Request $request, FileUpload $fileUpload,Product $editProduct, ProductRepository $productRepository, EntityManagerInterface $em, string $id): Response
     {
         $product = $productRepository->find(['id' => $id]);
-        $form = $this->createForm(ProductType::class, $product);
+        $form = $this->createForm(ProductType::class, $product, [
+            'id' => $id, ]);// Pass the condition as a form option
 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-
+            $imageFile = $form->get('productImage')->getData();
+            if ($imageFile) {
+                $fileName = $fileUpload->uploadFile('product', $imageFile);
+                $product->setProductImage($fileName);
+            }
             $em->persist($product);
             $em->flush();
             return $this->redirectToRoute('product_admin');
         }
         return $this->render('/admin/product_update.html.twig', [
-            'form' => $form->createView(),
+            'form' => $form->createView(),'editProduct' => $editProduct,
         ]);
     }
 
