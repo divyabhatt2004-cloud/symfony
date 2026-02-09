@@ -17,6 +17,15 @@ class CartProductController extends AbstractController
     {
         return $this->render('product_cart.html.twig');
     }
+    #[Route(path: '/productCart-table', name: 'productCartTable')]
+    public function productCartTable(CartProductRepository $productCartRepository): Response
+    {
+        $productCartList = $productCartRepository->getCartProducts();
+
+        return $this->render('tables/product_cartTable.html.twig', [
+            'productCartLists' => $productCartList,
+        ]);
+    }
 
     #[Route(path: '/add-to-cart/{id}', name: 'add_to_cart')]
     public function add_to_cart(ProductRepository $productRepository, EntityManagerInterface $em, string $id): Response
@@ -39,5 +48,14 @@ class CartProductController extends AbstractController
         $em->flush();
         return $this->json(['status' => true, 'msg' => 'add to cart success','errorMsg'=>'add to cart failed']);
 
+    }
+    #[Route(path: '/delete-from-cart/{id}', name: 'delete_from_cart')]
+    public function delete_from_cart(CartProductRepository $productCartRepository, EntityManagerInterface $em, string $id): Response
+    {
+        $cartProduct = $productCartRepository->find(['id' => $id]);
+        $cartProduct->setRecordState(1);
+        $em->persist($cartProduct);
+        $em->flush();
+        return $this->redirectToRoute('product_cart');
     }
 }

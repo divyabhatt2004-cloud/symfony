@@ -13,8 +13,21 @@ $(document).ready(function(){
                 else{
                     alertify.error(res.errorMsg)
                 }
-            }
+            },
         })
 
     })
+})
+
+$(document).ready(function(){
+    if($('#product_cartTable').length > 0) {
+
+        $.ajax({
+            type: 'get',
+            url: '/productCart-table',
+            success: function (res) {
+                $('#product_cartTable').html(res);
+            },
+        })
+    }
 })
