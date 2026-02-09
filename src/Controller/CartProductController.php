@@ -19,9 +19,8 @@ class CartProductController extends AbstractController
     }
 
     #[Route(path: '/add-to-cart/{id}', name: 'add_to_cart')]
-    public function add_to_cart(ProductRepository $productRepository, CartProductRepository $cartProductRepository, EntityManagerInterface $em, string $id): Response
+    public function add_to_cart(ProductRepository $productRepository, EntityManagerInterface $em, string $id): Response
     {
-        //        $product = $productRepository->find(['id' => $id]);
         $product = $productRepository->getProductById($id);
         if (!$product) {
             return $this->json(['status' => false, 'msg' => 'Product not found']);
@@ -38,7 +37,7 @@ class CartProductController extends AbstractController
         $cartProduct->setQuantity(1);
         $em->persist($cartProduct);
         $em->flush();
-        return $this->json(['status' => true, 'msg' => 'add to cart success']);
+        return $this->json(['status' => true, 'msg' => 'add to cart success','errorMsg'=>'add to cart failed']);
 
     }
 }

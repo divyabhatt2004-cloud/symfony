@@ -11,7 +11,7 @@ $(document).ready(function(){
                     alertify.success(res.msg)
                 }
                 else{
-                    alertify.error(res.msg)
+                    alertify.error(res.errorMsg)
                 }
             }
         })

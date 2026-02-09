@@ -90,8 +90,29 @@ class ProductController extends AbstractController
         return $this->redirectToRoute('product_admin');
     }
     #[Route(path: '/product-details/{id}', name: 'product_details')]
-    public function product_details(): Response
+    public function product_details(ProductRepository $productRepository, EntityManagerInterface $em, string $id): Response
     {
-        return $this->render('shop.html.twig');
+        $productList = $productRepository->getProductById($id);
+        return $this->render('product_details.html.twig',[
+            'productLists' => $productList,
+        ]);
+    }
+    #[Route(path: '/add-to-wishlist/{id}', name: 'add_to_wishlist')]
+    public function add_to_wishlist(ProductRepository $productRepository, EntityManagerInterface $em, string $id): Response
+    {
+        $product = $productRepository->find(['id' => $id]);
+        $product->setWishlist(1);
+        $em->persist($product);
+        $em->flush();
+        return $this->json(['status' => true, 'msg' => 'add to wishlist success','errorMsg'=>'add to wishlist failed']);
+    }
+    #[Route(path: '/remove-from-wishlist/{id}', name: 'remove_from_wishlist')]
+    public function remove_from_wishlist(ProductRepository $productRepository, EntityManagerInterface $em, string $id): Response
+    {
+        $product = $productRepository->find(['id' => $id]);
+        $product->setWishlist(0);
+        $em->persist($product);
+        $em->flush();
+        return $this->json(['status' => true, 'msg' => 'remove from wishlist success','errorMsg'=>'remove from wishlist failed']);
     }
 }

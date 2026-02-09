@@ -67,17 +67,21 @@
                                                      class="card-img rounded-0 img-fluid">
                                                 <ul class="list-unstyled start-0 end-0" id="actionButtons">
                                                     <li>
-                                                        {#                                                <?php if (!empty($favProductIds) && in_array($product_row['id'], $favProductIds)) { ?> #}
-                                                        {#                                                <a href="delete_from_wishlist.php?id=<?php echo $product_row['id']; ?>" #}
-                                                        {#                                                   class="text-white btn btn-success opacity-75 p-2 border-0 mb-1 rounded"> #}
-                                                        {#                                                    <i class="fa-solid fa-heart"></i> #}
-                                                        {#                                                </a> #}
-                                                        {#                                                <?php } else { ?> #}
-                                                        <a href="{{ path('add_to_wishlist',{'id':productList.id}) }}"
-                                                           class="text-white btn btn-success opacity-75 p-2 border-0 mb-1 rounded">
-                                                            <i class="fa-regular fa-heart"></i>
-                                                        </a>
-                                                        {#                                                <?php } ?> #}
+                                                        {% if productList.wishlist == 0 %}
+                                                            <a data-action="add2wishlist"
+                                                               data-url="{{ path('add_to_wishlist',{'id':productList.id}) }}"
+                                                               href="javascript:void(0)"
+                                                               class="text-white btn btn-success opacity-75 p-2 border-0 mb-1 rounded">
+                                                                <i class="fa-regular fa-heart"></i>
+                                                            </a>
+                                                        {% else %}
+                                                            <a data-action="removeFromWishlist"
+                                                               data-url="{{ path('remove_from_wishlist',{'id':productList.id}) }}"
+                                                               href="javascript:void(0)"
+                                                               class="text-white btn btn-success opacity-75 p-2 border-0 mb-1 rounded">
+                                                                <i class="fa-solid fa-heart"></i>
+                                                            </a>
+                                                        {% endif %}
                                                     </li>
                                                     <li>
                                                         <a href="{{ path('product_details',{'id':productList.id}) }}"
@@ -87,7 +91,9 @@
                                                     </li>
                                                     <li>
                                                         <a class="text-white btn btn-success opacity-75 p-2 border-0 mb-1 rounded"
-                                                           data-action="add2Cart" data-url="{{ path('add_to_cart',{'id':productList.id}) }}" href="javascript:void(0)">
+                                                           data-action="add2Cart"
+                                                           data-url="{{ path('add_to_cart',{'id':productList.id}) }}"
+                                                           href="javascript:void(0)">
                                                             <i class="fa-solid fa-cart-plus"></i>
                                                         </a>
                                                     </li>

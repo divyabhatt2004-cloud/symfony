@@ -26,3 +26,22 @@ body {
 .product-wap{
     cursor: pointer;
 }
+
+#imageUpdateButtons{
+    position: absolute;
+    display: none !important;
+    top: 70%;
+}
+
+#image-slot:hover  #imageUpdateButtons{
+    display: block !important;
+    transition: ease-in-out 6s;
+}
+
+#uploadedImage:hover{
+    opacity: 50%;
+}
+
+#image-slot{
+    cursor: pointer;
+}

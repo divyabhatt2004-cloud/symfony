@@ -31,11 +31,6 @@ class DefaultController extends AbstractController
             ['categoryLists' => $categoryList,'productLists' => $productList
         ]);
     }
-    #[Route(path: '/add-to-wishlist/{id}', name: 'add_to_wishlist')]
-    public function add_to_wishlist(): Response
-    {
-        return $this->render('shop.html.twig');
-    }
     #[Route(path: '/login', name: 'login')]
     public function login(): Response
     {
