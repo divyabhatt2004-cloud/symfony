@@ -41,5 +41,4 @@ class CartProductController extends AbstractController
         return $this->json(['status' => true, 'msg' => 'add to cart success']);
 
     }
-
 }
