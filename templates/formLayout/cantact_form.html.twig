@@ -3,26 +3,26 @@
     <div class="col-lg-6 col-md-4">
         <label for="name1" class="form-label">Name</label>
         <div class="mb-3">
-            {{ form_widget(form.name,{'attr':{'class':'form-control'}}) }}
+            {{ form_widget(form.name) }}
         </div>
     </div>
     <div class="col-lg-6 col-md-4">
         <label for="email1" class="form-label">Email</label>
         <div class="mb-3">
-            {{ form_widget(form.email,{'attr':{'class':'form-control'}}) }}
+            {{ form_widget(form.email) }}
         </div>
     </div>
 </div>
 <div class="row">
     <label for="subject1" class="form-label">Subject</label>
     <div class="mb-3">
-        {{ form_widget(form.subject,{'attr':{'class':'form-control'}}) }}
+        {{ form_widget(form.subject) }}
     </div>
 </div>
 <div class="row">
     <label for="message1" class="form-label">Message</label>
     <div class="mb-3">
-        {{ form_widget(form.message,{'attr':{'class':'form-control'}}) }}
+        {{ form_widget(form.message) }}
     </div>
 </div>
 {% if form.reply is defined and form.reply%}
@@ -30,7 +30,7 @@
     <div class="row">
         <label for="reply" class="form-label">Reply</label>
         <div class="mb-3">
-            {{ form_widget(form.reply,{'attr':{'class':'form-control'}}) }}
+            {{ form_widget(form.reply) }}
         </div>
     </div>
 {% endif %}
