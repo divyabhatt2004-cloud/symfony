@@ -8,11 +8,7 @@
     </div>
     <div>
         <div class="col-12" id="requestTable">
-            <div class="text-center">
-                <div class="spinner-border text-primary" role="status">
-                    <span class="visually-hidden">Loading...</span>
-                </div>
-            </div>
+            {{ include('tables/request_table.html.twig') }}
         </div>
     </div>
 {% endblock %}

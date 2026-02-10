@@ -1,0 +1,132 @@
+<div class="row">
+    <div class="col-md-12">
+            {% if query is defined and query|length > 0 %}
+
+                <div class="{{ tableResponsiveClass|default('table-responsive-lg') }}">
+                    {% block table %}
+                    {% endblock %}
+                </div>
+                {% block pagination %}
+                    {% if pagination is defined %}
+
+                        {% set paginationData = pagination.paginationData |default([]) %}
+
+                        <div class="card-footer">
+                            <div class="row align-items-center">
+                                <div class="col-12 col-md-6 text-end text-md-start mb-2">
+                                    <p class="m-0 text-secondary">
+                                        total row {{ paginationData.totalCount |default(0)  }} from {{ paginationData.firstItemNumber |default(0) }} to {{paginationData.lastItemNumber |default(0)  }}</p>
+                                </div>
+
+                                <div class="col-12 col-md-6 d-flex flex-column flex-md-row align-items-end align-items-md-center justify-content-end mb-2">
+                                    {% block recordPerPage %}
+                                        {% if recordsPerPage is defined %}
+                                            <label class="pe-1">
+                                                <select id="recordsPerPage" name="records" class="form-select"
+                                                    {{ stimulus_controller('table') }} {{ stimulus_target('table', 'pagination') }} {{ stimulus_action('table', 'showRecords', 'change') }}>
+                                                    <option value="10" {{ recordsPerPage == 10 ? 'selected' : '' }}>10
+                                                    </option>
+                                                    <option value="25" {{ recordsPerPage == 25 ? 'selected' : '' }}>25
+                                                    </option>
+                                                    <option value="50" {{ recordsPerPage == 50 ? 'selected' : '' }}>50
+                                                    </option>
+                                                    <option value="75" {{ recordsPerPage == 75 ? 'selected' : '' }}>75
+                                                    </option>
+                                                    <option value="100" {{ recordsPerPage == 100 ? 'selected' : '' }}>
+                                                        100
+                                                    </option>
+                                                    <option value="250" {{ recordsPerPage == 250 ? 'selected' : '' }}>
+                                                        250
+                                                    </option>
+                                                </select>
+                                            </label>
+                                        {% endif %}
+                                    {% endblock %}
+                                    {% if paginationData.totalCount |default(0) %}
+                                        {% set prev = (paginationData.current |default(1) > 0) ? paginationData.current - 1 : 0 %}
+
+                                        <ul class="pagination">
+
+                                            <!-- Previous Button -->
+                                            {% if paginationData.previous is defined %}
+                                                <li class="page-item">
+                                                    <a class="page-link"
+                                                       href="{{ path(app.current_route, app.request.attributes.get('_route_params')|merge({'page': paginationData.previous})) }}"
+                                                       data-page="{{ prev }}" data-controller="table"
+                                                       data-action="click->table#pagination"
+                                                       data-table-target="pagination">
+                                                        <!-- Tabler Icon for left arrow -->
+                                                        <i class="ti ti-chevron-left icon"></i>
+                                                        prev
+                                                    </a>
+                                                </li>
+                                            {% else %}
+                                                <li class="page-item disabled">
+                                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+                                                        <!-- Tabler Icon for left arrow (disabled) -->
+                                                        <i class="ti ti-chevron-left icon"></i>
+                                                        prev
+                                                    </a>
+                                                </li>
+                                            {% endif %}
+
+                                            <!-- Pagination Links -->
+                                            {% for page in paginationData.pagesInRange %}
+                                                {% if page > 0 %}
+                                                    {% if page == paginationData.current %}
+                                                        <li class="page-item active">
+                                                            <a class="page-link"
+                                                               href="{{ path(app.current_route, app.request.attributes.get('_route_params')|merge({'page': page})) }}"
+                                                               data-controller="table"
+                                                               data-action="click->table#pagination"
+                                                               data-table-target="pagination"
+                                                               data-page="{{ page }}">{{ page }}</a>
+                                                        </li>
+                                                    {% else %}
+                                                        <li class="page-item">
+                                                            <a class="page-link"
+                                                               href="{{ path(app.current_route, app.request.attributes.get('_route_params')|merge({'page': page})) }}"
+                                                               data-controller="table"
+                                                               data-action="click->table#pagination"
+                                                               data-table-target="pagination" data-page="{{ page }}">
+                                                                {{ page }}
+                                                            </a>
+                                                        </li>
+                                                    {% endif %}
+                                                {% endif %}
+                                            {% endfor %}
+
+                                            <!-- Next Button -->
+                                            {% if paginationData.next is defined %}
+                                                <li class="page-item">
+                                                    <a class="page-link"
+                                                       href="{{ path(app.current_route, app.request.attributes.get('_route_params')|merge({'page': paginationData.next})) }}"
+                                                       data-controller="table" data-action="click->table#pagination"
+                                                       data-table-target="pagination"
+                                                       data-page="{{ paginationData.next }}">
+                                                        next
+                                                        <i class="ti ti-chevron-right icon"></i>
+                                                    </a>
+                                                </li>
+                                            {% else %}
+                                                <li class="page-item disabled">
+                                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+                                                        next
+                                                        <i class="ti ti-chevron-right icon"></i>
+                                                    </a>
+                                                </li>
+                                            {% endif %}
+                                        </ul>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endblock %}
+            {% else %}
+                {% block noRecord %}
+                    <h4 class="text-center my-2 py-2">no records</h4>
+                {% endblock %}
+            {% endif %}
+    </div>
+</div>

@@ -1,24 +1,27 @@
+import alertify from "alertifyjs";
+
 $(document).ready(function () {
-    if ($('#productTable').length > 0) {
 
-        $.ajax({
-            type: 'get',
-            url: '/product-table',
-            success: function (res) {
-                $('#productTable').html(res);
-            },
-        })
-    }
-    if ($('#categoryTable').length > 0) {
-
-        $.ajax({
-            type: 'get',
-            url: '/category-table',
-            success: function (res) {
-                $('#categoryTable').html(res);
-            },
-        })
-    }
+    // if ($('#productTable').length > 0) {
+    //
+    //     $.ajax({
+    //         type: 'get',
+    //         url: '/product-table',
+    //         success: function (res) {
+    //             $('#productTable').html(res);
+    //         },
+    //     })
+    // }
+    // if ($('#categoryTable').length > 0) {
+    //
+    //     $.ajax({
+    //         type: 'get',
+    //         url: '/category-table',
+    //         success: function (res) {
+    //             $('#categoryTable').html(res);
+    //         },
+    //     })
+    // }
     if ($('#requestTable').length > 0) {
 
         $.ajax({

@@ -14,9 +14,28 @@ class ProductRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Product::class);
     }
-    public function getProducts(): ?array
+
+    public function getProducts(?array $filters = []): ?array
     {
-        return $this->findBy(['recordState' => 0]);
+
+        $query = $this->createQueryBuilder('p')
+            ->where('p.recordState = :recordState')
+            ->setParameter('recordState', 0);
+
+
+        if (isset($filters['sort']) && $filters['sort'] && $filters['direction']) {
+            $query->orderBy($filters['sort'], $filters['direction']);
+        } else {
+            $query->orderBy('p.id', 'DESC');
+        }
+
+        if(isset($filters['search']) && $filters['search'])
+        {
+            $query->andWhere('p.productName LIKE :search')
+            ->setParameter('search', '%'.$filters['search'].'%');
+        }
+
+        return $query->getQuery()->getResult();
     }
 
     public function getProductById(string $productId): ?Product

@@ -1,9 +1,11 @@
+{% extends 'tables/knp_paginator.html.twig' %}
+{% block table %}
 <table class="table">
     <thead>
     <tr>
         <th>Sno</th>
-        <th>Category name</th>
-        <th>Description</th>
+        <th>{{ knp_pagination_sortable(categoryLists, 'Name', 'c.categoryName') }}</th>
+        <th>{{ knp_pagination_sortable(categoryLists, 'Description', 'c.categoryDescription') }}</th>
         <th>Action</th>
     </tr>
     </thead>
@@ -27,3 +29,4 @@
     {% endif %}
     </tbody>
 </table>
+{% endblock %}

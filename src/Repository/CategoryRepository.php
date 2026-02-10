@@ -14,9 +14,26 @@ class CategoryRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Category::class);
     }
-    public function getCategories(): ?array
+    public function getCategories(?array $filters = []): ?array
     {
-        return $this->findBy(['recordState' => 0]);
+        $query = $this->createQueryBuilder('c')
+            ->where('c.recordState =:recordState')
+            ->setParameter('recordState', 0);
+
+        if (isset($filters['sort']) && $filters['sort'] && $filters['direction']) {
+
+            $query->orderBy($filters['sort'], $filters['direction']);
+        } else {
+            $query->orderBy('c.id', 'DESC');
+        }
+
+        if(isset($filters['search']) && $filters['search'])
+        {
+            $query->andWhere('c.productName LIKE :search')
+                ->setParameter('search', '%'.$filters['search'].'%');
+        }
+
+        return $query->getQuery()->getResult();
     }
 
     public function getCategoryById(string $productId)

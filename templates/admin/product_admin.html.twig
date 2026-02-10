@@ -1,19 +1,14 @@
 {% extends 'admin/inner_nav.html.twig' %}
 
+{% block actionButton %}
+    <button class="btn btn-success"><a href="{{ path('product_create') }}" class="text-white text-decoration-none">Create
+            <i class="fa-solid fa-circle-plus"></i></a></button>
+{% endblock %}
+
 {% block innerCardBody %}
-    <div class="row text-end border-bottom pb-2">
-        <div class=" offset-10 col-lg-2">
-            <button class="btn btn-success"><a href="{{ path('product_create') }}" class="text-white text-decoration-none">Create
-                    <i class="fa-solid fa-circle-plus"></i></a></button>
-        </div>
-    </div>
-    <div>
+    <div class="row">
         <div class="col-12" id="productTable">
-            <div class="text-center">
-                <div class="spinner-border text-primary" role="status">
-                    <span class="visually-hidden">Loading...</span>
-                </div>
-            </div>
+           {{ include('tables/product_table.html.twig') }}
         </div>
     </div>
 {% endblock %}

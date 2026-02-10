@@ -7,9 +7,11 @@
             <div class="col-md-4 col-xl-3">
                 <div class="card shadow rounded-0">
                     <div class="card-body">
-                        <a class="list-group-item border-0 text-success mb-1" href="{{ path('product_admin') }}">Product</a>
+                        <a class="list-group-item border-0 text-success mb-1"
+                           href="{{ path('product_admin') }}">Product</a>
                         <a class="list-group-item text-success border-0 mb-1" href="{{ path('category_admin') }}">Categories</a>
-                        <a class="list-group-item text-success border-0 mb-1" href="{{ path('support_admin') }}">Support</a>
+                        <a class="list-group-item text-success border-0 mb-1"
+                           href="{{ path('support_admin') }}">Support</a>
                         <a class="list-group-item text-success border-0 mb-1" href="#">Orders</a>
                     </div>
                 </div>
@@ -17,6 +19,18 @@
             <div class="col-md-8 col-xl-9">
                 <div class="card shadow rounded-0">
                     <div class="card-body">
+                        <div class="row border-bottom pb-2">
+                            <div class="col-md-3">
+                                <form method="get">
+                                    <input type="search" name="search" class="form-control">
+                                </form>
+                            </div>
+                            <div class="col-md-9 text-end">
+                                {% block actionButton %}
+                                {% endblock %}
+                            </div>
+                        </div>
+
                         {% block innerCardBody %}
                         {% endblock %}
                     </div>

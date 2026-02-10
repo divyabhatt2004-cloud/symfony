@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2925937-9bb4-488b-824d-3e2dd29b3f33" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/my_project_directory.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/my_project_directory.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/js/admin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/formLayout/cantact_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/formLayout/cantact_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tables/product_cartTable.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tables/product_cartTable.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/ProductRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ProductRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/product_admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/product_admin.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/tables/product_table.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tables/product_table.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -237,7 +239,7 @@
       <workItem from="1770615736458" duration="20028000" />
       <workItem from="1770701550863" duration="309000" />
       <workItem from="1770701890934" duration="1001000" />
-      <workItem from="1770703056787" duration="5212000" />
+      <workItem from="1770703056787" duration="6503000" />
     </task>
     <servers />
   </component>

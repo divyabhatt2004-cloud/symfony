@@ -12,16 +12,11 @@ use Symfony\Component\Routing\Attribute\Route;
 class ContactController extends AbstractController
 {
     #[Route(path: '/support-admin', name: 'support_admin')]
-    public function support_admin(): Response
-    {
-        return $this->render('admin/support_admin.html.twig');
-    }
-    #[Route(path: '/request-table', name: 'request_table')]
-    public function productTable(UserContactRepository $UserSupportRepository): Response
+    public function support_admin(UserContactRepository $UserSupportRepository): Response
     {
         $userSupportList = $UserSupportRepository->getUserRequests();
 
-        return $this->render('tables/request_table.html.twig', [
+        return $this->render('admin/support_admin.html.twig', [
             'userSupportLists' => $userSupportList,
         ]);
     }

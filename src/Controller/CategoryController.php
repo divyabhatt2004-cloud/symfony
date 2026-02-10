@@ -5,7 +5,9 @@ namespace App\Controller;
 use App\Entity\Category;
 use App\Form\CategoryType;
 use App\Repository\CategoryRepository;
+use App\Service\StaticHelper;
 use Doctrine\ORM\EntityManagerInterface;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -14,18 +16,26 @@ use Symfony\Component\Routing\Attribute\Route;
 class CategoryController extends AbstractController
 {
     #[Route(path: '/category-admin', name: 'category_admin')]
-    public function category_admin(): Response
+    public function category_admin(Request $request, PaginatorInterface $paginator,CategoryRepository $categoryRepository): Response
     {
-        return $this->render('admin/category_admin.html.twig');
-    }
-    #[Route(path: '/category-table', name: 'category_table')]
-    public function categoryTable(CategoryRepository $categoryRepository): Response
-    {
-        $categoryList = $categoryRepository->getCategories();
+        $filters = StaticHelper::filters($request);
 
-        return $this->render('tables/category_table.html.twig', [
-            'categoryLists' => $categoryList,
-        ]);
+        $query = $categoryRepository->getCategories($filters);
+
+        $categoryLists = $paginator->paginate($query, $request->query->getInt('page', 1), 10);
+
+        $params = [
+            'status'=>true,
+            'categoryLists' => $categoryLists,
+            'query' => $categoryLists,
+            'pagination' => $categoryLists,
+            'recordsPerPage' => $filters['recordsPerPage'],
+        ];
+        if($request->isXmlHttpRequest()) {
+            return $this->render('tables/category_table.html.twig',$params);
+        }
+
+        return $this->render('admin/category_admin.html.twig',$params);
     }
     #[Route(path: '/category-create', name: 'category_create')]
     public function category_create(Request $request, EntityManagerInterface $em): Response
