@@ -33,7 +33,8 @@
                                         </button>
 
                                         <input readonly class="form-control text-center quantityInput"
-                                               data-id="{{ productLists.id }}" data-quantity="1"
+                                               data-id="{{ productLists.id }}"
+                                               data-quantity="1"
                                                value="1">
 
                                         <button class="btn btn-outline-secondary" type="button" id="quantity_plus"><i
@@ -42,9 +43,9 @@
                                 </div>
                             </div>
                             <a class="btn btn-success w-100 add_to_cart"
-                               href="{{ path('add_to_cart',{'id':productLists.id}) }}
-{#                               add_to_cart.php?id=<?php echo $productdetail_row['id']; ?>&quantity=<?php echo $productdetail_row['quantity']; ?> #}
-                                    ">ADD TO CART</a>
+                               data-action="add2CartFromView"
+                               data-id="{{ productLists.id }}"
+                               data-quantity ="1">ADD TO CART</a>
                         </div>
                     </div>
                 </div>

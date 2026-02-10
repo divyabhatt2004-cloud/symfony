@@ -2,23 +2,34 @@ import alertify from "alertifyjs";
 $(document).ready(function(){
 
     $('body').on('click','[data-action="add2Cart"]', function(){
-        let url = $(this).data('url')
-        $.ajax({
-            url:url,
-            type:'post',
-            success:function(res){
-                if(res.status){
-                    alertify.success(res.msg)
-                }
-                else{
-                    alertify.error(res.errorMsg)
-                }
-            },
-        })
+        let productId = $(this).data('id')
 
+        let quantity =$(this).data('quantity')?? 1;
+
+        if(!productId)
+        {
+            alertify.error('Product id not defined.');
+            return;
+        }
+       addToCart(productId ,quantity)
     })
 })
+$(document).ready(function(){
 
+    $('body').on('click','[data-action="add2CartFromView"]', function(){
+
+        let productId = $(this).data('id')
+
+        let quantity = $(this).data('quantity')?? 1;
+
+        if(!productId)
+        {
+            alertify.error('Product id not defined.');
+            return;
+        }
+        addToCart(productId ,quantity)
+    })
+})
 $(document).ready(function(){
     if($('#product_cartTable').length > 0) {
 
@@ -31,3 +42,20 @@ $(document).ready(function(){
         })
     }
 })
+
+const addToCart = (productId,quantity = 1) => {
+    $.ajax({
+        url:`/add-to-cart`,
+        type:'post',
+        data: { productId, quantity},
+        success:function(res){
+            if(res.status){
+                alertify.success(res.msg)
+            }
+            else{
+                alertify.error(res.errorMsg)
+            }
+        },
+    })
+
+}

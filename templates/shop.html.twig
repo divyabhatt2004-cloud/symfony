@@ -92,7 +92,8 @@
                                                     <li>
                                                         <a class="text-white btn btn-success opacity-75 p-2 border-0 mb-1 rounded"
                                                            data-action="add2Cart"
-                                                           data-url="{{ path('add_to_cart',{'id':productList.id}) }}"
+                                                           data-id="{{ productList.id }}"
+                                                           data-quantity="1"
                                                            href="javascript:void(0)">
                                                             <i class="fa-solid fa-cart-plus"></i>
                                                         </a>
