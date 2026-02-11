@@ -6,9 +6,9 @@
         <thead>
         <tr>
             <th>Sno</th>
-            <th>{{ knp_pagination_sortable(productCartLists,'Name','cp.productName') }}</th>
+            <th>{{ knp_pagination_sortable(productCartLists,'Name','cp.name') }}</th>
             <th width="150">Image</th>
-            <th>{{ knp_pagination_sortable(productCartLists,'Description','cp.productDescription') }}</th>
+            <th>{{ knp_pagination_sortable(productCartLists,'Description','cp.description') }}</th>
             <th>Quantity</th>
             <th>Unit Price</th>
             <th>Total Gst Applied</th>
@@ -20,9 +20,9 @@
         {% for productCartList in productCartLists %}
             <tr>
                 <td>{{ loop.index }}</td>
-                <td>{{ productCartList.productName }}</td>
-                <td><img src="{{ asset('product/' ~ productCartList.productImage) }}" class="img-fluid w-50"></td>
-                <td>{{ productCartList.productDescription }}</td>
+                <td>{{ productCartList.name }}</td>
+                <td><img src="{{ asset('product/' ~ productCartList.image) }}" class="img-fluid w-50"></td>
+                <td>{{ productCartList.description }}</td>
                 <td>{{ productCartList.quantity }}</td>
                 <td>{{ productCartList.price }}</td>
                 <td>{{ ((productCartList.quantity * productCartList.price) * productCartList.gst)/100 }}</td>

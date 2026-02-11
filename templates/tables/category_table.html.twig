@@ -4,8 +4,8 @@
     <thead>
     <tr>
         <th>Sno</th>
-        <th>{{ knp_pagination_sortable(categoryLists, 'Name', 'c.categoryName') }}</th>
-        <th>{{ knp_pagination_sortable(categoryLists, 'Description', 'c.categoryDescription') }}</th>
+        <th>{{ knp_pagination_sortable(categoryLists, 'Name', 'c.name') }}</th>
+        <th>{{ knp_pagination_sortable(categoryLists, 'Description', 'c.description') }}</th>
         <th>Action</th>
     </tr>
     </thead>
@@ -14,8 +14,8 @@
         {% for categoryList in categoryLists %}
             <tr>
                 <td>{{ loop.index }}</td>
-                <td>{{ categoryList.categoryName }}</td>
-                <td>{{ categoryList.categoryDescription }}</td>
+                <td>{{ categoryList.name }}</td>
+                <td>{{ categoryList.description }}</td>
                 <td><a class="text-success ms-2" href="{{ path('update_category',{'id':categoryList.id}) }}"><i
                             class="fa-solid fa-pen"></i></a> <a class="text-danger ms-2"
                                                                 href="{{ path('delete_category',{'id':categoryList.id}) }}"><i

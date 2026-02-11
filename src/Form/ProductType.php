@@ -18,12 +18,12 @@ class ProductType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('productName', TextType::class)
-            ->add('productDescription', TextareaType::class, ['required' => false])
+            ->add('name', TextType::class)
+            ->add('description', TextareaType::class, ['required' => false])
             ->add('quantity', TextType::class, ['required' => true])
             ->add('category', EntityType::class, [
                 'class' => Category::class,
-                'choice_label' => 'categoryName',
+                'choice_label' => 'name',
                 'placeholder' => 'Select',
                 'required' => false,
             ])
@@ -31,7 +31,7 @@ class ProductType extends AbstractType
             ->add('gst', TextType::class, ['required' => true]);
 
         if (!$options['id']) {
-            $builder->add('productImage', FileType::class, ['label' => 'Product Image',
+            $builder->add('image', FileType::class, ['label' => 'image',
                 'mapped' => false,
                 'required' => false,
                 'constraints' => [new Assert\Image(

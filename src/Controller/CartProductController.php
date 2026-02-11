@@ -59,9 +59,9 @@ class CartProductController extends AbstractController
 
             $cartProduct = new CartProduct();
             $cartProduct->setProductId($product->getId());
-            $cartProduct->setProductName($product->getProductName());
-            $cartProduct->setProductImage($product->getProductImage());
-            $cartProduct->setProductDescription($product->getProductDescription());
+            $cartProduct->setName($product->getName());
+            $cartProduct->setImage($product->getImage());
+            $cartProduct->setDescription($product->getDescription());
             $cartProduct->setCategory($product->getCategory());
             $cartProduct->setPrice($product->getPrice());
             $cartProduct->setGst($product->getGst());

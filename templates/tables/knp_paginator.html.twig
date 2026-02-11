@@ -11,17 +11,17 @@
 
                         {% set paginationData = pagination.paginationData |default([]) %}
 
-                        <div class="card-footer">
+                        <div class="card-footer bg-white">
                             <div class="row align-items-center">
                                 <div class="col-12 col-md-6 text-end text-md-start mb-2">
                                     <p class="m-0 text-secondary">
-                                        total row {{ paginationData.totalCount |default(0)  }} from {{ paginationData.firstItemNumber |default(0) }} to {{paginationData.lastItemNumber |default(0)  }}</p>
+                                        Total row {{ paginationData.totalCount |default(0)  }} from {{ paginationData.firstItemNumber |default(0) }} to {{paginationData.lastItemNumber |default(0)  }}</p>
                                 </div>
 
-                                <div class="col-12 col-md-6 d-flex flex-column flex-md-row align-items-end align-items-md-center justify-content-end mb-2">
+                                <div class="col-12 col-md-6 d-flex flex-column flex-md-row align-items-end align-items-md-center justify-content-end ">
                                     {% block recordPerPage %}
                                         {% if recordsPerPage is defined %}
-                                            <label class="pe-1">
+                                            <label class="pe-2">
                                                 <select id="recordsPerPage" name="records" class="form-select"
                                                     {{ stimulus_controller('table') }} {{ stimulus_target('table', 'pagination') }} {{ stimulus_action('table', 'showRecords', 'change') }}>
                                                     <option value="10" {{ recordsPerPage == 10 ? 'selected' : '' }}>10
@@ -45,8 +45,7 @@
                                     {% if paginationData.totalCount |default(0) %}
                                         {% set prev = (paginationData.current |default(1) > 0) ? paginationData.current - 1 : 0 %}
 
-                                        <ul class="pagination">
-
+                                        <ul class="pagination mt-3">
                                             <!-- Previous Button -->
                                             {% if paginationData.previous is defined %}
                                                 <li class="page-item">
@@ -75,7 +74,7 @@
                                                 {% if page > 0 %}
                                                     {% if page == paginationData.current %}
                                                         <li class="page-item active">
-                                                            <a class="page-link"
+                                                            <a class="page-link text-success bg-white border-gray border-start-0 border-end-0 border-top border-bottom"
                                                                href="{{ path(app.current_route, app.request.attributes.get('_route_params')|merge({'page': page})) }}"
                                                                data-controller="table"
                                                                data-action="click->table#pagination"

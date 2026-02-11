@@ -53,11 +53,11 @@ class ProductController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
 
             /** @var UploadedFile $imageFile */
-            $imageFile = $form->get('productImage')->getData();
+            $imageFile = $form->get('image')->getData();
 
             if ($imageFile) {
                 $fileName = $fileUpload->uploadFile('product', $imageFile);
-                $product->setProductImage($fileName);
+                $product->setImage($fileName);
             }
 
             $em->persist($product);
@@ -78,10 +78,10 @@ class ProductController extends AbstractController
 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-            $imageFile = $form->get('productImage')->getData();
+            $imageFile = $form->get('image')->getData();
             if ($imageFile) {
                 $fileName = $fileUpload->uploadFile('product', $imageFile);
-                $product->setProductImage($fileName);
+                $product->setImage($fileName);
             }
             $em->persist($product);
             $em->flush();

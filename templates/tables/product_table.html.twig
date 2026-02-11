@@ -4,9 +4,9 @@
     <thead>
     <tr>
         <th>Sno</th>
-        <th>{{ knp_pagination_sortable(productLists, 'Name', 'p.productName') }}</th>
+        <th>{{ knp_pagination_sortable(productLists, 'Name', 'p.name') }}</th>
         <th width="150">Image</th>
-        <th>{{ knp_pagination_sortable(productLists, 'Description', 'p.productDescription') }}</th>
+        <th>{{ knp_pagination_sortable(productLists, 'Description', 'p.description') }}</th>
         <th>Quantity</th>
         <th>Category</th>
         <th>Price</th>
@@ -19,9 +19,9 @@
         {% for productList in productLists %}
             <tr>
                 <td>{{ loop.index }}</td>
-                <td>{{ productList.productName }}</td>
-                <td><img src="{{ asset('product/' ~ productList.productImage) }}" class="img-fluid w-25"> </td>
-                <td>{{ productList.productDescription }}</td>
+                <td>{{ productList.name }}</td>
+                <td><img src="{{ asset('product/' ~ productList.image) }}" class="img-fluid w-25"> </td>
+                <td>{{ productList.description }}</td>
                 <td>{{ productList.quantity }}</td>
                 <td>{{ productList.category }}</td>
                 <td>{{ productList.price }}</td>
