@@ -4,7 +4,7 @@
     <thead>
     <tr>
         <th>Sno</th>
-        <th class="productHeader">{{ knp_pagination_sortable(productLists, 'Name', 'p.name') }}</th>
+        <th>{{ knp_pagination_sortable(productLists, 'Name', 'p.name') }}</th>
         <th width="150">Image</th>
         <th>{{ knp_pagination_sortable(productLists, 'Description', 'p.description') }}</th>
         <th>Quantity</th>
@@ -27,8 +27,8 @@
                 <td>{{ productList.price }}</td>
                 <td>{{ productList.gst }}</td>
                 <td>
-                    <a class="text-success ms-2" href="{{ path('update_product',{'id':productList.id}) }}"><i
-                            class="fa-solid fa-pen"></i></a>
+                    <a class="text-success ms-2" id="updateProduct" href="{{ path('update_product',{'id':productList.id}) }}">
+                        <i class="fa-solid fa-pen" ></i></a>
                     <a class="text-danger" href="{{ path('delete_product',{'id':productList.id}) }}">
                         <i class="fa-solid fa-trash-can"></i></a>
                 </td>

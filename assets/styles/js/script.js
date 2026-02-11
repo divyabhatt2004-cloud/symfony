@@ -1,4 +1,4 @@
-import './admin';
+import './productImage';
 import './shop';
 import './cart';
 import './wishlist';

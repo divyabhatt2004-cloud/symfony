@@ -4,12 +4,14 @@
         <label for="name1" class="form-label">Name</label>
         <div class="mb-3">
             {{ form_widget(form.name) }}
+            {{ form_errors(form.name) }}
         </div>
     </div>
     <div class="col-lg-6 col-md-4">
         <label for="email1" class="form-label">Email</label>
         <div class="mb-3">
             {{ form_widget(form.email) }}
+            {{ form_errors(form.email) }}
         </div>
     </div>
 </div>
@@ -17,12 +19,14 @@
     <label for="subject1" class="form-label">Subject</label>
     <div class="mb-3">
         {{ form_widget(form.subject) }}
+        {{ form_errors(form.subject) }}
     </div>
 </div>
 <div class="row">
     <label for="message1" class="form-label">Message</label>
     <div class="mb-3">
         {{ form_widget(form.message) }}
+        {{ form_errors(form.message) }}
     </div>
 </div>
 {% if form.reply is defined and form.reply%}
@@ -31,6 +35,7 @@
         <label for="reply" class="form-label">Reply</label>
         <div class="mb-3">
             {{ form_widget(form.reply) }}
+            {{ form_errors(form.reply) }}
         </div>
     </div>
 {% endif %}
