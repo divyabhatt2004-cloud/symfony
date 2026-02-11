@@ -5,7 +5,9 @@ namespace App\Controller;
 use App\Entity\CartProduct;
 use App\Repository\CartProductRepository;
 use App\Repository\ProductRepository;
+use App\Service\StaticHelper;
 use Doctrine\ORM\EntityManagerInterface;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -14,20 +16,29 @@ use Symfony\Component\Routing\Attribute\Route;
 class CartProductController extends AbstractController
 {
     #[Route(path: '/product-cart', name: 'product_cart')]
-    public function product_cart(): Response
+    public function product_cart(Request $request,paginatorInterface $paginator, CartProductRepository $productCartRepository): Response
     {
-        return $this->render('product_cart.html.twig');
+        $filters = StaticHelper::filters($request);
+
+        $query = $productCartRepository->getCartProducts($filters);
+
+        $productCartLists = $paginator->paginate($query,$request->query->getInt('page',1),10);
+
+        $params = [
+            'status'=> true,
+            'productCartLists'=>$productCartLists,
+            'query'=>$productCartLists,
+            'pagination'=>$productCartLists,
+            'recordsPerPage'=>$filters['recordsPerPage'],
+        ];
+
+        if($request->isXmlHttpRequest()){
+            return $this->render('tables/product_cartTable.html.twig',$params);
+        }
+        return $this->render('product_cart.html.twig',$params);
     }
 
-    #[Route(path: '/productCart-table', name: 'productCartTable')]
-    public function productCartTable(CartProductRepository $productCartRepository): Response
-    {
-        $productCartList = $productCartRepository->getCartProducts();
 
-        return $this->render('tables/product_cartTable.html.twig', [
-            'productCartLists' => $productCartList,
-        ]);
-    }
 
     #[Route(path: '/add-to-cart', name: 'add_to_cart')]
     public function add_to_cart(Request $request, CartProductRepository $productCartRepository, ProductRepository $productRepository, EntityManagerInterface $em): Response

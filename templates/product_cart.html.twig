@@ -5,8 +5,35 @@
         <div class="container">
             <div class="row mt-5 mb-5" id="product_cartTable">
                 <div class="text-center">
-                    <div class="spinner-border text-primary" role="status">
-                        <span class="visually-hidden">Loading...</span>
+                    {{ include('tables/product_cartTable.html.twig') }}
+                    <div class="row mt-5 d-none">
+                        <div class="col-4 offset-8">
+                            <div class="card mb-5">
+                                <div class="card-body">
+                                    <div class="row mb-2">
+                                        <div class="col-6 text-start">
+                                            <p class="h6 fw-light">Net Product</p>
+                                            <p class="h6 fw-light">Net Gst</p>
+                                            <p class="h6 fw-light">Grand_Total</p>
+                                        </div>
+                                        <div class="col-6 text-end">
+                                            <div>
+
+                                            </div>
+                                            <div>
+
+                                            </div>
+                                            <div>
+
+                                            </div>
+                                            <div class="mt-2">
+                                                <a class="btn btn-success text-white" href="cart_Checkout.php">Checkout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

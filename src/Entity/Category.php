@@ -12,32 +12,32 @@ use Doctrine\ORM\Mapping as ORM;
 class Category extends AbstractEntity
 {
     #[ORM\Column(nullable: true)]
-    private ?string $categoryName = null;
+    private ?string $name = null;
     #[ORM\Column(nullable: true)]
-    private ?string $categoryDescription = null;
+    private ?string $description = null;
 
-    public function getCategoryName(): ?string
+    public function getName(): ?string
     {
-        return $this->categoryName;
+        return $this->name;
     }
 
-    public function setCategoryName(?string $categoryName): self
+    public function setName(?string $name): self
     {
-        $this->categoryName = $categoryName;
+        $this->name = $name;
         return $this;
     }
     public function __toString(): string
     {
-        return (string) $this->getCategoryName();
+        return (string) $this->getName();
     }
-    public function getCategoryDescription(): ?string
+    public function getDescription(): ?string
     {
-        return $this->categoryDescription;
+        return $this->description;
     }
 
-    public function setCategoryDescription(?string $categoryDescription): self
+    public function setDescription(?string $description): self
     {
-        $this->categoryDescription = $categoryDescription;
+        $this->description = $description;
         return $this;
     }
 }

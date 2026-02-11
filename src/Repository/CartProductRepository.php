@@ -11,9 +11,25 @@ class CartProductRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, CartProduct::class);
     }
-    public function getCartProducts(): ?array
+    public function getCartProducts(?array $filters =[]): ?array
     {
-        return $this->findBy(['recordState' => 0]);
+        $query = $this->createQueryBuilder('cp')
+            ->where('cp.recordState =:recordState')
+            ->setParameter('recordState',0);
+
+        if (isset($filters['sort']) && $filters['sort'] && $filters['direction']){
+            $query->orderBy($filters['sort'],$filters['direction']);
+        }else
+        {
+            $query->orderBy('cp.id', 'DESC');
+        }
+
+        if(isset($filters['search']) && $filters['search']){
+            $query->andWhere('cp.productName LIKE :search')
+                ->setParameter('search','%'.$filters['search'].'%');
+        }
+
+        return $query->getQuery()->getResult();
     }
 
     public function getCartProductById(string $productId)

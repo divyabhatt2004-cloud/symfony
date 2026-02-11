@@ -1,12 +1,14 @@
+{% extends 'tables/knp_paginator.html.twig' %}
+{% block table %}
 {% if productCartLists|length > 0 %}
 <div>
     <table class="table w-100">
         <thead>
         <tr>
             <th>Sno</th>
-            <th>Product_name</th>
+            <th>{{ knp_pagination_sortable(productCartLists,'Name','cp.productName') }}</th>
             <th width="150">Image</th>
-            <th>Description</th>
+            <th>{{ knp_pagination_sortable(productCartLists,'Description','cp.productDescription') }}</th>
             <th>Quantity</th>
             <th>Unit Price</th>
             <th>Total Gst Applied</th>
@@ -38,35 +40,6 @@
         {% endfor %}
         </tbody>
     </table>
-    <div class="row mt-5 d-none">
-        <div class="col-4 offset-8">
-            <div class="card mb-5">
-                <div class="card-body">
-                    <div class="row mb-2">
-                        <div class="col-6 text-start">
-                            <p class="h6 fw-light">Net Product</p>
-                            <p class="h6 fw-light">Net Gst</p>
-                            <p class="h6 fw-light">Grand_Total</p>
-                        </div>
-                        <div class="col-6 text-end">
-                            <div>
-
-                            </div>
-                            <div>
-
-                            </div>
-                            <div>
-
-                            </div>
-                            <div class="mt-2">
-                                <a class="btn btn-success text-white" href="cart_Checkout.php">Checkout</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
 {% else %}
 <div class="row justify-content-center mt-5 mb-5">
@@ -80,3 +53,4 @@
     </div>
 </div>
 {% endif %}
+{% endblock %}

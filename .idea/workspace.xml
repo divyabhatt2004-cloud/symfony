@@ -5,14 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2925937-9bb4-488b-824d-3e2dd29b3f33" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/my_project_directory.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/my_project_directory.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styles/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/js/admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ProductRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ProductRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/product_admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/product_admin.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tables/product_table.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tables/product_table.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/js/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/js/cart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/js/productDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/js/productQuantity.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/CartProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CartProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ContactController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/AbstractEntity.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/AbstractEntity.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/AbstractProductEntity.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/AbstractProductEntity.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/CartProductRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/CartProductRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/UserContactRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserContactRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/support_admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/support_admin.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/product_cart.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/product_cart.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/tables/product_cartTable.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tables/product_cartTable.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/tables/request_table.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tables/request_table.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -239,7 +248,8 @@
       <workItem from="1770615736458" duration="20028000" />
       <workItem from="1770701550863" duration="309000" />
       <workItem from="1770701890934" duration="1001000" />
-      <workItem from="1770703056787" duration="6503000" />
+      <workItem from="1770703056787" duration="17285000" />
+      <workItem from="1770788369858" duration="5540000" />
     </task>
     <servers />
   </component>

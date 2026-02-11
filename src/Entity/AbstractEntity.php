@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use DateTimeImmutable;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\ORM\Mapping\HasLifecycleCallbacks;
@@ -20,6 +21,20 @@ abstract class AbstractEntity
     #[ORM\Column(type: Types::INTEGER, nullable: true, options: ['default' => 0])]
     private ?int $recordState = 0;
 
+    #[ORM\Column(type: Types::DATETIME_IMMUTABLE)]
+    private DateTimeImmutable $createdAt;
+
+
+    public function getCreatedAt(): DateTimeImmutable
+    {
+        return $this->createdAt;
+    }
+
+    #[ORM\PrePersist] // This attribute calls the method before the entity is first persisted
+    public function onPrePersist(): void
+    {
+        $this->createdAt = new DateTimeImmutable();
+    }
     public function getId(): ?int
     {
         return $this->id;

@@ -30,18 +30,18 @@ $(document).ready(function(){
         addToCart(productId ,quantity)
     })
 })
-$(document).ready(function(){
-    if($('#product_cartTable').length > 0) {
-
-        $.ajax({
-            type: 'get',
-            url: '/productCart-table',
-            success: function (res) {
-                $('#product_cartTable').html(res);
-            },
-        })
-    }
-})
+// $(document).ready(function(){
+//     if($('#product_cartTable').length > 0) {
+//
+//         $.ajax({
+//             type: 'get',
+//             url: '/productCart-table',
+//             success: function (res) {
+//                 $('#product_cartTable').html(res);
+//             },
+//         })
+//     }
+// })
 
 const addToCart = (productId,quantity = 1) => {
     $.ajax({

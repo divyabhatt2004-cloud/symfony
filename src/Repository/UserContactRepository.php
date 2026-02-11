@@ -14,9 +14,25 @@ class UserContactRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, UserContact::class);
     }
-    public function getUserRequests(): ?array
+    public function getUserRequests(?array $filters =[]): ?array
     {
-        return $this->findBy(['recordState' => 0]);
+        $query = $this->createQueryBuilder('ur')
+            ->where('ur.recordState =:recordState')
+            ->setParameter('recordState', 0);
+
+        if(isset($filters['sort']) && $filters['sort'] && $filters['direction']){
+             $query->orderBy($filters['sort'], $filters['direction']);
+        }
+        else
+        {
+            $query->orderBy('ur.id', 'DESC');
+        }
+        if(isset($filters['search']) && $filters['search']){
+
+            $query->andwhere('ur.name like :search')
+                ->setParameter('search', '%'.$filters['search'].'%');
+        }
+        return $query->getQuery()->getResult();
     }
 
     public function getUserRequestById(string $productId)

@@ -12,11 +12,11 @@ abstract class AbstractProductEntity extends AbstractEntity
 {
 
     #[ORM\Column(nullable: true)]
-    private ?string $productName = null;
+    private ?string $name = null;
     #[ORM\Column(nullable: true)]
-    private ?string $productImage = null;
+    private ?string $image = null;
     #[ORM\Column(nullable: true)]
-    private ?string $productDescription = null;
+    private ?string $description = null;
     #[ORM\Column(nullable: true)]
     private ?int $quantity = null;
     #[ORM\ManyToOne(targetEntity: Category::class)]
@@ -26,34 +26,34 @@ abstract class AbstractProductEntity extends AbstractEntity
     #[ORM\Column(nullable: true)]
     private ?int $gst = null;
 
-    public function getProductName(): ?string
+    public function getName(): ?string
     {
-        return $this->productName;
+        return $this->name;
     }
 
-    public function setProductName(?string $productName): self
+    public function setName(?string $name): self
     {
-        $this->productName = $productName;
+        $this->name = $name;
         return $this;
     }
-    public function getProductImage(): ?string
+    public function getImage(): ?string
     {
-        return $this->productImage;
+        return $this->image;
     }
 
-    public function setProductImage(?string $productImage): self
+    public function setImage(?string $image): self
     {
-        $this->productImage = $productImage;
+        $this->image = $image;
         return $this;
     }
-    public function getProductDescription(): ?string
+    public function getDescription(): ?string
     {
-        return $this->productDescription;
+        return $this->description;
     }
 
-    public function setProductDescription(?string $productDescription): self
+    public function setDescription(?string $description): self
     {
-        $this->productDescription = $productDescription;
+        $this->description = $description;
         return $this;
     }
     public function getQuantity(): ?int

@@ -1,11 +1,9 @@
 {% extends 'admin/inner_nav.html.twig' %}
+{% block actionButton %}
+    <button class="btn btn-success"><a href="{{ path('contact') }}" class="text-white text-decoration-none">Create <i
+                class="fa-solid fa-circle-plus"></i></a></button>
+{% endblock %}
 {% block innerCardBody %}
-    <div class="row text-end border-bottom pb-2">
-        <div class=" offset-10 col-lg-2">
-            <button class="btn btn-success"><a href="{{ path('contact') }}" class="text-white text-decoration-none">Create <i
-                        class="fa-solid fa-circle-plus"></i></a></button>
-        </div>
-    </div>
     <div>
         <div class="col-12" id="requestTable">
             {{ include('tables/request_table.html.twig') }}

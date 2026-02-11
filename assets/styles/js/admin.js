@@ -22,16 +22,16 @@ $(document).ready(function () {
     //         },
     //     })
     // }
-    if ($('#requestTable').length > 0) {
-
-        $.ajax({
-            type: 'get',
-            url: '/request-table',
-            success: function (res) {
-                $('#requestTable').html(res);
-            },
-        })
-    }
+    // if ($('#requestTable').length > 0) {
+    //
+    //     $.ajax({
+    //         type: 'get',
+    //         url: '/request-table',
+    //         success: function (res) {
+    //             $('#requestTable').html(res);
+    //         },
+    //     })
+    // }
 
     // $('body').on('click','[data-type="popup"][data-edit="form"]',function(){
     //     window.bootbox.dialog({

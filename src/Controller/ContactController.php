@@ -4,7 +4,9 @@ namespace App\Controller;
 use App\Entity\UserContact;
 use App\Form\UserContactType;
 use App\Repository\UserContactRepository;
+use App\Service\StaticHelper;
 use Doctrine\ORM\EntityManagerInterface;
+use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
@@ -12,13 +14,27 @@ use Symfony\Component\Routing\Attribute\Route;
 class ContactController extends AbstractController
 {
     #[Route(path: '/support-admin', name: 'support_admin')]
-    public function support_admin(UserContactRepository $UserSupportRepository): Response
+    public function support_admin(Request $request, PaginatorInterface $paginator,UserContactRepository $UserSupportRepository): Response
     {
-        $userSupportList = $UserSupportRepository->getUserRequests();
+        $filters = StaticHelper::filters($request);
 
-        return $this->render('admin/support_admin.html.twig', [
-            'userSupportLists' => $userSupportList,
-        ]);
+        $query = $UserSupportRepository->getUserRequests($filters);
+
+        $userSupportLists = $paginator->paginate($query, $request->query->getInt('page',1),10);
+
+        $params = [
+            'status'=>true,
+            'userSupportLists' => $userSupportLists,
+            'query' => $userSupportLists,
+            'pagination' => $userSupportLists,
+            'recordsPerPage' => $filters['recordsPerPage'],
+        ];
+
+        if($request->isXmlHttpRequest()) {
+            return $this->render('tables/request_table.html.twig',$params);
+        }
+
+        return $this->render('admin/support_admin.html.twig',$params);
     }
     #[Route(path: '/contact', name: 'contact')]
     public function contact(Request $request, EntityManagerInterface $em): Response
