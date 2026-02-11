@@ -7,6 +7,7 @@ use App\Entity\Product;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -28,17 +29,16 @@ class ProductType extends AbstractType
                 'required' => false,
             ])
             ->add('price', TextType::class, ['required' => true])
-            ->add('gst', TextType::class, ['required' => true]);
+            ->add('gst', TextType::class, ['required' => true])
 
-        if (!$options['id']) {
-            $builder->add('image', FileType::class, ['label' => 'image',
+            ->add('imageFile', HiddenType::class, ['required' => false])
+            ->add('image', FileType::class, ['label' => 'image',
                 'mapped' => false,
                 'required' => false,
                 'constraints' => [new Assert\Image(
                     maxSize: '10M',
                     mimeTypesMessage: 'Please upload a valid image (JPG, PNG, WEBP, GIF)',
                 ),],]);
-        }
     }
 
 

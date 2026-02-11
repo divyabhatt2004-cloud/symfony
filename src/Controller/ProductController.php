@@ -73,16 +73,18 @@ class ProductController extends AbstractController
     public function update_product(Request $request, FileUpload $fileUpload, Product $editProduct, ProductRepository $productRepository, EntityManagerInterface $em, string $id): Response
     {
         $product = $productRepository->find(['id' => $id]);
-        $form = $this->createForm(ProductType::class, $product, [
-            'id' => $id,]);// Pass the condition as a form option
+        $form = $this->createForm(ProductType::class, $product, ['id' => $id,]);
 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-            $imageFile = $form->get('image')->getData()?? null;
-            dd($imageFile);
-            if ($imageFile) {
-                $fileName = $fileUpload->uploadFile('product', $imageFile);
-                $product->setImage($fileName);
+
+            if($form?->get('image') !== null)
+            {
+                $imageFile = $form->get('image')->getData();
+                if ($imageFile) {
+                    $fileName = $fileUpload->uploadFile('product', $imageFile);
+                    $product->setImage($fileName);
+                }
             }
             $em->persist($product);
             $em->flush();

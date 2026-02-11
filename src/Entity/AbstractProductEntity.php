@@ -15,6 +15,7 @@ abstract class AbstractProductEntity extends AbstractEntity
     private ?string $name = null;
     #[ORM\Column(nullable: true)]
     private ?string $image = null;
+    private ?string $imageFile = null;
     #[ORM\Column(nullable: true)]
     private ?string $description = null;
     #[ORM\Column(nullable: true)]
@@ -46,6 +47,20 @@ abstract class AbstractProductEntity extends AbstractEntity
         $this->image = $image;
         return $this;
     }
+
+    public function getImageFile(): ?string
+    {
+        return $this->imageFile;
+    }
+
+    public function setImageFile(?string $imageFile): self
+    {
+        $this->imageFile = $imageFile;
+
+        return $this;
+    }
+
+
     public function getDescription(): ?string
     {
         return $this->description;
