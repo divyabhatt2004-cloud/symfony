@@ -6,17 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c2925937-9bb4-488b-824d-3e2dd29b3f33" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CartProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CartProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/CategoryType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/CategoryType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/ProductType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ProductType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/formLayout/category_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/formLayout/category_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/formLayout/product_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/formLayout/product_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/product_details.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/product_details.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/shop.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/shop.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tables/category_table.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tables/category_table.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/js/table.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/js/table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/js/wishlist.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/js/wishlist.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/product_admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/product_admin.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/tables/knp_paginator.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tables/knp_paginator.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tables/product_cartTable.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tables/product_cartTable.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/tables/product_table.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tables/product_table.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -245,7 +238,7 @@
       <workItem from="1770701550863" duration="309000" />
       <workItem from="1770701890934" duration="1001000" />
       <workItem from="1770703056787" duration="17285000" />
-      <workItem from="1770788369858" duration="8608000" />
+      <workItem from="1770788369858" duration="12254000" />
     </task>
     <servers />
   </component>

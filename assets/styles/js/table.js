@@ -1,13 +1,15 @@
 $(document).ready(function () {
-    $('.fa-sort').on('click', function () {
-        let url = $(this).attr('href')
+    $('.dataTable th a').on('click', function (e) {
+        e.preventDefault();
+        let currentUrl = $(this).attr('href');
+        if (!currentUrl || currentUrl === 'javascript:void(0)') {
+            return;
+        }
         $.ajax({
-            url: url,
+            url: currentUrl,
             type: 'get',
             success: function (res) {
-                if (res.status) {
-                    $(this).html(res);
-                }
+                $('.tableResponse').html(res)
             },
         })
     })
