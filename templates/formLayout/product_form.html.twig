@@ -51,6 +51,9 @@
 </div>
 <div class="row">
     {% if editProduct.image %}
+        <div id="image-dialog" class="d-none">
+            <img src="{{ asset('product/' ~ editProduct.image) }}" alt="View" style="width:100%;">
+        </div>
         <div class="col-lg-12 col-md-4 d-none" id="uploadImage">
             <label for="product_image" class="form-label">Upload image</label>
             <div class="mb-3">
@@ -68,7 +71,7 @@
                 <div>
                     <ul class="list-unstyled mb-2" style=" margin-left: 35px" id="imageUpdateButtons">
                         <li>
-                            <a class="text-success opacity-75">
+                            <a class="text-success opacity-75" id="viewImage">
                                 <i class="fa-solid fa-eye"></i>
                             </a>
                         </li>

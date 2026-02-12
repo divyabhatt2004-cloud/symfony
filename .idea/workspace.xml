@@ -6,12 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c2925937-9bb4-488b-824d-3e2dd29b3f33" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/js/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/js/productImage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/formLayout/cantact_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/formLayout/cantact_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/formLayout/category_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/formLayout/category_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/js/productImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/js/productImage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/formLayout/product_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/formLayout/product_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tables/product_table.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tables/product_table.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,6 +240,7 @@
       <workItem from="1770788369858" duration="12254000" />
       <workItem from="1770805566348" duration="692000" />
       <workItem from="1770806674034" duration="2390000" />
+      <workItem from="1770874744259" duration="2576000" />
     </task>
     <servers />
   </component>
