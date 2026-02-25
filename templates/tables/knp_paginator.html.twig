@@ -1,8 +1,8 @@
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 tableResponse">
             {% if query is defined and query|length > 0 %}
 
-                <div class="{{ tableResponsiveClass|default('table-responsive-lg tableResponse')  }}" >
+                <div class="{{ tableResponsiveClass|default('table-responsive-lg')  }}" >
                     {% block table %}
                     {% endblock %}
                 </div>

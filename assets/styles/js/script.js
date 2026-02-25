@@ -1,6 +1,6 @@
-import './productImage';
+import './product';
 import './shop';
 import './cart';
 import './wishlist';
-import './productQuantity';
-import './table';
+import './AdminTable';
+import './bootbox';

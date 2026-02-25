@@ -7,9 +7,14 @@
                <div class="row text-center mt-3 pb-2">
                    <p class="h1 fw-light">Create product</p>
                </div>
+               {{ form_start(form) }}
                <div class="row" id="productForm">
                    {% include 'formLayout/product_form.html.twig' with {'form': form} %}
+                   <div class="col-6 offset-6 text-end pt-2 mt-4">
+                       <input type="submit" class="btn btn-success text-white fs-5" name="save" value="SAVE"></input>
+                   </div>
                </div>
+               {{ form_end(form) }}
            </div>
        </div>
     </div>

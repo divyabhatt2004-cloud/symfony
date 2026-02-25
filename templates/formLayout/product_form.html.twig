@@ -1,4 +1,5 @@
 {{ form_start(form) }}
+{{ form_errors(form) }}
 <div class="row">
     <div class="col-lg-6 col-md-4">
         <label for="product_name" class="form-label">Product Name</label>
@@ -93,8 +94,5 @@
             </div>
         </div>
     {% endif %}
-</div>
-<div class="col-6 offset-6 text-end pt-2 mt-4">
-    <input type="submit" class="btn btn-success text-white fs-5" name="save" value="SAVE"></input>
 </div>
 {{ form_end(form) }}

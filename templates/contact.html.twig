@@ -15,9 +15,15 @@
     </div>
     <div class="container pt-5">
         <div class="row justify-content-center pb-5">
+            {{ form_start(form) }}
             <div class="col-9  ms-10">
-                {% include 'formLayout/cantact_form.html.twig' with {'form': form} %}
+                {% include 'formLayout/contact_form.html.twig' with {'form': form} %}
+                <div class="col-12 text-end pt-2">
+                    <input type="submit" class="btn btn-success text-white fs-5" name="submit_contact"
+                           value="Let's Talk"></input>
+                </div>
             </div>
+            {{ form_end(form)}}
         </div>
     </div>
 {% endblock %}

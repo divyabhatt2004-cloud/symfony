@@ -79,7 +79,7 @@
                             <a class="nav-link text-black" href="{{ path('contact') }}">Contact</a>
                         </li>
                         <li class="nav-item px-5">
-                            <a class="nav-link text-black" href="{{ path('admin') }}">Admin</a>
+                            <a class="nav-link text-black" href="{{ path('product_admin') }}">Admin</a>
                         </li>
                     </ul>
                 </div>
@@ -88,7 +88,10 @@
                      <i class="fa-solid fa-magnifying-glass"></i>
                  </span>
                     <span class="me-2 p-1">
-                     <a href="{{ path('product_cart') }}" class="text-black"><i class="fa-sharp fa-solid fa-cart-arrow-down"></i></a>
+                     <a href="{{ path('product_cart') }}" class="text-black text-decoration-none"><i class="fa-sharp fa-solid fa-cart-arrow-down"></i>
+                         {{ "test user"|convertToCamelCase }}
+                         <span>{{ '(' ~ countCartProducts() ~ ')' }} </span>
+                     </a>
                  </span>
 
                     <span class="me-2 p-1">

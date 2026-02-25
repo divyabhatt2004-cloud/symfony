@@ -1,56 +1,106 @@
 {% extends 'tables/knp_paginator.html.twig' %}
 {% block table %}
-{% if productCartLists|length > 0 %}
-<div>
-    <table class="table w-100">
-        <thead>
-        <tr>
-            <th>Sno</th>
-            <th>{{ knp_pagination_sortable(productCartLists,'Name','cp.name') }}</th>
-            <th width="150">Image</th>
-            <th>{{ knp_pagination_sortable(productCartLists,'Description','cp.description') }}</th>
-            <th>Quantity</th>
-            <th>Unit Price</th>
-            <th>Total Gst Applied</th>
-            <th>Net Price(incl. gst)</th>
-            <th>Action</th>
-        </tr>
-        </thead>
-        <tbody>
-        {% for productCartList in productCartLists %}
-            <tr>
-                <td>{{ loop.index }}</td>
-                <td>{{ productCartList.name }}</td>
-                <td><img src="{{ asset('product/' ~ productCartList.image) }}" class="img-fluid w-50"></td>
-                <td>{{ productCartList.description }}</td>
-                <td>{{ productCartList.quantity }}</td>
-                <td>{{ productCartList.price }}</td>
-                <td>{{ ((productCartList.quantity * productCartList.price) * productCartList.gst)/100 }}</td>
-                <td>{{ (((productCartList.quantity * productCartList.price) * productCartList.gst)/100) +
-                (productCartList.quantity * productCartList.price) }}</td>
-                <td>
-                    <a class="text-success ms-2" href="{{ path('product_details',{'id':productCartList.productId}) }}">
-                        <i class="fa-solid fa-eye"></i>
-                    </a>
-                    <a class="text-danger ms-2" href="{{ path('delete_from_cart',{'id':productCartList.productId}) }}">
-                        <i class="fa-solid fa-trash-can"></i>
-                    </a>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-</div>
-{% else %}
-<div class="row justify-content-center mt-5 mb-5">
-    <div class="col-md-6 text-center">
-        <div class="card shadow pt-5 pb-5">
-            <div class="card-body">
-                <p class="h1 text-success">Cart is empty!</p>
-                <a class="btn btn-success p-2 mt-2" href="{{ path('shop') }}">Shopping</a>
+    {% if productCartLists|length > 0 %}
+        <div>
+            <table class="table w-100">
+                <thead>
+                <tr>
+                    <th>Sno</th>
+                    <th>{{ knp_pagination_sortable(productCartLists,'Name','cp.name') }}</th>
+                    <th width="150">Image</th>
+                    <th>{{ knp_pagination_sortable(productCartLists,'Description','cp.description') }}</th>
+                    <th>Quantity</th>
+                    <th>Unit Price</th>
+                    <th>Gst</th>
+                    <th>Net Price(excl. gst)</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for productCartList in productCartLists %}
+                    <tr>
+                        <td>{{ loop.index }}</td>
+                        <td>{{ productCartList.name }}</td>
+                        <td><img src="{{ asset('product/' ~ productCartList.image) }}" class="img-fluid w-50"></td>
+                        <td>{{ productCartList.description }}</td>
+                        <td>{{ productCartList.quantity }}</td>
+                        <td>{{ productCartList.price }}</td>
+                        <td>{{ productCartList.gst }}</td>
+                        <td>{{ (productCartList.quantity * productCartList.price) }}</td>
+                        <td>
+                            <a class="text-success ms-2"
+                               href="{{ path('product_details',{'id':productCartList.productId}) }}">
+                                <i class="fa-solid fa-eye"></i>
+                            </a>
+                            <a class="text-danger ms-2" href="{{ path('delete_from_cart',{'id':productCartList.id}) }}">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            {#    {{ ((productCartList.quantity * productCartList.price) * productCartList.gst)/100 }} #}
+            {#    {{ (((productCartList.quantity * productCartList.price) * productCartList.gst)/100) + #}
+            {#    (productCartList.quantity * productCartList.price) }} #}
+            <div class="row mt-5">
+                <div class="col-4 offset-8">
+                    <div class="card mb-5">
+                        <div class="card-body">
+                            <div class="row mb-2">
+                                <div class="col-12 text-start">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <p class="h6 fw-light">Sub-Total</p>
+                                        </div>
+                                        <div class="col-6">
+                                            {{ calculation('subtotal') }}
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="col-12 text-start">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <p class="h6 fw-light">Tax</p>
+                                        </div>
+                                        <div class="col-6">
+                                            {{ calculation('tax') }}
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-12 text-start">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <p class="h6 fw-light">Grand Total</p>
+                                        </div>
+                                        <div class="col-6">
+                                            {{ calculation('total') }}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-2">
+                                    <a class="btn btn-success text-white" href="cart_Checkout.php">Checkout</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-{% endif %}
+    {% else %}
+        <div class="row justify-content-center mt-5 mb-5">
+            <div class="col-md-6 text-center">
+                <div class="card shadow pt-5 pb-5">
+                    <div class="card-body">
+                        <p class="h1 text-success">Cart is empty!</p>
+                        <a class="btn btn-success p-2 mt-2" href="{{ path('shop') }}">Shopping</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
 {% endblock %}

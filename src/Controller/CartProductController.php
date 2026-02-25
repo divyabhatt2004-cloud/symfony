@@ -77,8 +77,9 @@ class CartProductController extends AbstractController
     public function delete_from_cart(CartProductRepository $productCartRepository, EntityManagerInterface $em, string $id): Response
     {
         $cartProduct = $productCartRepository->find(['id' => $id]);
-        $cartProduct->setRecordState(1);
-        $em->persist($cartProduct);
+        dd($cartProduct);
+//        $cartProduct->setRecordState(1);
+        $em->remove($cartProduct);
         $em->flush();
         return $this->redirectToRoute('product_cart');
     }

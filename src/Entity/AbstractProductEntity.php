@@ -12,20 +12,26 @@ abstract class AbstractProductEntity extends AbstractEntity
 {
 
     #[ORM\Column(nullable: true)]
-    private ?string $name = null;
+    protected ?string $name = null;
+
     #[ORM\Column(nullable: true)]
-    private ?string $image = null;
-    private ?string $imageFile = null;
+    protected ?string $image = null;
+    protected ?string $imageFile = null;
+
     #[ORM\Column(nullable: true)]
-    private ?string $description = null;
+    protected ?string $description = null;
+
     #[ORM\Column(nullable: true)]
-    private ?int $quantity = null;
+    protected ?int $quantity = null;
+
     #[ORM\ManyToOne(targetEntity: Category::class)]
-    private ?Category $category = null;
+    protected ?Category $category = null;
+
     #[ORM\Column(nullable: true)]
-    private ?int $price = null;
+    protected ?int $price = null;
+
     #[ORM\Column(nullable: true)]
-    private ?int $gst = null;
+    protected ?int $gst = null;
 
     public function getName(): ?string
     {

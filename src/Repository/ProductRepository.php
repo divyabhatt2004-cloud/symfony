@@ -31,7 +31,7 @@ class ProductRepository extends ServiceEntityRepository
 
         if(isset($filters['search']) && $filters['search'])
         {
-            $query->andWhere('p.productName LIKE :search')
+            $query->andWhere('p.name LIKE :search')
             ->setParameter('search', '%'.$filters['search'].'%');
         }
 

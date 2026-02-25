@@ -46,11 +46,19 @@ class ContactController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $em->persist($user);
             $em->flush();
+
+            if($request->isXmlHttpRequest()) {
+                return $this->json(['status' => true, 'msg' => 'Request added', 'redirect' => $this->generateUrl('support_admin')]);
+            }
             return $this->redirectToRoute('contact');
         }
-        return $this->render('contact.html.twig', [
-            'form' => $form->createView(),
-        ]);
+         $params =[
+             'form' => $form->createView(),
+         ];
+        if($request->isXmlHttpRequest()) {
+            return $this->render('formLayout/contact_form.html.twig',$params );
+        }
+        return $this->render('contact.html.twig', $params);
     }
     #[Route(path: '/edit-user-request/{id}', name: 'edit_user_request')]
     public function edit_user_request(Request $request,UserContactRepository $editUserRepository, EntityManagerInterface $em, string $id): Response

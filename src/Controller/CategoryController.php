@@ -47,11 +47,20 @@ class CategoryController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $em->persist($category);
             $em->flush();
+
+            if($request->isXmlHttpRequest()) {
+                return $this->json(['status' => true, 'msg' => 'category created', 'redirect' => $this->generateUrl('category_admin')]);
+            }
             return $this->redirectToRoute('category_admin');
         }
-        return $this->render('admin/category_create.html.twig', [
+        $params = [
             'form' => $form->createView(),
-        ]);
+        ];
+
+        if($request->isXmlHttpRequest()) {
+            return $this->render('formLayout/category_form.html.twig',$params);
+        }
+        return $this->render('admin/category_create.html.twig',$params);
     }
     #[Route(path: '/update-category/{id}', name: 'update_category')]
     public function update_category(Request $request,CategoryRepository $categoryRepository, EntityManagerInterface $em, string $id): Response

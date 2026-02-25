@@ -62,11 +62,22 @@ class ProductController extends AbstractController
 
             $em->persist($product);
             $em->flush();
+
+            if($request->isXmlHttpRequest()) {
+                return $this->json(['status' => true, 'msg' => 'Product created', 'redirect' => $this->generateUrl('product_admin')]);
+            }
+
             return $this->redirectToRoute('product_admin');
         }
-        return $this->render('admin/product_create.html.twig', [
+        $params = [
             'form' => $form->createView(), 'editProduct' => $product,
-        ]);
+        ];
+
+        if($request->isXmlHttpRequest()) {
+            return $this->render('formLayout/product_form.html.twig',$params);
+        }
+
+        return $this->render('admin/product_create.html.twig',$params );
     }
 
     #[Route(path: '/update-product/{id}', name: 'update_product')]

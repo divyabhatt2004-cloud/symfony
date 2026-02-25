@@ -1,7 +1,9 @@
 {% extends 'admin/inner_nav.html.twig' %}
 {% block actionButton %}
-    <button class="btn btn-success"><a href="{{ path('contact') }}" class="text-white text-decoration-none">Create <i
-                class="fa-solid fa-circle-plus"></i></a></button>
+    <a href="{{ path('contact') }}" class="btn btn-success" data-modal="ContactForm">
+        Create <i class="fa-solid fa-circle-plus"></i></a>
+    <a href="{{ path('contact') }}" class="btn btn-success d-none">Create<i
+            class="fa-solid fa-circle-plus"></i></a>
 {% endblock %}
 {% block innerCardBody %}
     <div>

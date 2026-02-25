@@ -34,6 +34,16 @@ class CartProductRepository extends ServiceEntityRepository
 
     public function getCartProductById(string $productId)
     {
-        return $this->findOneBy(['id' => $productId, 'recordState' => 0]);
+        return $this->findOneBy(['productId' => $productId, 'recordState' => 0]);
+    }
+
+    public function countProducts(): int
+    {
+        return (int) $this->createQueryBuilder('p')
+            ->select('SUM(p.quantity)')
+            ->where('p.quantity > :qty')
+            ->setParameter('qty', 0)
+            ->getQuery()
+            ->getSingleScalarResult();
     }
 }
