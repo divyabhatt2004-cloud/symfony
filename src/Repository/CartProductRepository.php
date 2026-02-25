@@ -25,7 +25,7 @@ class CartProductRepository extends ServiceEntityRepository
         }
 
         if(isset($filters['search']) && $filters['search']){
-            $query->andWhere('cp.productName LIKE :search')
+            $query->andWhere('cp.name LIKE :search')
                 ->setParameter('search','%'.$filters['search'].'%');
         }
 
