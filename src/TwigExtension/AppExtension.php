@@ -25,14 +25,17 @@ class AppExtension extends AbstractExtension
     {
 
     }
+
     public function countCartProducts(): int
     {
         return $this->cartProductRepository->countProducts();
     }
 
-    public function calculation($key): int
+    public function calculation($key): array
     {
-        $array =['subtotal'=> 2400,'tax' => 80, 'total' => 2480];
+
+        $total = $this->cartProductRepository->total();
+        $array =['subtotal'=> $total('subtotal'),'tax' => $total('gst'), 'grandTotal' => $total('total')];
         return  $array[$key];
     }
 }

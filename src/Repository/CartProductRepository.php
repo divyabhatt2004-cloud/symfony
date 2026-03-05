@@ -46,4 +46,22 @@ class CartProductRepository extends ServiceEntityRepository
             ->getQuery()
             ->getSingleScalarResult();
     }
+     public function total(): array
+     {
+        $subTotal= $this->createQueryBuilder('cp')
+            ->select('SUM(cp.quantity * cp.price)')
+            ->where('cp.recordState =:recordState')
+            ->setParameter('recordState',0)
+            ->getQuery()
+            ->getSingleScalarResult();
+
+         $gst = $this->createQueryBuilder('cp')
+             ->select('SUM(((cp.quantity * cp.price) * cp.gst)/100)')
+             ->where('cp.recordState =:recordState')
+             ->setParameter('recordState',0)
+             ->getQuery()
+             ->getSingleScalarResult();
+
+         return ['subtotal'=>$subTotal,'gst'=>$gst,'total'=>$subTotal+$gst];
+     }
 }

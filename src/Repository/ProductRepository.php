@@ -38,8 +38,8 @@ class ProductRepository extends ServiceEntityRepository
         return $query->getQuery()->getResult();
     }
 
-    public function getProductById(string $productId): ?Product
+    public function getProductById(string $id): ?Product
     {
-        return $this->findOneBy(['id' => $productId]);
+        return $this->findOneBy(['id' => $id]);
     }
 }

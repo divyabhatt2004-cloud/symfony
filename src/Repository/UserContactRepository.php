@@ -35,8 +35,8 @@ class UserContactRepository extends ServiceEntityRepository
         return $query->getQuery()->getResult();
     }
 
-    public function getUserRequestById(string $productId)
+    public function getUserRequestById(string $id)
     {
-        return $this->findOneBy(['id' => $productId, 'recordState' => 0]);
+        return $this->findOneBy(['id' => $id, 'recordState' => 0]);
     }
 }

@@ -29,15 +29,15 @@ class CategoryRepository extends ServiceEntityRepository
 
         if(isset($filters['search']) && $filters['search'])
         {
-            $query->andWhere('c.productName LIKE :search')
+            $query->andWhere('c.name LIKE :search')
                 ->setParameter('search', '%'.$filters['search'].'%');
         }
 
         return $query->getQuery()->getResult();
     }
 
-    public function getCategoryById(string $productId)
+    public function getCategoryById(string $id)
     {
-        return $this->findOneBy(['id' => $productId, 'recordState' => 0]);
+        return $this->findOneBy(['id' => $id, 'recordState' => 0]);
     }
 }

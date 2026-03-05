@@ -5,46 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2925937-9bb4-488b-824d-3e2dd29b3f33" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/styles/js/AdminTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/js/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/js/cart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/js/productImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/js/product.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/js/productQuantity.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/js/table.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/reference.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/reference.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/Version20260211104709.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CartProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CartProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ContactController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/AbstractEntity.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/AbstractEntity.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/AbstractProductEntity.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/AbstractProductEntity.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repository/CartProductRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/CartProductRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/CategoryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/CategoryRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repository/ProductRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ProductRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/category_admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/category_admin.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/category_create.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/category_create.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/inner_nav.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/inner_nav.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/product_admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/product_admin.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/product_create.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/product_create.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/product_update.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/product_update.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/request_update.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/request_update.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/support_admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/support_admin.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/contact.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/formLayout/cantact_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/formLayout/contact_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/formLayout/category_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/formLayout/category_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/formLayout/product_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/formLayout/product_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tables/category_table.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tables/category_table.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tables/knp_paginator.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tables/knp_paginator.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/UserContactRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserContactRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TwigExtension/AppExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/TwigExtension/AppExtension.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/tables/product_cartTable.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tables/product_cartTable.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tables/product_table.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tables/product_table.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tables/request_table.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tables/request_table.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -282,7 +249,8 @@
       <workItem from="1770874744259" duration="2576000" />
       <workItem from="1771998005293" duration="1732000" />
       <workItem from="1772002301674" duration="83000" />
-      <workItem from="1772016050610" duration="4172000" />
+      <workItem from="1772016050610" duration="4310000" />
+      <workItem from="1772086077746" duration="4220000" />
     </task>
     <servers />
   </component>
