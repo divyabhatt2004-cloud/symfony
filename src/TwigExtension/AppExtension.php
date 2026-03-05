@@ -35,7 +35,8 @@ class AppExtension extends AbstractExtension
     {
 
         $total = $this->cartProductRepository->total();
-        $array =['subtotal'=> $total('subtotal'),'tax' => $total('gst'), 'grandTotal' => $total('total')];
-        return  $array[$key];
+//        dd($total("subtotal"));
+//        $array =['subtotal'=> $total('subtotal'),'tax' => $total('gst'), 'grandTotal' => $total('total')];
+        return  $total[$key];
     }
 }

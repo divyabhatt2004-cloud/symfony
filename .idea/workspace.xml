@@ -6,11 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c2925937-9bb4-488b-824d-3e2dd29b3f33" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/CartProductRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/CartProductRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/CategoryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/CategoryRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ProductRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ProductRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/UserContactRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserContactRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TwigExtension/AppExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/TwigExtension/AppExtension.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/product_cart.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/product_cart.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/tables/product_cartTable.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tables/product_cartTable.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -251,6 +248,7 @@
       <workItem from="1772002301674" duration="83000" />
       <workItem from="1772016050610" duration="4310000" />
       <workItem from="1772086077746" duration="4220000" />
+      <workItem from="1772692502669" duration="1918000" />
     </task>
     <servers />
   </component>
