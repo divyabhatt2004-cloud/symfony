@@ -31,12 +31,10 @@ class AppExtension extends AbstractExtension
         return $this->cartProductRepository->countProducts();
     }
 
-    public function calculation($key): array
+    public function calculation($key): string
     {
 
         $total = $this->cartProductRepository->total();
-//        dd($total("subtotal"));
-//        $array =['subtotal'=> $total('subtotal'),'tax' => $total('gst'), 'grandTotal' => $total('total')];
         return  $total[$key];
     }
 }

@@ -27,6 +27,7 @@ class ProductType extends AbstractType
                 'choice_label' => 'name',
                 'placeholder' => 'Select',
                 'required' => false,
+//                'btn_add' =>'Add new category'
             ])
             ->add('price', TextType::class, ['required' => true])
             ->add('gst', TextType::class, ['required' => true])

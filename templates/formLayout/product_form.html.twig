@@ -22,7 +22,10 @@
     <div class="col-lg-6 col-md-4">
         <label for="category" class="form-label">Categories</label>
         <div>
+{#            <div class="d-flex m-1">#}
             {{ form_widget(form.category,{'attr':{'class':'form-select'}}) }}
+{#            <a href="{{ path('category_create') }}" class="btn btn-success">Create</a>#}
+{#            </div>#}
             {{ form_errors(form.category) }}
         </div>
     </div>
