@@ -1,9 +1,23 @@
 $(document).ready(function () {
+    //createProductForm
     $(document).on('click', '[data-modal="productForm"]', function (e) {
         e.preventDefault();
         let url = $(this).attr('href') || $(this).data('url');
         let title = 'Add Product';
         let errorMsg = 'Product not created';
+        if (!url) {
+            alertify.error('url not found');
+            return;
+        }
+        dialogBox(url,title,errorMsg);
+    })
+    //updateProductForm
+    $(document).on('click','[data-modal="updateProductForm"]', function (e) {
+        e.preventDefault();
+        let url = $(this).attr('href') || $(this).data('url');
+        let title = 'Update Product';
+        let errorMsg = 'Product not Updated';
+
         if (!url) {
             alertify.error('url not found');
             return;

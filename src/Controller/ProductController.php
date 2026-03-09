@@ -101,9 +101,13 @@ class ProductController extends AbstractController
             $em->flush();
             return $this->redirectToRoute('product_admin');
         }
-        return $this->render('/admin/product_update.html.twig', [
+        $params =[
             'form' => $form->createView(), 'editProduct' => $editProduct,
-        ]);
+        ];
+        if($request->isXmlHttpRequest()) {
+            return $this->render('formLayout/product_form.html.twig',$params);
+        }
+        return $this->render('/admin/product_update.html.twig',$params);
     }
 
     #[Route(path: '/delete-product/{id}', name: 'delete_product')]

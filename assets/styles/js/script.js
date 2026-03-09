@@ -1,6 +1,6 @@
 import './product';
 import './shop';
-import './cart';
+import './add2cart';
 import './wishlist';
 import './sortingAdminTables';
-import './bootbox';
+import './dialogForms';
