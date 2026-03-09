@@ -20,7 +20,11 @@
                 {% for productCartList in productCartLists %}
                     <tr>
                         <td>{{ loop.index }}</td>
-                        <td>{{ productCartList.name }}</td>
+                        <td>{{ productCartList.name }}
+                            <a class="text-success ms-2"
+                               href="{{ path('product_details',{'id':productCartList.productId}) }}">
+                                <i class="fa-solid fa-eye"></i>
+                            </a></td>
                         <td><img src="{{ asset('product/' ~ productCartList.image) }}" class="img-fluid w-50"></td>
                         <td>{{ productCartList.description }}</td>
                         <td>{{ productCartList.quantity }}</td>
@@ -28,10 +32,6 @@
                         <td>{{ productCartList.gst }}</td>
                         <td>{{ (productCartList.quantity * productCartList.price) }}</td>
                         <td>
-                            <a class="text-success ms-2"
-                               href="{{ path('product_details',{'id':productCartList.productId}) }}">
-                                <i class="fa-solid fa-eye"></i>
-                            </a>
                             <a class="text-danger ms-2" href="{{ path('delete_from_cart',{'id':productCartList.id}) }}">
                                 <i class="fa-solid fa-trash-can"></i>
                             </a>
