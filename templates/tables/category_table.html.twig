@@ -1,32 +1,36 @@
 {% extends 'tables/knp_paginator.html.twig' %}
 {% block table %}
-<table class="table CategoryDataTable">
-    <thead>
-    <tr>
-        <th>Sno</th>
-        <th>{{ knp_pagination_sortable(categoryLists, 'Name', 'c.name') }}</th>
-        <th>{{ knp_pagination_sortable(categoryLists, 'Description', 'c.description') }}</th>
-        <th>Action</th>
-    </tr>
-    </thead>
-    <tbody>
-    {% if categoryLists|length > 0 %}
-        {% for categoryList in categoryLists %}
-            <tr>
-                <td>{{ loop.index }}</td>
-                <td>{{ categoryList.name }}</td>
-                <td>{{ categoryList.description }}</td>
-                <td><a class="text-success ms-2" href="{{ path('update_category',{'id':categoryList.id}) }}"><i
-                            class="fa-solid fa-pen"></i></a> <a class="text-danger ms-2"
-                                                                href="{{ path('delete_category',{'id':categoryList.id}) }}"><i
-                            class="fa-solid fa-trash-can"></i></a></td>
-            </tr>
-        {% endfor %}
-    {% else %}
+    <table class="table CategoryDataTable">
+        <thead>
         <tr>
-            <td colspan="5" class="text-center"> No result found</td>
+            <th>Sno</th>
+            <th>{{ knp_pagination_sortable(categoryLists, 'Name', 'c.name') }}</th>
+            <th>{{ knp_pagination_sortable(categoryLists, 'Description', 'c.description') }}</th>
+            <th>Action</th>
         </tr>
-    {% endif %}
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+        {% if categoryLists|length > 0 %}
+            {% for categoryList in categoryLists %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ categoryList.name }}</td>
+                    <td>{{ categoryList.description }}</td>
+                    <td>
+                        <a class="text-success ms-2" data-modal="updateCategoryFrom" href="{{ path('update_category',{'id':categoryList.id}) }}"><i
+                                class="fa-solid fa-pen"></i></a>
+{#                        <a class="text-success ms-2" href="{{ path('update_category',{'id':categoryList.id}) }}"><i#}
+{#                                class="fa-solid fa-pen"></i></a>#}
+                        <a class="text-danger ms-2"
+                           href="{{ path('delete_category',{'id':categoryList.id}) }}"><i
+                                class="fa-solid fa-trash-can"></i></a></td>
+                </tr>
+            {% endfor %}
+        {% else %}
+            <tr>
+                <td colspan="5" class="text-center"> No result found</td>
+            </tr>
+        {% endif %}
+        </tbody>
+    </table>
 {% endblock %}

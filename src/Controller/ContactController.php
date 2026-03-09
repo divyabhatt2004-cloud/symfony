@@ -74,9 +74,13 @@ class ContactController extends AbstractController
             $em->flush();
             return $this->redirectToRoute('support_admin');
         }
-        return $this->render('admin/request_update.html.twig', [
+        $params =[
             'form' => $form->createView(),
-        ]);
+        ];
+        if($request->isXmlHttpRequest()) {
+            return $this->render('formLayout/contact_form.html.twig',$params );
+        }
+        return $this->render('admin/request_update.html.twig',$params );
     }
     #[Route(path:'/delete-user-request/{id}', name: 'delete_user_request')]
     public function delete_user_request(UserContactRepository $deleteUserRepository,EntityManagerInterface $em,string $id): Response

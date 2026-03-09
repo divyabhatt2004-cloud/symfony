@@ -1,36 +1,40 @@
 {% extends 'tables/knp_paginator.html.twig' %}
 {% block table %}
-<table class="table RequestDataTable">
-    <thead>
-    <tr>
-        <th>Sno</th>
-        <th>{{ knp_pagination_sortable(userSupportLists, 'Name', 'ur.name')}}</th>
-        <th>{{ knp_pagination_sortable(userSupportLists, 'Email', 'ur.email')}}</th>
-        <th>Subject</th>
-        <th>Reply</th>
-        <th>Action</th>
-    </tr>
-    </thead>
-    <tbody>
-    {% if userSupportLists|length > 0 %}
-        {% for userSupportlist in userSupportLists %}
-            <tr>
-                <td>{{ loop.index }}</td>
-                <td>{{ userSupportlist.name }}</td>
-                <td>{{ userSupportlist.email }}</td>
-                <td>{{ userSupportlist.subject }}</td>
-                <td>{{ userSupportlist.reply }}</td>
-                <td><a class="text-success ms-2" href="{{ path('edit_user_request',{'id':userSupportlist.id}) }}"><i
-                            class="fa-solid fa-pen"></i></a> <a class="text-danger ms-2"
-                                                                href="{{ path('delete_user_request',{'id':userSupportlist.id}) }}"><i
-                            class="fa-solid fa-trash-can"></i></a></td>
-            </tr>
-        {% endfor %}
-    {% else %}
+    <table class="table RequestDataTable">
+        <thead>
         <tr>
-            <td colspan="7" class="text-center"> No result found</td>
+            <th>Sno</th>
+            <th>{{ knp_pagination_sortable(userSupportLists, 'Name', 'ur.name') }}</th>
+            <th>{{ knp_pagination_sortable(userSupportLists, 'Email', 'ur.email') }}</th>
+            <th>Subject</th>
+            <th>Reply</th>
+            <th>Action</th>
         </tr>
-    {% endif %}
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+        {% if userSupportLists|length > 0 %}
+            {% for userSupportlist in userSupportLists %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ userSupportlist.name }}</td>
+                    <td>{{ userSupportlist.email }}</td>
+                    <td>{{ userSupportlist.subject }}</td>
+                    <td>{{ userSupportlist.reply }}</td>
+                    <td>
+                        <a class="text-success ms-2" data-modal= "updateRequest" href="{{ path('edit_user_request',{'id':userSupportlist.id}) }}"><i
+                                class="fa-solid fa-pen"></i></a>
+{#                        <a class="text-success ms-2" href="{{ path('edit_user_request',{'id':userSupportlist.id}) }}"><i#}
+{#                                class="fa-solid fa-pen"></i></a>#}
+                        <a class="text-danger ms-2"
+                           href="{{ path('delete_user_request',{'id':userSupportlist.id}) }}"><i
+                                class="fa-solid fa-trash-can"></i></a></td>
+                </tr>
+            {% endfor %}
+        {% else %}
+            <tr>
+                <td colspan="7" class="text-center"> No result found</td>
+            </tr>
+        {% endif %}
+        </tbody>
+    </table>
 {% endblock %}

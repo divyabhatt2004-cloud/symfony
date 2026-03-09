@@ -24,6 +24,7 @@ $(document).ready(function () {
         }
         dialogBox(url,title,errorMsg);
     })
+    //create category
     $(document).on('click', '[data-modal="CategoryForm"]', function (e) {
         e.preventDefault();
 
@@ -35,14 +36,40 @@ $(document).ready(function () {
             return;
         }
         dialogBox(url,title,errorMsg);
-
     })
+    // update Category
+    $(document).on('click', '[data-modal="updateCategoryFrom"]', function (e) {
+        e.preventDefault();
+
+        let url = $(this).attr('href') || $(this).data('url');
+        let title = 'Update Category';
+        let errorMsg = 'Category not Updated';
+        if (!url) {
+            alertify.error('url not found')
+            return;
+        }
+        dialogBox(url,title,errorMsg);
+    })
+    //create request
     $(document).on('click', '[data-modal="ContactForm"]', function (e) {
         e.preventDefault();
 
         let url = $(this).attr('href') || $(this).data('url');
-        let title = 'Contact';
+        let title = 'Add Request';
         let errorMsg = 'Request not submitted';
+        if (!url) {
+            alertify.error('url not found');
+            return;
+        }
+        dialogBox(url,title,errorMsg);
+    })
+    //update Request
+    $(document).on('click', '[data-modal="updateRequest"]', function (e) {
+        e.preventDefault();
+
+        let url = $(this).attr('href') || $(this).data('url');
+        let title = 'Update Request';
+        let errorMsg = 'Request not Updated';
         if (!url) {
             alertify.error('url not found');
             return;

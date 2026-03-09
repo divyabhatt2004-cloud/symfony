@@ -6,14 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c2925937-9bb4-488b-824d-3e2dd29b3f33" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/js/bootbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/js/dialogForms.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/js/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/js/add2cart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/scss/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/scss/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CartProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CartProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/formLayout/product_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/formLayout/product_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tables/product_table.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tables/product_table.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/js/dialogForms.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/js/dialogForms.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/tables/category_table.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tables/category_table.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/tables/request_table.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tables/request_table.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
