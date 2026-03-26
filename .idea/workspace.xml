@@ -6,10 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c2925937-9bb4-488b-824d-3e2dd29b3f33" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/js/dialogForms.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/js/dialogForms.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tables/category_table.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tables/category_table.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tables/request_table.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tables/request_table.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/js/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/js/product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/about.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/about.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/tables/product_table.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tables/product_table.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,7 +209,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-php-predefined-a98d8de5180a-0e0d91225499-com.jetbrains.php.sharedIndexes-PS-253.31033.138" />
+        <option value="bundled-php-predefined-a98d8de5180a-0e0d91225499-com.jetbrains.php.sharedIndexes-PS-253.32098.40" />
       </set>
     </attachedChunks>
   </component>
@@ -250,6 +249,29 @@
       <workItem from="1772016050610" duration="4310000" />
       <workItem from="1772086077746" duration="4220000" />
       <workItem from="1772692502669" duration="1918000" />
+      <workItem from="1773040477968" duration="3662000" />
+      <workItem from="1773292771670" duration="600000" />
+      <workItem from="1773295091060" duration="104000" />
+      <workItem from="1773299475686" duration="594000" />
+      <workItem from="1774332998538" duration="640000" />
+      <workItem from="1774334839850" duration="67000" />
+      <workItem from="1774336136194" duration="2051000" />
+      <workItem from="1774345005934" duration="84000" />
+      <workItem from="1774417606258" duration="2034000" />
+      <workItem from="1774420073814" duration="3254000" />
+      <workItem from="1774423702901" duration="1036000" />
+      <workItem from="1774425419575" duration="408000" />
+      <workItem from="1774431885257" duration="78000" />
+      <workItem from="1774432136711" duration="163000" />
+      <workItem from="1774435359822" duration="447000" />
+      <workItem from="1774436900486" duration="308000" />
+      <workItem from="1774437677781" duration="631000" />
+      <workItem from="1774503109138" duration="778000" />
+      <workItem from="1774506111180" duration="745000" />
+      <workItem from="1774507372589" duration="261000" />
+      <workItem from="1774507835550" duration="2662000" />
+      <workItem from="1774511115657" duration="215000" />
+      <workItem from="1774518679848" duration="728000" />
     </task>
     <servers />
   </component>

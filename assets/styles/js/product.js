@@ -3,10 +3,15 @@
 
 //productImage visibility in form
 $(document).ready(function () {
-    $('#trashImage').on('click', function () {
+    $(document).on('click','#trashImage', function () {
         $('#uploadImage').toggleClass('d-none');
         $('#updateImage').toggleClass('d-none');
     })
+    // $(document).on('click','#uploadedImage',function(){
+    //     let src =$(this).attr('src');
+    //     $.ajax
+    //     })
+    // })
 })
 
 //product quantity management in productDetails page
